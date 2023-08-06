@@ -3,7 +3,7 @@ defmodule JoePrices.Contracts.V21.LbFactory do
   import Parallel
 
   use Ethers.Contract,
-    abi_file: "priv/abis/LBFactory.json",
+    abi_file: "priv/abis/v21/LBFactory.json",
     default_address: "0x8e42f2F4101563bF679975178e880FD87d3eFd4e"
 
     def fetch_pairs({_network, address} = name) do
