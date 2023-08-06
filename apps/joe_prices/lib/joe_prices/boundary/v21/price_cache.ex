@@ -1,4 +1,4 @@
-defmodule JoePrices.Boundary.V21.LBFactory do
+defmodule JoePrices.Boundary.V21.PriceCache do
   use GenServer
 
   import JoePrices.Utils.Parallel
