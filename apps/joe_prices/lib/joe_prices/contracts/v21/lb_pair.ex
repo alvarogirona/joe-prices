@@ -19,7 +19,7 @@ defmodule JoePrices.Contracts.V21.LbPair do
     def fetch_active_bin_id(network, pair_contract) do
       network_rpc = Network.get_rpc_from_network(network)
 
-      JoePrices.Contracts.V21.LbPair.get_active_id(to: "0x500173f418137090dad96421811147b63b448a0f")
+      JoePrices.Contracts.V21.LbPair.get_active_id(to: pair_contract)
     end
 
     @doc """

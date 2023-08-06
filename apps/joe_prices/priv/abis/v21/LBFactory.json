@@ -2946,7 +2946,7 @@
     "id": 31607,
     "exportedSymbols": {
       "Encoded": [
-        47343
+        47298
       ],
       "EnumerableMap": [
         28601
@@ -2958,28 +2958,28 @@
         27284
       ],
       "ILBFactory": [
-        40901
+        40856
       ],
       "ILBPair": [
-        42655
+        42610
       ],
       "ImmutableClone": [
-        44796
+        44751
       ],
       "LBFactory": [
         31606
       ],
       "PairParameterHelper": [
-        46497
+        46452
       ],
       "PendingOwnable": [
-        46702
+        46657
       ],
       "PriceHelper": [
-        46876
+        46831
       ],
       "SafeCast": [
-        48615
+        48570
       ]
     },
     "nodeType": "SourceUnit",
@@ -3080,7 +3080,7 @@
         "file": "./libraries/PairParameterHelper.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 31607,
-        "sourceUnit": 46498,
+        "sourceUnit": 46453,
         "symbolAliases": [
           {
             "foreign": {
@@ -3105,7 +3105,7 @@
         "file": "./libraries/math/Encoded.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 31607,
-        "sourceUnit": 47344,
+        "sourceUnit": 47299,
         "symbolAliases": [
           {
             "foreign": {
@@ -3130,7 +3130,7 @@
         "file": "./libraries/ImmutableClone.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 31607,
-        "sourceUnit": 44797,
+        "sourceUnit": 44752,
         "symbolAliases": [
           {
             "foreign": {
@@ -3155,7 +3155,7 @@
         "file": "./libraries/PendingOwnable.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 31607,
-        "sourceUnit": 46703,
+        "sourceUnit": 46658,
         "symbolAliases": [
           {
             "foreign": {
@@ -3180,7 +3180,7 @@
         "file": "./libraries/PriceHelper.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 31607,
-        "sourceUnit": 46877,
+        "sourceUnit": 46832,
         "symbolAliases": [
           {
             "foreign": {
@@ -3205,7 +3205,7 @@
         "file": "./libraries/math/SafeCast.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 31607,
-        "sourceUnit": 48616,
+        "sourceUnit": 48571,
         "symbolAliases": [
           {
             "foreign": {
@@ -3230,7 +3230,7 @@
         "file": "./interfaces/ILBFactory.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 31607,
-        "sourceUnit": 40902,
+        "sourceUnit": 40857,
         "symbolAliases": [
           {
             "foreign": {
@@ -3255,7 +3255,7 @@
         "file": "./interfaces/ILBPair.sol",
         "nameLocation": "-1:-1:-1",
         "scope": 31607,
-        "sourceUnit": 42656,
+        "sourceUnit": 42611,
         "symbolAliases": [
           {
             "foreign": {
@@ -3285,7 +3285,7 @@
               "id": 30212,
               "name": "SafeCast",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 48615,
+              "referencedDeclaration": 48570,
               "src": "1089:8:27"
             },
             "typeName": {
@@ -3308,7 +3308,7 @@
               "id": 30215,
               "name": "Encoded",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 47343,
+              "referencedDeclaration": 47298,
               "src": "1121:7:27"
             },
             "typeName": {
@@ -3331,7 +3331,7 @@
               "id": 30218,
               "name": "PairParameterHelper",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 46497,
+              "referencedDeclaration": 46452,
               "src": "1152:19:27"
             },
             "typeName": {
@@ -3666,7 +3666,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_contract$_ILBPair_$42655_$dyn_storage",
+              "typeIdentifier": "t_array$_t_contract$_ILBPair_$42610_$dyn_storage",
               "typeString": "contract ILBPair[]"
             },
             "typeName": {
@@ -3677,13 +3677,13 @@
                   "id": 30248,
                   "name": "ILBPair",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 42655,
+                  "referencedDeclaration": 42610,
                   "src": "1652:7:27"
                 },
-                "referencedDeclaration": 42655,
+                "referencedDeclaration": 42610,
                 "src": "1652:7:27",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_ILBPair_$42655",
+                  "typeIdentifier": "t_contract$_ILBPair_$42610",
                   "typeString": "contract ILBPair"
                 }
               },
@@ -3691,7 +3691,7 @@
               "nodeType": "ArrayTypeName",
               "src": "1652:9:27",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_contract$_ILBPair_$42655_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_contract$_ILBPair_$42610_$dyn_storage_ptr",
                 "typeString": "contract ILBPair[]"
               }
             },
@@ -3716,7 +3716,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$_$",
+              "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$_$",
               "typeString": "mapping(contract IERC20 => mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation)))"
             },
             "typeName": {
@@ -3741,7 +3741,7 @@
               "nodeType": "Mapping",
               "src": "1958:75:27",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$_$",
+                "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$_$",
                 "typeString": "mapping(contract IERC20 => mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation)))"
               },
               "valueType": {
@@ -3766,7 +3766,7 @@
                 "nodeType": "Mapping",
                 "src": "1976:56:27",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$",
+                  "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$",
                   "typeString": "mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation))"
                 },
                 "valueType": {
@@ -3784,7 +3784,7 @@
                   "nodeType": "Mapping",
                   "src": "1994:37:27",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                     "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation)"
                   },
                   "valueType": {
@@ -3794,13 +3794,13 @@
                       "id": 30258,
                       "name": "LBPairInformation",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 40583,
+                      "referencedDeclaration": 40538,
                       "src": "2013:17:27"
                     },
-                    "referencedDeclaration": 40583,
+                    "referencedDeclaration": 40538,
                     "src": "2013:17:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage_ptr",
+                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage_ptr",
                       "typeString": "struct ILBFactory.LBPairInformation"
                     }
                   }
@@ -4072,7 +4072,7 @@
                         "name": "LBFactory__FlashLoanFeeAboveMax",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40537,
+                        "referencedDeclaration": 40492,
                         "src": "2914:31:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$_t_uint256_$returns$__$",
@@ -4242,7 +4242,7 @@
                       "name": "FlashLoanFeeSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40610,
+                      "referencedDeclaration": 40565,
                       "src": "3074:15:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
@@ -4386,7 +4386,7 @@
               ]
             },
             "baseFunctions": [
-              40666
+              40621
             ],
             "documentation": {
               "id": 30311,
@@ -4483,7 +4483,7 @@
               ]
             },
             "baseFunctions": [
-              40671
+              40626
             ],
             "documentation": {
               "id": 30321,
@@ -4581,7 +4581,7 @@
               ]
             },
             "baseFunctions": [
-              40676
+              40631
             ],
             "documentation": {
               "id": 30331,
@@ -4678,7 +4678,7 @@
               ]
             },
             "baseFunctions": [
-              40681
+              40636
             ],
             "documentation": {
               "id": 30341,
@@ -4775,7 +4775,7 @@
               ]
             },
             "baseFunctions": [
-              40686
+              40641
             ],
             "documentation": {
               "id": 30351,
@@ -4862,7 +4862,7 @@
                       "referencedDeclaration": 30251,
                       "src": "4503:11:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_contract$_ILBPair_$42655_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_contract$_ILBPair_$42610_$dyn_storage",
                         "typeString": "contract ILBPair[] storage ref"
                       }
                     },
@@ -4887,7 +4887,7 @@
               ]
             },
             "baseFunctions": [
-              40691
+              40646
             ],
             "documentation": {
               "id": 30361,
@@ -4973,7 +4973,7 @@
                       "referencedDeclaration": 30251,
                       "src": "4826:11:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_contract$_ILBPair_$42655_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_contract$_ILBPair_$42610_$dyn_storage",
                         "typeString": "contract ILBPair[] storage ref"
                       }
                     },
@@ -4997,7 +4997,7 @@
                     "nodeType": "IndexAccess",
                     "src": "4826:18:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ILBPair_$42655",
+                      "typeIdentifier": "t_contract$_ILBPair_$42610",
                       "typeString": "contract ILBPair"
                     }
                   },
@@ -5009,7 +5009,7 @@
               ]
             },
             "baseFunctions": [
-              40699
+              40654
             ],
             "documentation": {
               "id": 30372,
@@ -5079,7 +5079,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ILBPair_$42655",
+                    "typeIdentifier": "t_contract$_ILBPair_$42610",
                     "typeString": "contract ILBPair"
                   },
                   "typeName": {
@@ -5089,13 +5089,13 @@
                       "id": 30377,
                       "name": "ILBPair",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 42655,
+                      "referencedDeclaration": 42610,
                       "src": "4793:7:27"
                     },
-                    "referencedDeclaration": 42655,
+                    "referencedDeclaration": 42610,
                     "src": "4793:7:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ILBPair_$42655",
+                      "typeIdentifier": "t_contract$_ILBPair_$42610",
                       "typeString": "contract ILBPair"
                     }
                   },
@@ -5174,7 +5174,7 @@
               ]
             },
             "baseFunctions": [
-              40704
+              40659
             ],
             "documentation": {
               "id": 30387,
@@ -5358,7 +5358,7 @@
               ]
             },
             "baseFunctions": [
-              40712
+              40667
             ],
             "documentation": {
               "id": 30399,
@@ -5585,7 +5585,7 @@
               ]
             },
             "baseFunctions": [
-              40720
+              40675
             ],
             "documentation": {
               "id": 30417,
@@ -5758,7 +5758,7 @@
                       "referencedDeclaration": 31572,
                       "src": "6487:21:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$returns$_t_struct$_LBPairInformation_$40583_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$returns$_t_struct$_LBPairInformation_$40538_memory_ptr_$",
                         "typeString": "function (contract IERC20,contract IERC20,uint256) view returns (struct ILBFactory.LBPairInformation memory)"
                       }
                     },
@@ -5773,7 +5773,7 @@
                     "src": "6487:46:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                       "typeString": "struct ILBFactory.LBPairInformation memory"
                     }
                   },
@@ -5785,7 +5785,7 @@
               ]
             },
             "baseFunctions": [
-              40734
+              40689
             ],
             "documentation": {
               "id": 30436,
@@ -5923,7 +5923,7 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                    "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                     "typeString": "struct ILBFactory.LBPairInformation"
                   },
                   "typeName": {
@@ -5933,13 +5933,13 @@
                       "id": 30447,
                       "name": "LBPairInformation",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 40583,
+                      "referencedDeclaration": 40538,
                       "src": "6422:17:27"
                     },
-                    "referencedDeclaration": 40583,
+                    "referencedDeclaration": 40538,
                     "src": "6422:17:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage_ptr",
+                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage_ptr",
                       "typeString": "struct ILBFactory.LBPairInformation"
                     }
                   },
@@ -6073,7 +6073,7 @@
                         "name": "LBFactory__BinStepHasNoPreset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40553,
+                        "referencedDeclaration": 40508,
                         "src": "7684:29:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
@@ -6288,7 +6288,7 @@
                         "lValueRequested": false,
                         "memberName": "getBaseFactor",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 45721,
+                        "referencedDeclaration": 45676,
                         "src": "7804:20:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -6364,7 +6364,7 @@
                         "lValueRequested": false,
                         "memberName": "getFilterPeriod",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 45737,
+                        "referencedDeclaration": 45692,
                         "src": "7851:22:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -6440,7 +6440,7 @@
                         "lValueRequested": false,
                         "memberName": "getDecayPeriod",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 45753,
+                        "referencedDeclaration": 45708,
                         "src": "7899:21:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -6516,7 +6516,7 @@
                         "lValueRequested": false,
                         "memberName": "getReductionFactor",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 45769,
+                        "referencedDeclaration": 45724,
                         "src": "7950:25:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -6592,7 +6592,7 @@
                         "lValueRequested": false,
                         "memberName": "getVariableFeeControl",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 45785,
+                        "referencedDeclaration": 45740,
                         "src": "8008:28:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint24_$bound_to$_t_bytes32_$",
@@ -6668,7 +6668,7 @@
                         "lValueRequested": false,
                         "memberName": "getProtocolShare",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 45801,
+                        "referencedDeclaration": 45756,
                         "src": "8064:23:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -6744,7 +6744,7 @@
                         "lValueRequested": false,
                         "memberName": "getMaxVolatilityAccumulator",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 45817,
+                        "referencedDeclaration": 45772,
                         "src": "8126:34:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint24_$bound_to$_t_bytes32_$",
@@ -6838,7 +6838,7 @@
                         "lValueRequested": false,
                         "memberName": "decodeBool",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 47234,
+                        "referencedDeclaration": 47189,
                         "src": "8182:17:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_uint256_$returns$_t_bool_$bound_to$_t_bytes32_$",
@@ -6873,7 +6873,7 @@
               ]
             },
             "baseFunctions": [
-              40755
+              40710
             ],
             "documentation": {
               "id": 30459,
@@ -7220,7 +7220,7 @@
               ]
             },
             "baseFunctions": [
-              40761
+              40716
             ],
             "documentation": {
               "id": 30552,
@@ -8146,7 +8146,7 @@
               ]
             },
             "baseFunctions": [
-              40767
+              40722
             ],
             "documentation": {
               "id": 30565,
@@ -8637,7 +8637,7 @@
                                 "referencedDeclaration": 30651,
                                 "src": "10053:16:27",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40583_memory_ptr_$dyn_memory_ptr",
+                                  "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40538_memory_ptr_$dyn_memory_ptr",
                                   "typeString": "struct ILBFactory.LBPairInformation memory[] memory"
                                 }
                               },
@@ -8673,7 +8673,7 @@
                                   "nodeType": "NewExpression",
                                   "src": "10072:23:27",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_LBPairInformation_$40583_memory_ptr_$dyn_memory_ptr_$",
+                                    "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_LBPairInformation_$40538_memory_ptr_$dyn_memory_ptr_$",
                                     "typeString": "function (uint256) pure returns (struct ILBFactory.LBPairInformation memory[] memory)"
                                   },
                                   "typeName": {
@@ -8684,13 +8684,13 @@
                                         "id": 30685,
                                         "name": "LBPairInformation",
                                         "nodeType": "IdentifierPath",
-                                        "referencedDeclaration": 40583,
+                                        "referencedDeclaration": 40538,
                                         "src": "10076:17:27"
                                       },
-                                      "referencedDeclaration": 40583,
+                                      "referencedDeclaration": 40538,
                                       "src": "10076:17:27",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage_ptr",
+                                        "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage_ptr",
                                         "typeString": "struct ILBFactory.LBPairInformation"
                                       }
                                     },
@@ -8698,7 +8698,7 @@
                                     "nodeType": "ArrayTypeName",
                                     "src": "10076:19:27",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40583_storage_$dyn_storage_ptr",
+                                      "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40538_storage_$dyn_storage_ptr",
                                       "typeString": "struct ILBFactory.LBPairInformation[]"
                                     }
                                   }
@@ -8714,13 +8714,13 @@
                                 "src": "10072:31:27",
                                 "tryCall": false,
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40583_memory_ptr_$dyn_memory_ptr",
+                                  "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40538_memory_ptr_$dyn_memory_ptr",
                                   "typeString": "struct ILBFactory.LBPairInformation memory[] memory"
                                 }
                               },
                               "src": "10053:50:27",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40583_memory_ptr_$dyn_memory_ptr",
+                                "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40538_memory_ptr_$dyn_memory_ptr",
                                 "typeString": "struct ILBFactory.LBPairInformation memory[] memory"
                               }
                             },
@@ -8745,7 +8745,7 @@
                                 "stateVariable": false,
                                 "storageLocation": "storage",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                                   "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation)"
                                 },
                                 "typeName": {
@@ -8763,7 +8763,7 @@
                                   "nodeType": "Mapping",
                                   "src": "10122:37:27",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                                     "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation)"
                                   },
                                   "valueType": {
@@ -8773,13 +8773,13 @@
                                       "id": 30694,
                                       "name": "LBPairInformation",
                                       "nodeType": "IdentifierPath",
-                                      "referencedDeclaration": 40583,
+                                      "referencedDeclaration": 40538,
                                       "src": "10141:17:27"
                                     },
-                                    "referencedDeclaration": 40583,
+                                    "referencedDeclaration": 40538,
                                     "src": "10141:17:27",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage_ptr",
+                                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage_ptr",
                                       "typeString": "struct ILBFactory.LBPairInformation"
                                     }
                                   }
@@ -8798,7 +8798,7 @@
                                   "referencedDeclaration": 30263,
                                   "src": "10182:12:27",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$_$",
+                                    "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$_$",
                                     "typeString": "mapping(contract IERC20 => mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)))"
                                   }
                                 },
@@ -8822,7 +8822,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "10182:20:27",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$",
+                                  "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$",
                                   "typeString": "mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref))"
                                 }
                               },
@@ -8846,7 +8846,7 @@
                               "nodeType": "IndexAccess",
                               "src": "10182:28:27",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                                 "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                               }
                             },
@@ -8967,7 +8967,7 @@
                                       "lValueRequested": false,
                                       "memberName": "safe16",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 48592,
+                                      "referencedDeclaration": 48547,
                                       "src": "10305:23:27",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint16_$bound_to$_t_uint256_$",
@@ -9008,7 +9008,7 @@
                                         "referencedDeclaration": 30651,
                                         "src": "10353:16:27",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40583_memory_ptr_$dyn_memory_ptr",
+                                          "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40538_memory_ptr_$dyn_memory_ptr",
                                           "typeString": "struct ILBFactory.LBPairInformation memory[] memory"
                                         }
                                       },
@@ -9032,7 +9032,7 @@
                                       "nodeType": "IndexAccess",
                                       "src": "10353:19:27",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                                        "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                                         "typeString": "struct ILBFactory.LBPairInformation memory"
                                       }
                                     },
@@ -9062,7 +9062,7 @@
                                               "referencedDeclaration": 30697,
                                               "src": "10469:11:27",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                                                 "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                                               }
                                             },
@@ -9086,7 +9086,7 @@
                                             "nodeType": "IndexAccess",
                                             "src": "10469:20:27",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                                              "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                                               "typeString": "struct ILBFactory.LBPairInformation storage ref"
                                             }
                                           },
@@ -9097,10 +9097,10 @@
                                           "lValueRequested": false,
                                           "memberName": "LBPair",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 40578,
+                                          "referencedDeclaration": 40533,
                                           "src": "10469:27:27",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                                             "typeString": "contract ILBPair"
                                           }
                                         },
@@ -9114,7 +9114,7 @@
                                               "referencedDeclaration": 30697,
                                               "src": "10538:11:27",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                                                 "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                                               }
                                             },
@@ -9138,7 +9138,7 @@
                                             "nodeType": "IndexAccess",
                                             "src": "10538:20:27",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                                              "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                                               "typeString": "struct ILBFactory.LBPairInformation storage ref"
                                             }
                                           },
@@ -9149,7 +9149,7 @@
                                           "lValueRequested": false,
                                           "memberName": "createdByOwner",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 40580,
+                                          "referencedDeclaration": 40535,
                                           "src": "10538:35:27",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_bool",
@@ -9166,7 +9166,7 @@
                                               "referencedDeclaration": 30697,
                                               "src": "10618:11:27",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                                                 "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                                               }
                                             },
@@ -9190,7 +9190,7 @@
                                             "nodeType": "IndexAccess",
                                             "src": "10618:20:27",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                                              "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                                               "typeString": "struct ILBFactory.LBPairInformation storage ref"
                                             }
                                           },
@@ -9201,7 +9201,7 @@
                                           "lValueRequested": false,
                                           "memberName": "ignoredForRouting",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 40582,
+                                          "referencedDeclaration": 40537,
                                           "src": "10618:38:27",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_bool",
@@ -9216,7 +9216,7 @@
                                             "typeString": "uint16"
                                           },
                                           {
-                                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                                             "typeString": "contract ILBPair"
                                           },
                                           {
@@ -9232,10 +9232,10 @@
                                         "name": "LBPairInformation",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 40583,
+                                        "referencedDeclaration": 40538,
                                         "src": "10375:17:27",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_type$_t_struct$_LBPairInformation_$40583_storage_ptr_$",
+                                          "typeIdentifier": "t_type$_t_struct$_LBPairInformation_$40538_storage_ptr_$",
                                           "typeString": "type(struct ILBFactory.LBPairInformation storage pointer)"
                                         }
                                       },
@@ -9255,13 +9255,13 @@
                                       "src": "10375:304:27",
                                       "tryCall": false,
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                                        "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                                         "typeString": "struct ILBFactory.LBPairInformation memory"
                                       }
                                     },
                                     "src": "10353:326:27",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                                       "typeString": "struct ILBFactory.LBPairInformation memory"
                                     }
                                   },
@@ -9410,7 +9410,7 @@
               ]
             },
             "baseFunctions": [
-              40780
+              40735
             ],
             "documentation": {
               "id": 30639,
@@ -9521,7 +9521,7 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40583_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40538_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct ILBFactory.LBPairInformation[]"
                   },
                   "typeName": {
@@ -9532,13 +9532,13 @@
                         "id": 30648,
                         "name": "LBPairInformation",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 40583,
+                        "referencedDeclaration": 40538,
                         "src": "9712:17:27"
                       },
-                      "referencedDeclaration": 40583,
+                      "referencedDeclaration": 40538,
                       "src": "9712:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage_ptr",
+                        "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage_ptr",
                         "typeString": "struct ILBFactory.LBPairInformation"
                       }
                     },
@@ -9546,7 +9546,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "9712:19:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40583_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_LBPairInformation_$40538_storage_$dyn_storage_ptr",
                       "typeString": "struct ILBFactory.LBPairInformation[]"
                     }
                   },
@@ -9574,7 +9574,7 @@
                 {
                   "condition": {
                     "commonType": {
-                      "typeIdentifier": "t_contract$_ILBFactory_$40901",
+                      "typeIdentifier": "t_contract$_ILBFactory_$40856",
                       "typeString": "contract ILBFactory"
                     },
                     "id": 30764,
@@ -9612,10 +9612,10 @@
                             "name": "ILBPair",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 42655,
+                            "referencedDeclaration": 42610,
                             "src": "11027:7:27",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_ILBPair_$42655_$",
+                              "typeIdentifier": "t_type$_t_contract$_ILBPair_$42610_$",
                               "typeString": "type(contract ILBPair)"
                             }
                           },
@@ -9630,7 +9630,7 @@
                           "src": "11027:32:27",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         },
@@ -9641,10 +9641,10 @@
                         "lValueRequested": false,
                         "memberName": "getFactory",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 42426,
+                        "referencedDeclaration": 42381,
                         "src": "11027:43:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_ILBFactory_$40901_$",
+                          "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_ILBFactory_$40856_$",
                           "typeString": "function () view external returns (contract ILBFactory)"
                         }
                       },
@@ -9659,7 +9659,7 @@
                       "src": "11027:45:27",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ILBFactory_$40901",
+                        "typeIdentifier": "t_contract$_ILBFactory_$40856",
                         "typeString": "contract ILBFactory"
                       }
                     },
@@ -9718,7 +9718,7 @@
                             "name": "LBFactory__LBPairSafetyCheckFailed",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 40567,
+                            "referencedDeclaration": 40522,
                             "src": "11103:34:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$__$",
@@ -9875,7 +9875,7 @@
                             "name": "LBFactory__SameImplementation",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 40571,
+                            "referencedDeclaration": 40526,
                             "src": "11325:29:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$__$",
@@ -9990,7 +9990,7 @@
                       "name": "LBPairImplementationSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40616,
+                      "referencedDeclaration": 40571,
                       "src": "11463:23:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
@@ -10019,7 +10019,7 @@
               ]
             },
             "baseFunctions": [
-              40785
+              40740
             ],
             "documentation": {
               "id": 30750,
@@ -10038,7 +10038,7 @@
                   "id": 30755,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "11003:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -10219,7 +10219,7 @@
                         "name": "LBFactory__BinStepHasNoPreset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40553,
+                        "referencedDeclaration": 40508,
                         "src": "12145:29:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
@@ -10470,7 +10470,7 @@
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 46562,
+                        "referencedDeclaration": 46517,
                         "src": "12280:5:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -10675,7 +10675,7 @@
                             "name": "LBFactory__PresetIsLockedForUsers",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 40547,
+                            "referencedDeclaration": 40502,
                             "src": "12359:33:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$_t_uint256_$returns$__$",
@@ -10857,7 +10857,7 @@
                         "name": "LBFactory__QuoteAssetNotWhitelisted",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40494,
+                        "referencedDeclaration": 40449,
                         "src": "12494:35:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_contract$_IERC20_$27284_$returns$__$",
@@ -10957,7 +10957,7 @@
                         "name": "LBFactory__IdenticalAddresses",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40489,
+                        "referencedDeclaration": 40444,
                         "src": "12577:29:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_contract$_IERC20_$27284_$returns$__$",
@@ -11028,10 +11028,10 @@
                         "name": "PriceHelper",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 46876,
+                        "referencedDeclaration": 46831,
                         "src": "12695:11:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_PriceHelper_$46876_$",
+                          "typeIdentifier": "t_type$_t_contract$_PriceHelper_$46831_$",
                           "typeString": "type(library PriceHelper)"
                         }
                       },
@@ -11042,7 +11042,7 @@
                       "lValueRequested": false,
                       "memberName": "getPriceFromId",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 46757,
+                      "referencedDeclaration": 46712,
                       "src": "12695:26:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint24_$_t_uint16_$returns$_t_uint256_$",
@@ -11358,7 +11358,7 @@
                         "name": "LBFactory__AddressZero",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40501,
+                        "referencedDeclaration": 40456,
                         "src": "13008:22:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$__$returns$__$",
@@ -11410,7 +11410,7 @@
                                   "referencedDeclaration": 30263,
                                   "src": "13054:12:27",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$_$",
+                                    "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$_$",
                                     "typeString": "mapping(contract IERC20 => mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)))"
                                   }
                                 },
@@ -11434,7 +11434,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "13054:20:27",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$",
+                                  "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$",
                                   "typeString": "mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref))"
                                 }
                               },
@@ -11458,7 +11458,7 @@
                               "nodeType": "IndexAccess",
                               "src": "13054:28:27",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                                 "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                               }
                             },
@@ -11482,7 +11482,7 @@
                             "nodeType": "IndexAccess",
                             "src": "13054:37:27",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                              "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                               "typeString": "struct ILBFactory.LBPairInformation storage ref"
                             }
                           },
@@ -11493,10 +11493,10 @@
                           "lValueRequested": false,
                           "memberName": "LBPair",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 40578,
+                          "referencedDeclaration": 40533,
                           "src": "13054:44:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         }
@@ -11504,7 +11504,7 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         ],
@@ -11677,7 +11677,7 @@
                             "name": "LBFactory__LBPairAlreadyExists",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 40511,
+                            "referencedDeclaration": 40466,
                             "src": "13136:30:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$returns$__$",
@@ -11864,7 +11864,7 @@
                             "name": "LBFactory__ImplementationNotSet",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 40573,
+                            "referencedDeclaration": 40528,
                             "src": "13328:31:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$__$returns$__$",
@@ -11906,7 +11906,7 @@
                           "referencedDeclaration": 30810,
                           "src": "13376:4:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         },
@@ -12173,10 +12173,10 @@
                                   "name": "ImmutableClone",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 44796,
+                                  "referencedDeclaration": 44751,
                                   "src": "13408:14:27",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_ImmutableClone_$44796_$",
+                                    "typeIdentifier": "t_type$_t_contract$_ImmutableClone_$44751_$",
                                     "typeString": "type(library ImmutableClone)"
                                   }
                                 },
@@ -12187,7 +12187,7 @@
                                 "lValueRequested": false,
                                 "memberName": "cloneDeterministic",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 44739,
+                                "referencedDeclaration": 44694,
                                 "src": "13408:33:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_bytes_memory_ptr_$_t_bytes32_$returns$_t_address_$",
@@ -12221,10 +12221,10 @@
                             "name": "ILBPair",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 42655,
+                            "referencedDeclaration": 42610,
                             "src": "13383:7:27",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_ILBPair_$42655_$",
+                              "typeIdentifier": "t_type$_t_contract$_ILBPair_$42610_$",
                               "typeString": "type(contract ILBPair)"
                             }
                           },
@@ -12239,13 +12239,13 @@
                           "src": "13383:257:27",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         },
                         "src": "13376:264:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       },
@@ -12281,7 +12281,7 @@
                           "lValueRequested": false,
                           "memberName": "getBaseFactor",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 45721,
+                          "referencedDeclaration": 45676,
                           "src": "13690:20:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -12326,7 +12326,7 @@
                           "lValueRequested": false,
                           "memberName": "getFilterPeriod",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 45737,
+                          "referencedDeclaration": 45692,
                           "src": "13726:22:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -12371,7 +12371,7 @@
                           "lValueRequested": false,
                           "memberName": "getDecayPeriod",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 45753,
+                          "referencedDeclaration": 45708,
                           "src": "13764:21:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -12416,7 +12416,7 @@
                           "lValueRequested": false,
                           "memberName": "getReductionFactor",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 45769,
+                          "referencedDeclaration": 45724,
                           "src": "13801:25:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -12461,7 +12461,7 @@
                           "lValueRequested": false,
                           "memberName": "getVariableFeeControl",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 45785,
+                          "referencedDeclaration": 45740,
                           "src": "13842:28:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint24_$bound_to$_t_bytes32_$",
@@ -12506,7 +12506,7 @@
                           "lValueRequested": false,
                           "memberName": "getProtocolShare",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 45801,
+                          "referencedDeclaration": 45756,
                           "src": "13886:23:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint16_$bound_to$_t_bytes32_$",
@@ -12551,7 +12551,7 @@
                           "lValueRequested": false,
                           "memberName": "getMaxVolatilityAccumulator",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 45817,
+                          "referencedDeclaration": 45772,
                           "src": "13925:34:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_uint24_$bound_to$_t_bytes32_$",
@@ -12629,7 +12629,7 @@
                         "referencedDeclaration": 30810,
                         "src": "13661:4:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       },
@@ -12640,7 +12640,7 @@
                       "lValueRequested": false,
                       "memberName": "initialize",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 42420,
+                      "referencedDeclaration": 42375,
                       "src": "13661:15:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint16_$_t_uint16_$_t_uint16_$_t_uint16_$_t_uint24_$_t_uint16_$_t_uint24_$_t_uint24_$returns$__$",
@@ -12684,7 +12684,7 @@
                             "referencedDeclaration": 30263,
                             "src": "14004:12:27",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$_$",
+                              "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$_$",
                               "typeString": "mapping(contract IERC20 => mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)))"
                             }
                           },
@@ -12708,7 +12708,7 @@
                           "nodeType": "IndexAccess",
                           "src": "14004:20:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$",
+                            "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$",
                             "typeString": "mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref))"
                           }
                         },
@@ -12732,7 +12732,7 @@
                         "nodeType": "IndexAccess",
                         "src": "14004:28:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                           "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                         }
                       },
@@ -12756,7 +12756,7 @@
                       "nodeType": "IndexAccess",
                       "src": "14004:37:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                        "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                         "typeString": "struct ILBFactory.LBPairInformation storage ref"
                       }
                     },
@@ -12784,7 +12784,7 @@
                           "referencedDeclaration": 30810,
                           "src": "14101:4:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         },
@@ -12824,7 +12824,7 @@
                             "typeString": "uint16"
                           },
                           {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           },
                           {
@@ -12840,10 +12840,10 @@
                         "name": "LBPairInformation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40583,
+                        "referencedDeclaration": 40538,
                         "src": "14056:17:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_LBPairInformation_$40583_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_LBPairInformation_$40538_storage_ptr_$",
                           "typeString": "type(struct ILBFactory.LBPairInformation storage pointer)"
                         }
                       },
@@ -12863,13 +12863,13 @@
                       "src": "14056:102:27",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                        "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                         "typeString": "struct ILBFactory.LBPairInformation memory"
                       }
                     },
                     "src": "14004:154:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                       "typeString": "struct ILBFactory.LBPairInformation storage ref"
                     }
                   },
@@ -12888,7 +12888,7 @@
                         "referencedDeclaration": 30810,
                         "src": "14186:4:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       }
@@ -12896,7 +12896,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       ],
@@ -12908,7 +12908,7 @@
                         "referencedDeclaration": 30251,
                         "src": "14169:11:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_contract$_ILBPair_$42655_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_contract$_ILBPair_$42610_$dyn_storage",
                           "typeString": "contract ILBPair[] storage ref"
                         }
                       },
@@ -12921,7 +12921,7 @@
                       "nodeType": "MemberAccess",
                       "src": "14169:16:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_contract$_ILBPair_$42655_$dyn_storage_ptr_$_t_contract$_ILBPair_$42655_$returns$__$bound_to$_t_array$_t_contract$_ILBPair_$42655_$dyn_storage_ptr_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_contract$_ILBPair_$42610_$dyn_storage_ptr_$_t_contract$_ILBPair_$42610_$returns$__$bound_to$_t_array$_t_contract$_ILBPair_$42610_$dyn_storage_ptr_$",
                         "typeString": "function (contract ILBPair[] storage pointer,contract ILBPair)"
                       }
                     },
@@ -13109,7 +13109,7 @@
                         "referencedDeclaration": 30810,
                         "src": "14309:4:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       },
@@ -13132,7 +13132,7 @@
                             "referencedDeclaration": 30251,
                             "src": "14315:11:27",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_contract$_ILBPair_$42655_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_contract$_ILBPair_$42610_$dyn_storage",
                               "typeString": "contract ILBPair[] storage ref"
                             }
                           },
@@ -13189,7 +13189,7 @@
                           "typeString": "uint16"
                         },
                         {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         },
                         {
@@ -13201,10 +13201,10 @@
                       "name": "LBPairCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40598,
+                      "referencedDeclaration": 40553,
                       "src": "14270:13:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$_t_contract$_ILBPair_$42655_$_t_uint256_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$_t_contract$_ILBPair_$42610_$_t_uint256_$returns$__$",
                         "typeString": "function (contract IERC20,contract IERC20,uint256,contract ILBPair,uint256)"
                       }
                     },
@@ -13230,7 +13230,7 @@
               ]
             },
             "baseFunctions": [
-              40801
+              40756
             ],
             "documentation": {
               "id": 30795,
@@ -13395,7 +13395,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ILBPair_$42655",
+                    "typeIdentifier": "t_contract$_ILBPair_$42610",
                     "typeString": "contract ILBPair"
                   },
                   "typeName": {
@@ -13405,13 +13405,13 @@
                       "id": 30808,
                       "name": "ILBPair",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 42655,
+                      "referencedDeclaration": 42610,
                       "src": "12077:7:27"
                     },
-                    "referencedDeclaration": 42655,
+                    "referencedDeclaration": 42610,
                     "src": "12077:7:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ILBPair_$42655",
+                      "typeIdentifier": "t_contract$_ILBPair_$42610",
                       "typeString": "contract ILBPair"
                     }
                   },
@@ -13596,7 +13596,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                        "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                         "typeString": "struct ILBFactory.LBPairInformation"
                       },
                       "typeName": {
@@ -13606,13 +13606,13 @@
                           "id": 31066,
                           "name": "LBPairInformation",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 40583,
+                          "referencedDeclaration": 40538,
                           "src": "14960:17:27"
                         },
-                        "referencedDeclaration": 40583,
+                        "referencedDeclaration": 40538,
                         "src": "14960:17:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage_ptr",
+                          "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage_ptr",
                           "typeString": "struct ILBFactory.LBPairInformation"
                         }
                       },
@@ -13631,7 +13631,7 @@
                           "referencedDeclaration": 30263,
                           "src": "15003:12:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$_$",
+                            "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$_$",
                             "typeString": "mapping(contract IERC20 => mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)))"
                           }
                         },
@@ -13655,7 +13655,7 @@
                         "nodeType": "IndexAccess",
                         "src": "15003:20:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$",
+                          "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$",
                           "typeString": "mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref))"
                         }
                       },
@@ -13679,7 +13679,7 @@
                       "nodeType": "IndexAccess",
                       "src": "15003:28:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                         "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                       }
                     },
@@ -13703,7 +13703,7 @@
                     "nodeType": "IndexAccess",
                     "src": "15003:37:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                       "typeString": "struct ILBFactory.LBPairInformation storage ref"
                     }
                   },
@@ -13732,7 +13732,7 @@
                             "referencedDeclaration": 31068,
                             "src": "15062:15:27",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                              "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                               "typeString": "struct ILBFactory.LBPairInformation memory"
                             }
                           },
@@ -13743,10 +13743,10 @@
                           "lValueRequested": false,
                           "memberName": "LBPair",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 40578,
+                          "referencedDeclaration": 40533,
                           "src": "15062:22:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         }
@@ -13754,7 +13754,7 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         ],
@@ -13927,7 +13927,7 @@
                             "name": "LBFactory__LBPairDoesNotExist",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 40521,
+                            "referencedDeclaration": 40476,
                             "src": "15122:29:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$returns$__$",
@@ -13976,7 +13976,7 @@
                         "referencedDeclaration": 31068,
                         "src": "15201:15:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                          "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                           "typeString": "struct ILBFactory.LBPairInformation memory"
                         }
                       },
@@ -13987,7 +13987,7 @@
                       "lValueRequested": false,
                       "memberName": "ignoredForRouting",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 40582,
+                      "referencedDeclaration": 40537,
                       "src": "15201:33:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -14026,7 +14026,7 @@
                         "name": "LBFactory__LBPairIgnoredIsAlreadyInTheSameState",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40549,
+                        "referencedDeclaration": 40504,
                         "src": "15254:47:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$__$returns$__$",
@@ -14072,7 +14072,7 @@
                               "referencedDeclaration": 30263,
                               "src": "15314:12:27",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$_$",
+                                "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$_$",
                                 "typeString": "mapping(contract IERC20 => mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)))"
                               }
                             },
@@ -14096,7 +14096,7 @@
                             "nodeType": "IndexAccess",
                             "src": "15314:20:27",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$",
+                              "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$",
                               "typeString": "mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref))"
                             }
                           },
@@ -14120,7 +14120,7 @@
                           "nodeType": "IndexAccess",
                           "src": "15314:28:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                             "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                           }
                         },
@@ -14144,7 +14144,7 @@
                         "nodeType": "IndexAccess",
                         "src": "15314:37:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                          "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                           "typeString": "struct ILBFactory.LBPairInformation storage ref"
                         }
                       },
@@ -14155,7 +14155,7 @@
                       "lValueRequested": true,
                       "memberName": "ignoredForRouting",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 40582,
+                      "referencedDeclaration": 40537,
                       "src": "15314:55:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -14198,7 +14198,7 @@
                           "referencedDeclaration": 31068,
                           "src": "15421:15:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                            "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                             "typeString": "struct ILBFactory.LBPairInformation memory"
                           }
                         },
@@ -14209,10 +14209,10 @@
                         "lValueRequested": false,
                         "memberName": "LBPair",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 40578,
+                        "referencedDeclaration": 40533,
                         "src": "15421:22:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       },
@@ -14232,7 +14232,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         },
                         {
@@ -14244,10 +14244,10 @@
                       "name": "LBPairIgnoredStateChanged",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40623,
+                      "referencedDeclaration": 40578,
                       "src": "15395:25:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_ILBPair_$42655_$_t_bool_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_ILBPair_$42610_$_t_bool_$returns$__$",
                         "typeString": "function (contract ILBPair,bool)"
                       }
                     },
@@ -14273,7 +14273,7 @@
               ]
             },
             "baseFunctions": [
-              40814
+              40769
             ],
             "documentation": {
               "id": 31039,
@@ -14292,7 +14292,7 @@
                   "id": 31052,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "14869:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -14531,7 +14531,7 @@
                         "name": "LBFactory__BinStepTooLow",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40541,
+                        "referencedDeclaration": 40496,
                         "src": "16659:24:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
@@ -14777,7 +14777,7 @@
                       "lValueRequested": false,
                       "memberName": "setStaticFeeParameters",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 46259,
+                      "referencedDeclaration": 46214,
                       "src": "16720:33:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_uint16_$_t_uint16_$_t_uint16_$_t_uint16_$_t_uint24_$_t_uint16_$_t_uint24_$returns$_t_bytes32_$bound_to$_t_bytes32_$",
@@ -14905,7 +14905,7 @@
                               "lValueRequested": false,
                               "memberName": "setBool",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 47208,
+                              "referencedDeclaration": 47163,
                               "src": "17010:14:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_bool_$_t_uint256_$returns$_t_bytes32_$bound_to$_t_bytes32_$",
@@ -15207,7 +15207,7 @@
                       "name": "PresetSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40641,
+                      "referencedDeclaration": 40596,
                       "src": "17129:9:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$__$",
@@ -15276,7 +15276,7 @@
                       "name": "PresetOpenStateChanged",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40647,
+                      "referencedDeclaration": 40602,
                       "src": "17390:22:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_bool_$returns$__$",
@@ -15305,7 +15305,7 @@
               ]
             },
             "baseFunctions": [
-              40835
+              40790
             ],
             "documentation": {
               "id": 31122,
@@ -15324,7 +15324,7 @@
                   "id": 31143,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "16603:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -15720,7 +15720,7 @@
                         "name": "LBFactory__BinStepHasNoPreset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40553,
+                        "referencedDeclaration": 40508,
                         "src": "17796:29:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
@@ -15943,7 +15943,7 @@
                         "lValueRequested": false,
                         "memberName": "decodeBool",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 47234,
+                        "referencedDeclaration": 47189,
                         "src": "17907:17:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_uint256_$returns$_t_bool_$bound_to$_t_bytes32_$",
@@ -16002,7 +16002,7 @@
                             "name": "LBFactory__PresetOpenStateIsAlreadyInTheSameState",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 40555,
+                            "referencedDeclaration": 40510,
                             "src": "17981:49:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$__$returns$__$",
@@ -16105,7 +16105,7 @@
                               "lValueRequested": false,
                               "memberName": "setBool",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 47208,
+                              "referencedDeclaration": 47163,
                               "src": "18083:14:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_bool_$_t_uint256_$returns$_t_bytes32_$bound_to$_t_bytes32_$",
@@ -16269,7 +16269,7 @@
                       "name": "PresetOpenStateChanged",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40647,
+                      "referencedDeclaration": 40602,
                       "src": "18147:22:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_bool_$returns$__$",
@@ -16298,7 +16298,7 @@
               ]
             },
             "baseFunctions": [
-              40842
+              40797
             ],
             "documentation": {
               "id": 31209,
@@ -16317,7 +16317,7 @@
                   "id": 31216,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "17736:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -16524,7 +16524,7 @@
                         "name": "LBFactory__BinStepHasNoPreset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40553,
+                        "referencedDeclaration": 40508,
                         "src": "18427:29:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
@@ -16578,7 +16578,7 @@
                       "name": "PresetRemoved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40651,
+                      "referencedDeclaration": 40606,
                       "src": "18481:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
@@ -16607,7 +16607,7 @@
               ]
             },
             "baseFunctions": [
-              40847
+              40802
             ],
             "documentation": {
               "id": 31271,
@@ -16626,7 +16626,7 @@
                   "id": 31276,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "18369:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -16714,7 +16714,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ILBPair_$42655",
+                        "typeIdentifier": "t_contract$_ILBPair_$42610",
                         "typeString": "contract ILBPair"
                       },
                       "typeName": {
@@ -16724,13 +16724,13 @@
                           "id": 31323,
                           "name": "ILBPair",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 42655,
+                          "referencedDeclaration": 42610,
                           "src": "19818:7:27"
                         },
-                        "referencedDeclaration": 42655,
+                        "referencedDeclaration": 42610,
                         "src": "19818:7:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       },
@@ -16800,7 +16800,7 @@
                         "referencedDeclaration": 31572,
                         "src": "19835:21:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_internal_view$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$returns$_t_struct$_LBPairInformation_$40583_memory_ptr_$",
+                          "typeIdentifier": "t_function_internal_view$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$returns$_t_struct$_LBPairInformation_$40538_memory_ptr_$",
                           "typeString": "function (contract IERC20,contract IERC20,uint256) view returns (struct ILBFactory.LBPairInformation memory)"
                         }
                       },
@@ -16815,7 +16815,7 @@
                       "src": "19835:46:27",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                        "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                         "typeString": "struct ILBFactory.LBPairInformation memory"
                       }
                     },
@@ -16826,10 +16826,10 @@
                     "lValueRequested": false,
                     "memberName": "LBPair",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 40578,
+                    "referencedDeclaration": 40533,
                     "src": "19835:53:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ILBPair_$42655",
+                      "typeIdentifier": "t_contract$_ILBPair_$42610",
                       "typeString": "contract ILBPair"
                     }
                   },
@@ -16857,7 +16857,7 @@
                           "referencedDeclaration": 31325,
                           "src": "19911:6:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         }
@@ -16865,7 +16865,7 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_contract$_ILBPair_$42655",
+                            "typeIdentifier": "t_contract$_ILBPair_$42610",
                             "typeString": "contract ILBPair"
                           }
                         ],
@@ -17033,7 +17033,7 @@
                         "name": "LBFactory__LBPairNotCreated",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40531,
+                        "referencedDeclaration": 40486,
                         "src": "19941:27:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_contract$_IERC20_$27284_$_t_contract$_IERC20_$27284_$_t_uint256_$returns$__$",
@@ -17187,7 +17187,7 @@
                         "referencedDeclaration": 31325,
                         "src": "20004:6:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       },
@@ -17198,7 +17198,7 @@
                       "lValueRequested": false,
                       "memberName": "setStaticFeeParameters",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 42651,
+                      "referencedDeclaration": 42606,
                       "src": "20004:29:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint16_$_t_uint16_$_t_uint16_$_t_uint16_$_t_uint24_$_t_uint16_$_t_uint24_$returns$__$",
@@ -17227,7 +17227,7 @@
               ]
             },
             "baseFunctions": [
-              40872
+              40827
             ],
             "documentation": {
               "id": 31295,
@@ -17246,7 +17246,7 @@
                   "id": 31320,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "19798:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -17630,7 +17630,7 @@
               ]
             },
             "baseFunctions": [
-              40877
+              40832
             ],
             "documentation": {
               "id": 31363,
@@ -17649,7 +17649,7 @@
                   "id": 31368,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "20500:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -17843,7 +17843,7 @@
                         "name": "LBFactory__SameFlashLoanFee",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40563,
+                        "referencedDeclaration": 40518,
                         "src": "20871:27:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
@@ -17959,7 +17959,7 @@
                         "name": "LBFactory__FlashLoanFeeAboveMax",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40537,
+                        "referencedDeclaration": 40492,
                         "src": "20968:31:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$_t_uint256_$returns$__$",
@@ -18072,7 +18072,7 @@
                       "name": "FlashLoanFeeSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40610,
+                      "referencedDeclaration": 40565,
                       "src": "21087:15:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
@@ -18101,7 +18101,7 @@
               ]
             },
             "baseFunctions": [
-              40882
+              40837
             ],
             "documentation": {
               "id": 31377,
@@ -18120,7 +18120,7 @@
                   "id": 31382,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "20757:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -18349,7 +18349,7 @@
                             "name": "LBFactory__QuoteAssetAlreadyWhitelisted",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 40499,
+                            "referencedDeclaration": 40454,
                             "src": "21452:39:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_contract$_IERC20_$27284_$returns$__$",
@@ -18405,7 +18405,7 @@
                       "name": "QuoteAssetAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40656,
+                      "referencedDeclaration": 40611,
                       "src": "21529:15:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_contract$_IERC20_$27284_$returns$__$",
@@ -18434,7 +18434,7 @@
               ]
             },
             "baseFunctions": [
-              40888
+              40843
             ],
             "documentation": {
               "id": 31417,
@@ -18453,7 +18453,7 @@
                   "id": 31423,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "21359:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -18684,7 +18684,7 @@
                         "name": "LBFactory__QuoteAssetNotWhitelisted",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40494,
+                        "referencedDeclaration": 40449,
                         "src": "21872:35:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_contract$_IERC20_$27284_$returns$__$",
@@ -18738,7 +18738,7 @@
                       "name": "QuoteAssetRemoved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40661,
+                      "referencedDeclaration": 40616,
                       "src": "21935:17:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_contract$_IERC20_$27284_$returns$__$",
@@ -18767,7 +18767,7 @@
               ]
             },
             "baseFunctions": [
-              40894
+              40849
             ],
             "documentation": {
               "id": 31446,
@@ -18786,7 +18786,7 @@
                   "id": 31452,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "21790:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -18906,7 +18906,7 @@
                       "lValueRequested": false,
                       "memberName": "decodeBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 47234,
+                      "referencedDeclaration": 47189,
                       "src": "22062:17:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_uint256_$returns$_t_bool_$bound_to$_t_bytes32_$",
@@ -19127,7 +19127,7 @@
                         "name": "LBFactory__AddressZero",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40501,
+                        "referencedDeclaration": 40456,
                         "src": "22359:22:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$__$returns$__$",
@@ -19277,7 +19277,7 @@
                         "name": "LBFactory__SameFeeRecipient",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40559,
+                        "referencedDeclaration": 40514,
                         "src": "22487:27:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_address_$returns$__$",
@@ -19390,7 +19390,7 @@
                       "name": "FeeRecipientSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 40604,
+                      "referencedDeclaration": 40559,
                       "src": "22583:15:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
@@ -19499,7 +19499,7 @@
                         "referencedDeclaration": 31527,
                         "src": "22714:4:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ILBPair_$42655",
+                          "typeIdentifier": "t_contract$_ILBPair_$42610",
                           "typeString": "contract ILBPair"
                         }
                       },
@@ -19510,7 +19510,7 @@
                       "lValueRequested": false,
                       "memberName": "forceDecay",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 42654,
+                      "referencedDeclaration": 42609,
                       "src": "22714:15:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
@@ -19539,7 +19539,7 @@
               ]
             },
             "baseFunctions": [
-              40900
+              40855
             ],
             "functionSelector": "3c78a941",
             "implemented": true,
@@ -19552,7 +19552,7 @@
                   "id": 31530,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 46521,
+                  "referencedDeclaration": 46476,
                   "src": "22694:9:27"
                 },
                 "nodeType": "ModifierInvocation",
@@ -19583,7 +19583,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ILBPair_$42655",
+                    "typeIdentifier": "t_contract$_ILBPair_$42610",
                     "typeString": "contract ILBPair"
                   },
                   "typeName": {
@@ -19593,13 +19593,13 @@
                       "id": 31525,
                       "name": "ILBPair",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 42655,
+                      "referencedDeclaration": 42610,
                       "src": "22662:7:27"
                     },
-                    "referencedDeclaration": 42655,
+                    "referencedDeclaration": 42610,
                     "src": "22662:7:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ILBPair_$42655",
+                      "typeIdentifier": "t_contract$_ILBPair_$42610",
                       "typeString": "contract ILBPair"
                     }
                   },
@@ -19765,7 +19765,7 @@
                           "referencedDeclaration": 30263,
                           "src": "23333:12:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$_$",
+                            "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$_$",
                             "typeString": "mapping(contract IERC20 => mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)))"
                           }
                         },
@@ -19789,7 +19789,7 @@
                         "nodeType": "IndexAccess",
                         "src": "23333:20:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$_$",
+                          "typeIdentifier": "t_mapping$_t_contract$_IERC20_$27284_$_t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$_$",
                           "typeString": "mapping(contract IERC20 => mapping(uint256 => struct ILBFactory.LBPairInformation storage ref))"
                         }
                       },
@@ -19813,7 +19813,7 @@
                       "nodeType": "IndexAccess",
                       "src": "23333:28:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40583_storage_$",
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_LBPairInformation_$40538_storage_$",
                         "typeString": "mapping(uint256 => struct ILBFactory.LBPairInformation storage ref)"
                       }
                     },
@@ -19837,7 +19837,7 @@
                     "nodeType": "IndexAccess",
                     "src": "23333:37:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage",
+                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage",
                       "typeString": "struct ILBFactory.LBPairInformation storage ref"
                     }
                   },
@@ -19977,7 +19977,7 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_LBPairInformation_$40583_memory_ptr",
+                    "typeIdentifier": "t_struct$_LBPairInformation_$40538_memory_ptr",
                     "typeString": "struct ILBFactory.LBPairInformation"
                   },
                   "typeName": {
@@ -19987,13 +19987,13 @@
                       "id": 31550,
                       "name": "LBPairInformation",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 40583,
+                      "referencedDeclaration": 40538,
                       "src": "23230:17:27"
                     },
-                    "referencedDeclaration": 40583,
+                    "referencedDeclaration": 40538,
                     "src": "23230:17:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_LBPairInformation_$40583_storage_ptr",
+                      "typeIdentifier": "t_struct$_LBPairInformation_$40538_storage_ptr",
                       "typeString": "struct ILBFactory.LBPairInformation"
                     }
                   },
@@ -20386,7 +20386,7 @@
               "id": 30208,
               "name": "PendingOwnable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 46702,
+              "referencedDeclaration": 46657,
               "src": "1050:14:27"
             },
             "id": 30209,
@@ -20398,7 +20398,7 @@
               "id": 30210,
               "name": "ILBFactory",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 40901,
+              "referencedDeclaration": 40856,
               "src": "1066:10:27"
             },
             "id": 30211,
@@ -20418,40 +20418,40 @@
         "fullyImplemented": true,
         "linearizedBaseContracts": [
           31606,
-          40901,
-          46702,
-          43368
+          40856,
+          46657,
+          43323
         ],
         "name": "LBFactory",
         "nameLocation": "1037:9:27",
         "scope": 31607,
         "usedErrors": [
-          40489,
-          40494,
-          40499,
-          40501,
-          40511,
-          40521,
-          40531,
-          40537,
-          40541,
-          40547,
-          40549,
-          40553,
-          40555,
-          40559,
-          40563,
-          40567,
-          40571,
-          40573,
-          43325,
-          43327,
-          43329,
-          43331,
-          43333,
-          45663,
-          47930,
-          49990
+          40444,
+          40449,
+          40454,
+          40456,
+          40466,
+          40476,
+          40486,
+          40492,
+          40496,
+          40502,
+          40504,
+          40508,
+          40510,
+          40514,
+          40518,
+          40522,
+          40526,
+          40528,
+          43280,
+          43282,
+          43284,
+          43286,
+          43288,
+          45618,
+          47885,
+          49945
         ]
       }
     ],
