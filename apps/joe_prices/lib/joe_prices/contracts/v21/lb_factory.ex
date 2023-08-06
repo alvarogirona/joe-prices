@@ -9,8 +9,13 @@ defmodule JoePrices.Contracts.V21.LbFactory do
   @doc """
   ## Example
 
-    JoePrices.Contracts.V21.LbFactory.fetch_pairs({:arbitrum_mainnet, "0x8e42f2F4101563bF679975178e880FD87d3eFd4e"})
-
+    iex> JoePrices.Contracts.V21.LbFactory.fetch_pairs(:arbitrum_mainnet)
+    [
+      ok: ["0x500173f418137090dad96421811147b63b448a0f"],
+      ok: ["0xdf34e7548af638cc37b8923ef1139ea98644735a"],
+      ok: ["0xd8053763b1179bd412a5a5a42fa2d15851518cfb"],
+      ...
+    ]
   """
   use Ethers.Contract,
     abi_file: "priv/abis/v21/LBFactory.json",
