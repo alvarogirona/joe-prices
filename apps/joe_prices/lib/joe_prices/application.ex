@@ -16,21 +16,23 @@ defmodule JoePrices.Application do
       {Finch, name: JoePrices.Finch},
       {
         Registry,
-        [name: JoePrices.Registry.V2.Pair, keys: :unique]
+        [name: JoePrices.Registry.V21.PriceCache, keys: :unique]
       },
-      {
-        Registry,
-        [name: JoePrices.Registry.V21.LBFactory, keys: :unique]
-      },
-      {
-        DynamicSupervisor,
-        [name: JoePrices.Supervisor.V2.Pair, strategy: :one_for_one]
-      }
       # Start a worker by calling: JoePrices.Worker.start_link(arg)
       # {JoePrices.Worker, arg}
     ]
 
+    caches = JoePrices.Core.Network.all_networks
+     |> Enum.map(&cache_child_from_network(&1))
+
     opts = [strategy: :one_for_one, name: JoePrices.Supervisor]
-    Supervisor.start_link(children, opts)
+    Supervisor.start_link(children ++ caches, opts)
+  end
+
+  defp cache_child_from_network(network) do
+    {
+      JoePrices.Boundary.V21.PriceCache,
+      [network: network]
+    }
   end
 end

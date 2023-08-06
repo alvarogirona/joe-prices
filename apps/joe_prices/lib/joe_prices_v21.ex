@@ -1,4 +1,7 @@
 defmodule JoePricesV21 do
+
+  alias JoePrices.Boundary.V21.PriceCache
+
   @doc """
   Returns the current price for the given tokens
   """
