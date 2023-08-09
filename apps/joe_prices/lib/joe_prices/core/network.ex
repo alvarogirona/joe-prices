@@ -14,4 +14,10 @@ defmodule JoePrices.Core.Network do
 
   @spec all_networks :: [:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnnet, ...]
   def all_networks(), do: [arbitrum_mainnet(), avalanche_mainnet(), bsc_mainnet()]
+
+  @spec opts_for_network(:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnnet, String) :: any
+  def opts_for_network(network, contract) do
+    network_rpc = get_rpc_from_network(network)
+    [rpc_opts: [rpc_opts: [url: network_rpc]]]
+  end
 end

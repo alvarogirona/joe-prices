@@ -28,7 +28,8 @@ defmodule JoePrices.Contracts.V21.LbFactory do
     iex> JoePrices.Contracts.V21.LbFactory.fetch_pairs(:avalanche_mainnet)
   """
   def fetch_pairs(network) do
-    opts = opts_for_network(network)
+    opts = Network.opts_for_network(network, contract_for_network(network))
+     |> Keyword.merge([to: contract_for_network(network)])
     contract_address = contract_for_network(network)
 
     [pairs_count] = __MODULE__.get_number_of_lb_pairs!(opts)
@@ -43,9 +44,4 @@ defmodule JoePrices.Contracts.V21.LbFactory do
   end
 
   defp contract_for_network(_), do: "0x8e42f2F4101563bF679975178e880FD87d3eFd4e"
-
-  defp opts_for_network(network) do
-    network_rpc = Network.get_rpc_from_network(network)
-    [to: contract_for_network(network), rpc_opts: [rpc_opts: [url: network_rpc]]]
-  end
 end
