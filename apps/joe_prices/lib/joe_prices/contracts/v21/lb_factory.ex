@@ -23,20 +23,29 @@ defmodule JoePrices.Contracts.V21.LbFactory do
 
   @doc """
   Calls contract to fetch all available pairs.
+
+  ## Example
+    iex> JoePrices.Contracts.V21.LbFactory.fetch_pairs(:avalanche_mainnet)
   """
   def fetch_pairs(network) do
-    network_rpc = Network.get_rpc_from_network(network)
+    opts = opts_for_network(network)
     contract_address = contract_for_network(network)
 
-    [pairs_count] = __MODULE__.get_number_of_lb_pairs!(to: contract_address, rpc_opts: [{:url, network_rpc}])
+    [pairs_count] = __MODULE__.get_number_of_lb_pairs!(opts)
 
-    responses = 0..pairs_count
-    |> Enum.to_list
-    |> pmap(&__MODULE__.get_lb_pair_at_index(&1))
+    responses = 0..pairs_count - 1
+      |> Enum.to_list
+      |> pmap(&__MODULE__.get_lb_pair_at_index(&1, opts))
 
     ok_responses = responses
       |> Enum.filter(&match?({:ok, _}, &1))
+      |> Enum.map(fn {:ok, result} -> result end)
   end
 
   defp contract_for_network(_), do: "0x8e42f2F4101563bF679975178e880FD87d3eFd4e"
+
+  defp opts_for_network(network) do
+    network_rpc = Network.get_rpc_from_network(network)
+    [to: contract_for_network(network), rpc_opts: [rpc_opts: [url: network_rpc]]]
+  end
 end

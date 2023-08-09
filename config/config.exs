@@ -72,7 +72,8 @@ config :ethers,
   json_module: Jason # Defaults to: Jason
 
 # If using Ethereumex, you need to specify a JSON-RPC server url here
-config :ethereumex, url: "https://rpc.ankr.com/arbitrum"
+config :ethereumex,
+  http_headers: [{"Content-Type", "application/json"}]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

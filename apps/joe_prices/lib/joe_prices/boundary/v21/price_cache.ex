@@ -71,7 +71,7 @@ defmodule JoePrices.Boundary.V21.PriceCache do
 
     ## Example
 
-    iex> JoePrices.Boundary.V21.PriceCache.get_price({1,2})
+    iex> JoePrices.Boundary.V21.PriceCache.get_price(:arbitrum_mainnet, {1,2})
   """
   def get_price(network, {_token_x, _token_y} = tokens) do
     GenServer.call(via(network), {:get_all_pairs, tokens})
@@ -79,14 +79,22 @@ defmodule JoePrices.Boundary.V21.PriceCache do
 
   # GenServer Handlers
   def handle_call({:get_all_pairs, {token_x, token_y}}, _from, {network}) do
-    IO.puts(">>>>>")
-    all_pairs = LBFactoryContract.fetch_pairs(network)
-    IO.inspect(all_pairs)
+    IO.puts(">>>>> :get_all_pairs")
+    # all_pairs = LBFactoryContract.fetch_pairs(network)
+    # IO.inspect(all_pairs)
 
     table_name = get_table_name(network)
     IO.inspect(table_name)
 
-    :ets.insert(table_name, all_pairs)
+    :ets.insert(table_name, {1, 2})
+
+    {:reply, 1, {network}}
+  end
+
+  def lookup(network) do
+    table_name = get_table_name(network)
+
+    :ets.lookup(table_name, 1)
   end
 
   @doc """
