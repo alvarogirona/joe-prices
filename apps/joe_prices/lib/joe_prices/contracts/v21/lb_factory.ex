@@ -28,8 +28,7 @@ defmodule JoePrices.Contracts.V21.LbFactory do
     iex> JoePrices.Contracts.V21.LbFactory.fetch_pairs(:avalanche_mainnet)
   """
   def fetch_pairs(network) do
-    opts = Network.opts_for_network(network)
-     |> Keyword.merge([to: contract_for_network(network)])
+    opts = Network.opts_for_call(network, contract_for_network(network))
 
     [pairs_count] = __MODULE__.get_number_of_lb_pairs!(opts)
 
@@ -39,7 +38,7 @@ defmodule JoePrices.Contracts.V21.LbFactory do
 
     responses
       |> Enum.filter(&match?({:ok, _}, &1))
-      |> Enum.map(fn {:ok, result} -> result end)
+      |> Enum.map(fn {:ok, [result]} -> result end)
   end
 
   defp contract_for_network(_), do: "0x8e42f2F4101563bF679975178e880FD87d3eFd4e"
