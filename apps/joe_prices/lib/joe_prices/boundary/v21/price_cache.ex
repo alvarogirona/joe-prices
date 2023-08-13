@@ -54,9 +54,7 @@ defmodule JoePrices.Boundary.V21.PriceCache do
     {:ok, {network}}
   end
 
-  # @spec start_link({@network_name}) :: {:ok, term}
   def start_link({:network, network}) do
-    IO.inspect(network)
     GenServer.start_link(
       __MODULE__,
       {network},
