@@ -40,7 +40,7 @@ defmodule JoePrices.Boundary.V21.PriceCache do
 
   def child_spec([network: network] = opts) do
     %{
-      id: network,
+      id: via(network),
       start: {__MODULE__, :start_link, opts},
       shutdown: 30_000,
       restart: :permanent,
@@ -75,14 +75,21 @@ defmodule JoePrices.Boundary.V21.PriceCache do
     GenServer.call(via(network), {:get_all_pairs, tokens})
   end
 
+  def update_prices(network, pairs) do
+    pairs
+    |> Enum.each(fn pair -> update_price(network, pair) end)
+  end
+
+  defp update_price(network, pair = %JoePrices.Core.V21.Pair{}) do
+
+  end
+
   # GenServer Handlers
   def handle_call({:get_all_pairs, {token_x, token_y}}, _from, {network}) do
-    IO.puts(">>>>> :get_all_pairs")
     # all_pairs = LBFactoryContract.fetch_pairs(network)
     # IO.inspect(all_pairs)
 
     table_name = get_table_name(network)
-    IO.inspect(table_name)
 
     :ets.insert(table_name, {1, 2})
 

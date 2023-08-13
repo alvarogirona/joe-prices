@@ -18,6 +18,10 @@ defmodule JoePrices.Application do
         Registry,
         [name: JoePrices.Registry.V21.PriceCache, keys: :unique]
       },
+      {
+        Registry,
+        [name: JoePrices.Registry.Common.TokenInfoCache, keys: :unique]
+      },
       # Start a worker by calling: JoePrices.Worker.start_link(arg)
       # {JoePrices.Worker, arg}
     ]
@@ -25,13 +29,23 @@ defmodule JoePrices.Application do
     caches = JoePrices.Core.Network.all_networks
      |> Enum.map(&cache_child_from_network(&1))
 
+    token_caches = JoePrices.Core.Network.all_networks
+     |> Enum.map(&token_cache_child_from_network(&1))
+
     opts = [strategy: :one_for_one, name: JoePrices.Supervisor]
-    Supervisor.start_link(children ++ caches, opts)
+    Supervisor.start_link(children ++ caches ++ token_caches, opts)
   end
 
   defp cache_child_from_network(network) do
     {
       JoePrices.Boundary.V21.PriceCache,
+      [network: network]
+    }
+  end
+
+  defp token_cache_child_from_network(network) do
+    {
+      JoePrices.Boundary.Common.TokenInfoCache,
       [network: network]
     }
   end
