@@ -9,10 +9,14 @@ defmodule JoePrices.Core.Network do
   def network_from_string("arbitrum_mainnet"), do: arbitrum_mainnet()
   def network_from_string("bsc_mainnet"), do: bsc_mainnet()
 
+  @spec arbitrum_mainnet :: :arbitrum_mainnet
   def arbitrum_mainnet(), do: :arbitrum_mainnet
+  @spec avalanche_mainnet :: :avalanche_mainnet
   def avalanche_mainnet(), do: :avalanche_mainnet
+  @spec bsc_mainnet :: :bsc_mainnnet
   def bsc_mainnet(), do: :bsc_mainnnet
 
+  @spec all_networks :: [:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnnet, ...]
   def all_networks(), do: [arbitrum_mainnet(), avalanche_mainnet(), bsc_mainnet()]
 
   @spec opts_for_call(:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnnet, String) :: Keyword

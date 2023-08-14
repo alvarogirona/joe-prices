@@ -50,7 +50,8 @@ defmodule JoePricesWeb.MixProject do
       {:gettext, "~> 0.20"},
       {:joe_prices, in_umbrella: true},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:ex_doc, "~> 0.30.5", only: :dev, runtime: false}
     ]
   end
 
