@@ -43,7 +43,7 @@ defmodule JoePrices.MixProject do
       {:swoosh, "~> 1.3"},
       {:finch, "~> 0.13"},
       {:ethers, "~> 0.0.4"},
-      {:quantum, "~> 3.0"}
+      {:quantum, "~> 3.0"},
     ]
   end
 
