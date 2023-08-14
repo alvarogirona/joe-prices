@@ -18,15 +18,6 @@ config :joe_prices,
   arbitrum_rpc: System.get_env("ARB_RPC_URL") || raise("missing arb rpc"),
   bsc_rpc: System.get_env("BSC_RPC_URL") || raise ("missing bsc rpc")
 
-# Configures the mailer
-#
-# By default it uses the "Local" adapter which stores the emails
-# locally. You can see the emails in your browser, at "/dev/mailbox".
-#
-# For production it's recommended to configure a different adapter
-# at the `config/runtime.exs`.
-config :joe_prices, JoePrices.Mailer, adapter: Swoosh.Adapters.Local
-
 config :joe_prices_web,
   ecto_repos: [JoePrices.Repo],
   generators: [context_app: :joe_prices]

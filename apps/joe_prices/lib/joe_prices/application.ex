@@ -13,7 +13,6 @@ defmodule JoePrices.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      JoePrices.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: JoePrices.PubSub},
       # Start Finch

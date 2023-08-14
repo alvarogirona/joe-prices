@@ -12,7 +12,7 @@ defmodule JoePrices.Boundary.V21.PriceService do
   ## Example
     iex> JoePrices.Boundary.V21.PriceService.load_prices(:avalanche_mainnet)
   """
-  def get_price(network, {token_x_address, token_y_address} = %JoePrices.Boundary.V21.PriceRequest{}) do
+  def get_price(network, price = %JoePrices.Boundary.V21.PriceRequest{}) do
 
   end
 end
