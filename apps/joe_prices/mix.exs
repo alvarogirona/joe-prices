@@ -44,7 +44,8 @@ defmodule JoePrices.MixProject do
       {:finch, "~> 0.13"},
       {:ethers, "~> 0.0.4"},
       {:quantum, "~> 3.0"},
-      {:ex_doc, "~> 0.30.5", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.30.5", only: :dev, runtime: false},
+      {:cachex, "~> 3.6"}
     ]
   end
 

@@ -51,7 +51,7 @@ defmodule JoePricesWeb.MixProject do
       {:joe_prices, in_umbrella: true},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:ex_doc, "~> 0.30.5", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.30.5", only: :dev, runtime: false},
     ]
   end
 

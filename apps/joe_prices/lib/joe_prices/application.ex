@@ -5,6 +5,10 @@ defmodule JoePrices.Application do
 
   use Application
 
+  import Cachex.Spec
+
+  @cache_ttl_seconds 5
+
   @impl true
   def start(_type, _args) do
     children = [
@@ -16,31 +20,34 @@ defmodule JoePrices.Application do
       {Finch, name: JoePrices.Finch},
       {
         Registry,
-        [name: JoePrices.Registry.V21.Cache.PriceCache, keys: :unique]
-      },
-      {
-        Registry,
         [name: JoePrices.Registry.Common.TokenInfoCache, keys: :unique]
       },
       # Start a worker by calling: JoePrices.Worker.start_link(arg)
       # {JoePrices.Worker, arg}
     ]
 
-    caches = JoePrices.Core.Network.all_networks
-     |> Enum.map(&cache_child_from_network(&1))
+    v21_caches = JoePrices.Core.Network.all_networks
+     |> Enum.map(&v21_cache_child_from_network(&1))
 
     token_caches = JoePrices.Core.Network.all_networks
      |> Enum.map(&token_cache_child_from_network(&1))
 
     opts = [strategy: :one_for_one, name: JoePrices.Supervisor]
-    Supervisor.start_link(children ++ caches ++ token_caches, opts)
+    Supervisor.start_link(children ++ v21_caches ++ token_caches, opts)
   end
 
-  defp cache_child_from_network(network) do
-    {
-      JoePrices.Boundary.V21.Cache.PriceCache,
-      [network: network]
-    }
+  defp v21_cache_child_from_network(network) do
+    Supervisor.child_spec(
+      {
+        Cachex,
+        [
+          name: JoePrices.Boundary.V21.Cache.PriceCache.get_table_name(network),
+          expiration: expiration(default: :timer.seconds(@cache_ttl_seconds)),
+          interval: nil, # Just lazy expiration, no background ttl process.
+        ]
+      },
+      id: make_ref()
+    )
   end
 
   defp token_cache_child_from_network(network) do
