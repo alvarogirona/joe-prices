@@ -45,7 +45,10 @@ defmodule JoePrices.Contracts.V21.LbFactory do
   def fetch_pairs_for_tokens(network, token_x, token_y, bin_step) do
     opts = Network.opts_for_call(network, contract_for_network(network))
 
-    JoePrices.Contracts.V21.LbFactory.get_lb_pair_information(token_x, token_y, bin_step)
+    case JoePrices.Contracts.V21.LbFactory.get_lb_pair_information(token_x, token_y, bin_step, opts) do
+      {:ok, pairs} -> {:ok, pairs}
+      {:error, _} -> {:error, "Error getting pairs for tokens"}
+    end
   end
 
   defp contract_for_network(_), do: "0x8e42f2F4101563bF679975178e880FD87d3eFd4e"

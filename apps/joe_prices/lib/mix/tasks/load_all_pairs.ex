@@ -52,7 +52,7 @@ defmodule Mix.Tasks.LoadAllPairs do
         :bin_step => bin_step,
       }
     end)
-    |> Jason.encode!
+
   end
 
   def fetch_token_name(network, token_address) do

@@ -11,6 +11,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCacheEntry do
       token_y: pair.token_y_address,
       bin_step: pair.bin_step,
       active_bin_id: pair.active_bin,
+      updated_at: Time.utc_now(),
     }
   end
 end
