@@ -1,4 +1,4 @@
-defmodule JoePrices.Boundary.V21.PriceCache do
+defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   use GenServer
 
   @ttl 60
@@ -126,7 +126,7 @@ defmodule JoePrices.Boundary.V21.PriceCache do
     {
       :via,
       Registry,
-      {JoePrices.Registry.V21.PriceCache, network},
+      {JoePrices.Registry.V21.Cache.PriceCache, network},
     }
   end
 end

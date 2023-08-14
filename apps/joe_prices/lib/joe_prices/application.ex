@@ -16,7 +16,7 @@ defmodule JoePrices.Application do
       {Finch, name: JoePrices.Finch},
       {
         Registry,
-        [name: JoePrices.Registry.V21.PriceCache, keys: :unique]
+        [name: JoePrices.Registry.V21.Cache.PriceCache, keys: :unique]
       },
       {
         Registry,
@@ -38,7 +38,7 @@ defmodule JoePrices.Application do
 
   defp cache_child_from_network(network) do
     {
-      JoePrices.Boundary.V21.PriceCache,
+      JoePrices.Boundary.V21.Cache.PriceCache,
       [network: network]
     }
   end
