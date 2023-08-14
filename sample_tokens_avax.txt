@@ -1,0 +1,222 @@
+[
+  %{
+    tokens: %{
+      token_x: "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8112278,
+    bin_step: 1,
+    pair_name: "Dai Stablecoin-USD Coin",
+    price: 9.99402852192261e-13,
+    updated_at: ~T[08:27:04.988694]
+  },
+  %{
+    tokens: %{
+      token_x: "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8375191,
+    bin_step: 15,
+    pair_name: "Wrapped Ether-USD Coin",
+    price: 1.8456746687720432e-9,
+    updated_at: ~T[08:27:04.988667]
+  },
+  %{
+    tokens: %{
+      token_x: "0xc7198437980c041c805a1edcba50c1ce5db95118",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8388596,
+    bin_step: 1,
+    pair_name: "Tether USD-USD Coin",
+    price: 0.9988007796361366,
+    updated_at: ~T[08:27:05.278419]
+  },
+  %{
+    tokens: %{
+      token_x: "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8394294,
+    bin_step: 10,
+    pair_name: "Bitcoin-USD Coin",
+    price: 293.8762892477669,
+    updated_at: ~T[08:27:05.022466]
+  },
+  %{
+    tokens: %{
+      token_x: "0x5947bb275c521040051d82396192181b413227a3",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8387842,
+    bin_step: 10,
+    pair_name: "Chainlink Token-Wrapped AVAX",
+    price: 0.46504678984150516,
+    updated_at: ~T[08:27:04.894144]
+  },
+  %{
+    tokens: %{
+      token_x: "0xc7198437980c041c805a1edcba50c1ce5db95118",
+      token_y: "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7"
+    },
+    active_bin: 8388605,
+    bin_step: 1,
+    pair_name: "Tether USD-TetherToken",
+    price: 0.9997000599900016,
+    updated_at: ~T[08:27:05.172019]
+  },
+  %{
+    tokens: %{
+      token_x: "0x0f577433bf59560ef2a79c124e9ff99fca258948",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8333332,
+    bin_step: 5,
+    pair_name: "Moremoney USD-USD Coin",
+    price: 9.999283161976726e-13,
+    updated_at: ~T[08:27:05.148573]
+  },
+  %{
+    tokens: %{
+      token_x: "0x0f577433bf59560ef2a79c124e9ff99fca258948",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8387596,
+    bin_step: 25,
+    pair_name: "Moremoney USD-Wrapped AVAX",
+    price: 0.07991092029884898,
+    updated_at: ~T[08:27:04.816398]
+  },
+  %{
+    tokens: %{
+      token_x: "0x78dd359ccb9546a36fa2df88235a9fffa4bf6b5f",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8389765,
+    bin_step: 100,
+    pair_name: "Good Bridging Good Subnets-Wrapped AVAX",
+    price: 99960.74092291859,
+    updated_at: ~T[08:27:04.978457]
+  },
+  %{
+    tokens: %{
+      token_x: "0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8388188,
+    bin_step: 100,
+    pair_name: "Avalaunch-Wrapped AVAX",
+    price: 0.015311685891949502,
+    updated_at: ~T[08:27:05.243735]
+  },
+  %{
+    tokens: %{
+      token_x: "0x846d50248baf8b7ceaa9d9b53bfd12d7d7fbb25a",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8387885,
+    bin_step: 100,
+    pair_name: "VersoToken-Wrapped AVAX",
+    price: 7.510117903116164e-4,
+    updated_at: ~T[08:27:04.908995]
+  },
+  %{
+    tokens: %{
+      token_x: "0xc0c5aa69dbe4d6dddfbc89c0957686ec60f24389",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8386473,
+    bin_step: 100,
+    pair_name: "XEN Crypto-Wrapped AVAX",
+    price: 5.941101526931232e-10,
+    updated_at: ~T[08:27:04.885466]
+  },
+  %{
+    tokens: %{
+      token_x: "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8388236,
+    bin_step: 100,
+    pair_name: "JoeToken-Wrapped AVAX",
+    price: 0.024685899288283682,
+    updated_at: ~T[08:27:04.958593]
+  },
+  %{
+    tokens: %{
+      token_x: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8386096,
+    bin_step: 100,
+    pair_name: "Wrapped AVAX-USD Coin",
+    price: 1.3954332210366443e-11,
+    updated_at: ~T[08:27:04.953356]
+  },
+  %{
+    tokens: %{
+      token_x: "0xb279f8dd152b99ec1d84a489d32c35bc0c7f5674",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8385717,
+    bin_step: 100,
+    pair_name: "STEAK-USD Coin",
+    price: 3.2129827535616685e-13,
+    updated_at: ~T[08:27:04.914927]
+  },
+  %{
+    tokens: %{
+      token_x: "0xaec8318a9a59baeb39861d10ff6c7f7bf1f96c57",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8385840,
+    bin_step: 100,
+    pair_name: "agEUR-USD Coin",
+    price: 1.092540058745441e-12,
+    updated_at: ~T[08:27:05.148611]
+  },
+  %{
+    tokens: %{
+      token_x: "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8389076,
+    bin_step: 100,
+    pair_name: "Wrapped Ether-Wrapped AVAX",
+    price: 105.29383172170041,
+    updated_at: ~T[08:27:05.258597]
+  },
+  %{
+    tokens: %{
+      token_x: "0x62edc0692bd897d2295872a9ffcac5425011c661",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8388741,
+    bin_step: 100,
+    pair_name: "GMX-Wrapped AVAX",
+    price: 3.756148147544384,
+    updated_at: ~T[08:27:05.052802]
+  },
+  %{
+    tokens: %{
+      token_x: "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590",
+      token_y: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    active_bin: 8385810,
+    bin_step: 100,
+    pair_name: "StargateToken-USD Coin",
+    price: 8.105805081837337e-13,
+    updated_at: ~T[08:27:04.818762]
+  },
+  %{
+    tokens: %{
+      token_x: "0x7761e2338b35bceb6bda6ce477ef012bde7ae611",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    active_bin: 8389132,
+    bin_step: 100,
+    pair_name: "chikn egg-Wrapped AVAX",
+    price: 183.82300532166516,
+    updated_at: ~T[08:27:04.952893]
+  }
+]
