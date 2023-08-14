@@ -1,12 +1,11 @@
 defmodule JoePrices.Core.V21.Pair do
-  @enforce_keys [:name, :token_x_address, :token_y_address, :bin_step, :active_bin, :price]
+  @enforce_keys [:name, :token_x_address, :token_y_address, :bin_step, :active_bin]
 
   defstruct name: "",
     token_x_address: "",
     token_y_address: "",
     bin_step: 0,
-    active_bin: 0,
-    price: 0
+    active_bin: 0
 
   @type t() :: %__MODULE__{
     name: String.t(),

@@ -58,14 +58,14 @@ defmodule JoePricesV21 do
   end
 
   defp maybe_update_cache?({:ok, nil} = resp, request, network) do
-    # JoePrices.Contracts.V21.LbFactory.fetch_pairs_for_token
     %{:token_x_address => tx, :token_y_address => ty, :bin_step => bin_step} = request
 
     case JoePrices.Contracts.V21.LbFactory.fetch_pairs_for_tokens(network, tx, ty, bin_step) do
       {:ok, pairs} ->
         info = fetch_pairs_info(pairs, network: network)
+        JoePrices.Boundary.V21.Cache.PriceCache.update_prices(network, info)
         info
-      _ -> :ddddd
+      _ -> {:error, "LBFactory contract call error (fetch_pairs_for_tokens)"}
     end
   end
 
@@ -79,18 +79,17 @@ defmodule JoePricesV21 do
         case pair do
           {_, 0, _, _} -> nil
           {_, addr, _, _} ->
-            IO.puts("pricessing")
             [token_x, token_y] = JoePrices.Contracts.V21.LbPair.fetch_tokens(network, addr)
 
             {:ok, bin_step} = JoePrices.Contracts.V21.LbPair.fetch_bin_step(network, addr)
             {:ok, [active_bin]} = JoePrices.Contracts.V21.LbPair.fetch_active_bin_id(network, addr)
 
-            %{
-              :token_x => token_x,
-              :token_y => token_y,
-              # :pair_name => "#{token_x_name}-#{token_y_name}",
-              :bin_step => bin_step,
-              :active_bin => active_bin,
+            %JoePrices.Core.V21.Pair{
+              name: "",
+              token_x_address: token_x,
+              token_y_address: token_y,
+              bin_step: bin_step,
+              active_bin: active_bin,
             }
         end
       end)

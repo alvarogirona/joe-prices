@@ -30,14 +30,15 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   #   end)
   # end
 
+  def update_prices(network, []) do end
   def update_prices(network, [price]), do: update_price(network, price)
   def update_prices(network, [price | rest]) do
     update_price(network, price)
     update_prices(network, rest)
   end
 
-  defp update_price(network, {token_x_address, token_y_address} = pair = %JoePrices.Core.V21.Pair{}) do
-    key = cache_key_for_tokens({token_x_address, token_y_address})
+  defp update_price(network, pair = %JoePrices.Core.V21.Pair{}) do
+    key = cache_key_for_tokens(pair)
     table = get_table_name(network)
     cache_entry = PriceCacheEntry.new(pair)
 
@@ -49,7 +50,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
     |> String.to_atom
   end
 
-  defp cache_key_for_tokens(%{:token_x_address => tx, :token_y_address => ty, :bin_step => bin_step} = tokens) do
+  def cache_key_for_tokens(%{:token_x_address => tx, :token_y_address => ty, :bin_step => bin_step} = tokens) do
     joined_tokens = [tx, ty]
       |> Enum.sort()
       |> Enum.join("-")
