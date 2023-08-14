@@ -13,6 +13,11 @@ import Config
 config :joe_prices,
   ecto_repos: [JoePrices.Repo]
 
+config :joe_prices,
+  avax_rpc: System.get_env("AVAX_RPC_URL") || raise("missing avax rpc"),
+  arbitrum_rpc: System.get_env("ARB_RPC_URL") || raise("missing arb rpc"),
+  bsc_rpc: System.get_env("BSC_RPC_URL") || raise ("missing bsc rpc")
+
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
