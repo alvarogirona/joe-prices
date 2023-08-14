@@ -1,7 +1,5 @@
 defmodule JoePricesV21 do
   alias JoePrices.Core.Network
-  alias JoePrices.Utils.Parallel
-  alias JoePrices.Boundary.V21.Cache.PriceCacheEntry
   alias JoePrices.Boundary.V21.Cache.PriceCache
   alias JoePrices.Boundary.V21.PriceRequest
 
@@ -57,7 +55,7 @@ defmodule JoePricesV21 do
       |> maybe_update_cache?(request, @default_network)
   end
 
-  defp maybe_update_cache?({:ok, nil} = resp, request, network) do
+  defp maybe_update_cache?({:ok, nil} = _resp, request, network) do
     %{:token_x_address => tx, :token_y_address => ty, :bin_step => bin_step} = request
 
     case JoePrices.Contracts.V21.LbFactory.fetch_pairs_for_tokens(network, tx, ty, bin_step) do
@@ -69,7 +67,7 @@ defmodule JoePricesV21 do
     end
   end
 
-  defp maybe_update_cache?({:ok, value} = resp, request, network) do
+  defp maybe_update_cache?({:ok, value} = _resp, _request, _network) do
     value
   end
 

@@ -1,5 +1,4 @@
 defmodule JoePrices.Boundary.V21.Cache.PriceCache do
-  @ttl 60
   @ets_table_suffix :prices_cache_v21
 
   @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
@@ -8,7 +7,6 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   Module for managin Cachex access for prices.
   """
   alias JoePrices.Boundary.V21.Cache.PriceCacheEntry
-  alias JoePrices.Boundary.V21.PriceRequest
 
   def get_price(network, request) do
     key = cache_key_for_tokens(request)
@@ -30,7 +28,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   #   end)
   # end
 
-  def update_prices(network, []) do end
+  def update_prices(_network, []) do end
   def update_prices(network, [price]), do: update_price(network, price)
   def update_prices(network, [price | rest]) do
     update_price(network, price)
@@ -50,7 +48,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
     |> String.to_atom
   end
 
-  def cache_key_for_tokens(%{:token_x_address => tx, :token_y_address => ty, :bin_step => bin_step} = tokens) do
+  def cache_key_for_tokens(%{:token_x_address => tx, :token_y_address => ty, :bin_step => bin_step} = _tokens) do
     joined_tokens = [tx, ty]
       |> Enum.sort()
       |> Enum.join("-")

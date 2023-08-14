@@ -6,17 +6,6 @@ defmodule JoePrices.Contracts.V21.LbFactory do
 
   @type network_name() :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 
-  @doc """
-  ## Example
-
-    iex> JoePrices.Contracts.V21.LbFactory.fetch_pairs(:arbitrum_mainnet)
-    [
-      ok: ["0x500173f418137090dad96421811147b63b448a0f"],
-      ok: ["0xdf34e7548af638cc37b8923ef1139ea98644735a"],
-      ok: ["0xd8053763b1179bd412a5a5a42fa2d15851518cfb"],
-      ...
-    ]
-  """
   use Ethers.Contract,
     abi_file: "priv/abis/v21/LBFactory.json",
     default_address: "0x8e42f2F4101563bF679975178e880FD87d3eFd4e"
@@ -25,7 +14,13 @@ defmodule JoePrices.Contracts.V21.LbFactory do
   Calls contract to fetch all available pairs.
 
   ## Example
-    iex> JoePrices.Contracts.V21.LbFactory.fetch_pairs(:avalanche_mainnet)
+    iex> JoePrices.Contracts.V21.LbFactory.fetch_pairs(:arbitrum_mainnet)
+    [
+      ok: ["0x500173f418137090dad96421811147b63b448a0f"],
+      ok: ["0xdf34e7548af638cc37b8923ef1139ea98644735a"],
+      ok: ["0xd8053763b1179bd412a5a5a42fa2d15851518cfb"],
+      ...
+    ]
   """
   def fetch_pairs(network) do
     opts = Network.opts_for_call(network, contract_for_network(network))

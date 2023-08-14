@@ -18,7 +18,7 @@ defmodule Mix.Tasks.LoadAllPairs do
   alias JoePrices.Utils.Parallel
 
   @impl Mix.Task
-  def run([network_arg] = args) do
+  def run([network_arg] = _args) do
     Mix.Task.run("app.start")
 
     network = Network.network_from_string(network_arg)

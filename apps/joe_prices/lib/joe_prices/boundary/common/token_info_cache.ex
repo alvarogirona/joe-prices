@@ -29,22 +29,22 @@ defmodule JoePrices.Boundary.Common.TokenInfoCache do
     )
   end
 
-  def set_tokens(tokens, [network: network] = opts) do
-    table_name = get_table_name(network)
-  end
+  # def set_tokens(tokens, [network: network] = _opts) do
+  #   table_name = get_table_name(network)
+  # end
 
   @doc """
   ## Example
    iex> token = %JoePrices.Core.V21.Token{name: "name", address: "asdf"}
    iex> JoePrices.Boundary.Common.TokenInfoCache.set_token(token, network: :avalanche_mainnet)
   """
-  def set_token(token = %JoePrices.Core.V21.Token{}, [network: network] = opts) do
+  def set_token(token = %JoePrices.Core.V21.Token{}, [network: network] = _opts) do
     table_name = get_table_name(network)
 
     :ets.insert(table_name, {1, token})
   end
 
-  def lookup(token_address) do
+  def lookup(_token_address) do
 
   end
 
