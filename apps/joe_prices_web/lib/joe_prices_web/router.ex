@@ -14,10 +14,20 @@ defmodule JoePricesWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", JoePricesWeb do
-    pipe_through :browser
+  scope "/api", JoePricesWeb do
+    scope "/v1" do
 
-    get "/", PageController, :home
+    end
+
+    scope "/v2" do
+
+    end
+
+    scope "/v2_1" do
+      scope "/prices" do
+        get "/:token_x/:token_y/:bin_step", Api.V21.PriceController, :index
+      end
+    end
   end
 
   # Other scopes may use custom stacks.
