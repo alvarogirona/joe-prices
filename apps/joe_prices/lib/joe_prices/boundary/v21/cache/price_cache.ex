@@ -31,13 +31,9 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   #   end)
   # end
 
-  @spec update_prices(any, [JoePrices.Core.V21.Pair.t()]) ::
-          nil | {:error, boolean} | {:ok, boolean}
-  def update_prices(_network, []) do
-  end
-
+  @spec update_prices(any, [JoePrices.Core.V21.Pair.t()]) :: nil | {:error, boolean} | {:ok, boolean}
+  def update_prices(_network, []) do end
   def update_prices(network, [price]), do: update_price(network, price)
-
   def update_prices(network, [price | rest]) do
     update_price(network, price)
     update_prices(network, rest)
@@ -54,7 +50,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   @spec get_table_name(atom) :: atom
   def get_table_name(network) when is_atom(network) do
     (Atom.to_string(network) <> Atom.to_string(@ets_table_suffix))
-    |> String.to_atom()
+      |> String.to_atom
   end
 
   @spec cache_key_for_tokens(%{
@@ -64,8 +60,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
           optional(any) => any
         }) :: nonempty_binary
   def cache_key_for_tokens(%{:token_x => tx, :token_y => ty, :bin_step => bin_step} = _tokens) do
-    joined_tokens =
-      [tx, ty]
+    joined_tokens = [tx, ty]
       |> Enum.sort()
       |> Enum.join("-")
 
