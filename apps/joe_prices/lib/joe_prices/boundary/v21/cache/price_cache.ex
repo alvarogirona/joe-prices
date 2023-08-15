@@ -7,8 +7,11 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   Module for managin Cachex access for prices.
   """
   alias JoePrices.Boundary.V21.Cache.PriceCacheEntry
+  alias JoePrices.Boundary.V21.PriceRequest
+  alias JoePrices.Core.V21.Pair
 
-  def get_price(network, request) do
+  @spec get_price(atom(), PriceRequest.t()) :: {:ok, term()}
+  def get_price(network, request = %PriceRequest{}) do
     key = cache_key_for_tokens(request)
     table = get_table_name(network)
 
@@ -28,6 +31,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   #   end)
   # end
 
+  @spec update_price(atom(), list(Pair.t())) :: any
   def update_prices(_network, []) do end
   def update_prices(network, [price]), do: update_price(network, price)
   def update_prices(network, [price | rest]) do
@@ -35,7 +39,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
     update_prices(network, rest)
   end
 
-  defp update_price(network, pair = %JoePrices.Core.V21.Pair{}) do
+  defp update_price(network, pair = %Pair{}) do
     key = cache_key_for_tokens(pair)
     table = get_table_name(network)
     cache_entry = PriceCacheEntry.new(pair)
@@ -45,7 +49,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
 
   def get_table_name(network) when is_atom(network) do
     (Atom.to_string(network) <> Atom.to_string(@ets_table_suffix))
-    |> String.to_atom
+      |> String.to_atom
   end
 
   def cache_key_for_tokens(%{:token_x_address => tx, :token_y_address => ty, :bin_step => bin_step} = _tokens) do
