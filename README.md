@@ -32,6 +32,10 @@ MIX_ENV=prod mix phx.server
 
 ## Available endpoints
 
+```
+GET  /api/v2_1/prices/:token_x/:token_y/:bin_step  JoePricesWeb.Api.V21.PriceController :index
+```
+
 ## Generating a release
 
 An specific release for you OS and architecture can be created by running:
