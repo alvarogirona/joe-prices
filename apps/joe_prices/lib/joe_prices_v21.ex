@@ -74,7 +74,7 @@ defmodule JoePricesV21 do
     case JoePrices.Contracts.V21.LbFactory.fetch_pairs_for_tokens(network, tx, ty, bin_step) do
       {:ok, pairs} ->
         [info] = fetch_pairs_info(pairs, network: network)
-        JoePrices.Boundary.V21.Cache.PriceCache.update_prices(network, [info])
+        PriceCache.update_prices(network, [info])
         info
       _ -> {:error, "LBFactory contract call error (fetch_pairs_for_tokens)"}
     end
