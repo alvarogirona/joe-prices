@@ -28,7 +28,8 @@ defmodule JoePrices.Umbrella.MixProject do
       # Required to run "mix format" on ~H/.heex files from the umbrella root
       {:phoenix_live_view, ">= 0.0.0"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.30.5", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.30.5", only: :dev, runtime: false},
+      {:ecto_sql, "~> 3.10.1"}
     ]
   end
 
