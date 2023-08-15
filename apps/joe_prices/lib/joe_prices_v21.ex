@@ -4,6 +4,7 @@ defmodule JoePricesV21 do
   alias JoePrices.Boundary.V21.PriceRequest
 
   @default_network Network.avalanche_mainnet()
+  @bad_resp_addr "0x0000000000000000000000000000000000000000"
 
   @doc """
   Get prices for the default network.
@@ -15,7 +16,7 @@ defmodule JoePricesV21 do
   @doc """
   Get prices for a given network and tokens.
   """
-  @spec get_prices(atom, list(%PriceRequest{})) :: any
+  @spec get_prices(atom, list(PriceRequest.t())) :: any
   def get_prices(network, pairs) do
     pairs
       |> Enum.map(fn request ->
@@ -25,9 +26,9 @@ defmodule JoePricesV21 do
   end
 
 
-  @spec get_price(atom(), %PriceRequest{}) :: any
+  @spec get_price(PriceRequest.t()) :: any
   def get_price(request = %PriceRequest{}) do
-    PriceCache.get_price(@default_network, request)
+    __MODULE__.get_price(@default_network, request)
   end
 
   @doc """
@@ -49,7 +50,7 @@ defmodule JoePricesV21 do
   JoePricesV21.get_price(:avalanche_mainnet, request)
   ```
   """
-  @spec get_price(atom(), %PriceRequest{}) :: any
+  @spec get_price(atom(), PriceRequest.t()) :: any
   def get_price(network, request = %PriceRequest{}) do
     JoePrices.Boundary.V21.Cache.PriceCache.get_price(network, request)
       |> maybe_update_cache?(request, @default_network)
@@ -75,7 +76,7 @@ defmodule JoePricesV21 do
     pairs
       |> Enum.map(fn  pair ->
         case pair do
-          {_, 0, _, _} -> nil
+          {_, @bad_resp_addr, _, _} -> nil
           {_, addr, _, _} ->
             [token_x, token_y] = JoePrices.Contracts.V21.LbPair.fetch_tokens(network, addr)
 

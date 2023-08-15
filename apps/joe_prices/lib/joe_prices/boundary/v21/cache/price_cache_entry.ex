@@ -3,7 +3,6 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCacheEntry do
     token_y: "",
     bin_step: 0,
     active_bin_id: 0,
-    updated_at: 0
 
   def new(pair = %JoePrices.Core.V21.Pair{}) do
     %__MODULE__{
@@ -11,7 +10,6 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCacheEntry do
       token_y: pair.token_y_address,
       bin_step: pair.bin_step,
       active_bin_id: pair.active_bin,
-      updated_at: Time.utc_now(),
     }
   end
 end
