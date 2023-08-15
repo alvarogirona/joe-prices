@@ -26,6 +26,7 @@ defmodule JoePricesWeb.Router do
     scope "/v2_1" do
       scope "/prices" do
         get "/:token_x/:token_y/:bin_step", Api.V21.PriceController, :index
+        post "/v2_1/batch-prices", Api.V21.PriceController, :batch
       end
     end
   end

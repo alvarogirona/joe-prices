@@ -22,4 +22,8 @@ defmodule JoePricesWeb.Api.V21.PriceController do
       price: JoePrices.Core.V21.Bin.get_price_from_id(price.active_bin, price.bin_step)
     })
   end
+
+  def batch(conn, opts) do
+    text(conn, "batch")
+  end
 end
