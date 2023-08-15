@@ -14,7 +14,7 @@ defmodule JoePricesWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", JoePricesWeb do
+  scope "/", JoePricesWeb do
     scope "/v1" do
 
     end
@@ -24,9 +24,9 @@ defmodule JoePricesWeb.Router do
     end
 
     scope "/v2_1" do
+      post "/batch-prices", Api.V21.PriceController, :batch
       scope "/prices" do
         get "/:token_x/:token_y/:bin_step", Api.V21.PriceController, :index
-        post "/v2_1/batch-prices", Api.V21.PriceController, :batch
       end
     end
   end
