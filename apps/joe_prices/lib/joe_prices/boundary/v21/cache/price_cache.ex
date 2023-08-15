@@ -52,7 +52,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
       |> String.to_atom
   end
 
-  def cache_key_for_tokens(%{:token_x_address => tx, :token_y_address => ty, :bin_step => bin_step} = _tokens) do
+  def cache_key_for_tokens(%{:token_x => tx, :token_y => ty, :bin_step => bin_step} = _tokens) do
     joined_tokens = [tx, ty]
       |> Enum.sort()
       |> Enum.join("-")
