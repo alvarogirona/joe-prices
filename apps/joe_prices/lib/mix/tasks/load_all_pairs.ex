@@ -23,7 +23,7 @@ defmodule Mix.Tasks.LoadAllPairs do
 
     network = Network.network_from_string(network_arg)
 
-    pairs = load_pairs(network)
+    load_pairs(network)
   end
 
   @doc """
