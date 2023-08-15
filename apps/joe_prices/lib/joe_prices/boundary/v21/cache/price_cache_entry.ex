@@ -4,16 +4,16 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCacheEntry do
   """
 
   defstruct token_x: "",
-    token_y: "",
-    bin_step: 0,
-    active_bin: 0
+            token_y: "",
+            bin_step: 0,
+            active_bin: 0
 
   @type t :: %__MODULE__{
-    token_x: String.t(),
-    token_y: String.t(),
-    bin_step: integer(),
-    active_bin: integer()
-  }
+          token_x: String.t(),
+          token_y: String.t(),
+          bin_step: integer(),
+          active_bin: integer()
+        }
 
   @doc """
   Creates a new cache entry from a `V21.Pair`

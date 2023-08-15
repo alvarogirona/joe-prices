@@ -13,6 +13,6 @@ defmodule JoePrices.Core.V21.Bin do
   """
   @spec get_price_from_id(integer(), integer()) :: float
   def get_price_from_id(bin_id, bin_step) do
-    (1 + bin_step / 10_000) ** (bin_id - 8388608)
+    (1 + bin_step / 10_000) ** (bin_id - 8_388_608)
   end
 end

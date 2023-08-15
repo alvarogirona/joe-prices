@@ -45,13 +45,13 @@ defmodule JoePrices.Contracts.V21.LbPair do
     ]
   """
   @spec fetch_tokens(:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet, binary) ::
-    [String.t() | String.t()]
-    | {:error, any}
+          [String.t() | String.t()]
+          | {:error, any}
   def fetch_tokens(network, contract_address) do
     opts = Network.opts_for_call(network, contract_address)
 
     with {:ok, [token_x]} <- JoePrices.Contracts.V21.LbPair.get_token_x(opts),
-     {:ok, [token_y]} <- JoePrices.Contracts.V21.LbPair.get_token_y(opts) do
+         {:ok, [token_y]} <- JoePrices.Contracts.V21.LbPair.get_token_y(opts) do
       [token_x, token_y]
     end
   end

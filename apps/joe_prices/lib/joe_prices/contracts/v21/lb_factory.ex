@@ -28,20 +28,26 @@ defmodule JoePrices.Contracts.V21.LbFactory do
 
     [pairs_count] = __MODULE__.get_number_of_lb_pairs!(opts)
 
-    responses = 0..pairs_count - 1
-      |> Enum.to_list
+    responses =
+      0..(pairs_count - 1)
+      |> Enum.to_list()
       |> pmap(&__MODULE__.get_lb_pair_at_index(&1, opts))
 
     responses
-      |> Enum.filter(&match?({:ok, _}, &1))
-      |> Enum.map(fn {:ok, [result]} -> result end)
+    |> Enum.filter(&match?({:ok, _}, &1))
+    |> Enum.map(fn {:ok, [result]} -> result end)
   end
 
   @spec fetch_pairs_for_tokens(atom(), String.t(), String.t(), integer()) :: any
   def fetch_pairs_for_tokens(network, token_x, token_y, bin_step) do
     opts = Network.opts_for_call(network, contract_for_network(network))
 
-    case JoePrices.Contracts.V21.LbFactory.get_lb_pair_information(token_x, token_y, bin_step, opts) do
+    case JoePrices.Contracts.V21.LbFactory.get_lb_pair_information(
+           token_x,
+           token_y,
+           bin_step,
+           opts
+         ) do
       {:ok, pairs} -> {:ok, pairs}
       {:error, _} -> {:error, "Error getting pairs for tokens"}
     end

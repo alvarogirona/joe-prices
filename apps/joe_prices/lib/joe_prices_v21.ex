@@ -15,6 +15,7 @@ defmodule JoePricesV21 do
   @doc """
   Get prices for the default network.
   """
+  @spec get_prices([PriceRequest.t()]) :: list
   def get_prices(pairs) do
     get_prices(@default_network, pairs)
   end
@@ -25,12 +26,11 @@ defmodule JoePricesV21 do
   @spec get_prices(atom, list(PriceRequest.t())) :: any
   def get_prices(network, pairs) do
     pairs
-      |> Enum.map(fn request ->
-        get_price(network, request)
-          |> maybe_update_cache?(request, network)
-      end)
+    |> Enum.map(fn request ->
+      get_price(network, request)
+      |> maybe_update_cache?(request, network)
+    end)
   end
-
 
   @doc """
   Gets the price for a single pair and the default network.
@@ -65,7 +65,7 @@ defmodule JoePricesV21 do
   @spec get_price(atom(), PriceRequest.t()) :: PriceCacheEntry.t()
   def get_price(network, request = %PriceRequest{}) do
     JoePrices.Boundary.V21.Cache.PriceCache.get_price(network, request)
-      |> maybe_update_cache?(request, @default_network)
+    |> maybe_update_cache?(request, @default_network)
   end
 
   defp maybe_update_cache?({:ok, nil} = _resp, request = %PriceRequest{}, network) do
@@ -76,7 +76,9 @@ defmodule JoePricesV21 do
         [info] = fetch_pairs_info(pairs, network: network)
         PriceCache.update_prices(network, [info])
         info
-      _ -> {:error, "LBFactory contract call error (fetch_pairs_for_tokens)"}
+
+      _ ->
+        {:error, "LBFactory contract call error (fetch_pairs_for_tokens)"}
     end
   end
 
@@ -86,23 +88,25 @@ defmodule JoePricesV21 do
 
   defp fetch_pairs_info(pairs, network: network) do
     pairs
-      |> Enum.map(fn  pair ->
-        case pair do
-          {_, @bad_resp_addr, _, _} -> nil
-          {_, addr, _, _} ->
-            [token_x, token_y] = JoePrices.Contracts.V21.LbPair.fetch_tokens(network, addr)
+    |> Enum.map(fn pair ->
+      case pair do
+        {_, @bad_resp_addr, _, _} ->
+          nil
 
-            {:ok, bin_step} = JoePrices.Contracts.V21.LbPair.fetch_bin_step(network, addr)
-            {:ok, [active_bin]} = JoePrices.Contracts.V21.LbPair.fetch_active_bin_id(network, addr)
+        {_, addr, _, _} ->
+          [token_x, token_y] = JoePrices.Contracts.V21.LbPair.fetch_tokens(network, addr)
 
-            %Pair{
-              name: "",
-              token_x: token_x,
-              token_y: token_y,
-              bin_step: bin_step,
-              active_bin: active_bin,
-            }
-        end
-      end)
+          {:ok, bin_step} = JoePrices.Contracts.V21.LbPair.fetch_bin_step(network, addr)
+          {:ok, [active_bin]} = JoePrices.Contracts.V21.LbPair.fetch_active_bin_id(network, addr)
+
+          %Pair{
+            name: "",
+            token_x: token_x,
+            token_y: token_y,
+            bin_step: bin_step,
+            active_bin: active_bin
+          }
+      end
+    end)
   end
 end
