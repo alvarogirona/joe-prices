@@ -14,9 +14,9 @@ config :joe_prices,
   ecto_repos: [JoePrices.Repo]
 
 config :joe_prices,
-  avax_rpc: System.get_env("AVAX_RPC_URL") || raise("missing avax rpc"),
-  arbitrum_rpc: System.get_env("ARB_RPC_URL") || raise("missing arb rpc"),
-  bsc_rpc: System.get_env("BSC_RPC_URL") || raise ("missing bsc rpc")
+  avax_rpc: System.get_env("AVAX_RPC_URL") || "https://rpc.ankr.com/avalanche",
+  arbitrum_rpc: System.get_env("ARB_RPC_URL") || "https://rpc.ankr.com/arbitrum",
+  bsc_rpc: System.get_env("BSC_RPC_URL") || "https://rpc.ankr.com/bsc"
 
 config :joe_prices_web,
   ecto_repos: [JoePrices.Repo],
