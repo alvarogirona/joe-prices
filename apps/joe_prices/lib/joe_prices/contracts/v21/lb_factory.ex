@@ -22,6 +22,7 @@ defmodule JoePrices.Contracts.V21.LbFactory do
       ...
     ]
   """
+  @spec fetch_pairs(network_name()) :: list
   def fetch_pairs(network) do
     opts = Network.opts_for_call(network, contract_for_network(network))
 
