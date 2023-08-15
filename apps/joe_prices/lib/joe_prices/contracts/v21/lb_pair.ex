@@ -28,10 +28,7 @@ defmodule JoePrices.Contracts.V21.LbPair do
   @spec fetch_bin_step(network_name, String) ::
           non_neg_integer
           | {:error, any}
-          | {:ok,
-             <<_::528>>
-             | [non_neg_integer]
-             | %{data: binary, selector: ABI.FunctionSelector.t(), to: <<_::160, _::_*176>>}}
+          | {:ok, any}
   def fetch_bin_step(network, contract_address) do
     opts = Network.opts_for_call(network, contract_address)
 
