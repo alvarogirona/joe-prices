@@ -4,6 +4,7 @@ defmodule JoePricesV21 do
   alias JoePrices.Boundary.V21.PriceRequest
   alias JoePrices.Boundary.V21.Cache.PriceCacheEntry
   alias JoePrices.Core.V21.Pair
+  alias JoePrices.Utils.Parallel
 
   @moduledoc """
   Fecade for interacting with v2.1 pairs
@@ -26,7 +27,7 @@ defmodule JoePricesV21 do
   @spec get_prices(atom, list(PriceRequest.t())) :: any
   def get_prices(network, pairs) do
     pairs
-    |> Enum.map(fn request ->
+    |> Parallel.pmap(fn request ->
       get_price(network, request)
     end)
     |> Enum.filter(&match?({:ok, _}, &1))
