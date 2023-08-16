@@ -28,7 +28,6 @@ defmodule JoePricesV21 do
     pairs
     |> Enum.map(fn request ->
       get_price(network, request)
-      |> maybe_update_cache?(request, network)
     end)
   end
 
