@@ -15,7 +15,7 @@ defmodule JoePricesV21 do
   @doc """
   Get prices for the default network.
   """
-  @spec get_prices([PriceRequest.t()]) :: list
+  @spec get_prices([PriceRequest.t()]) :: [PriceCacheEntry.t()]
   def get_prices(pairs) do
     get_prices(@default_network, pairs)
   end
@@ -29,6 +29,8 @@ defmodule JoePricesV21 do
     |> Enum.map(fn request ->
       get_price(network, request)
     end)
+    |> Enum.filter(&match?({:ok, _}, &1))
+    |> Enum.map(fn {:ok, info} -> info end)
   end
 
   @doc """
@@ -46,19 +48,11 @@ defmodule JoePricesV21 do
   Gets the price for a pair of tokens on v2.1 and bin step
 
   ## Example
-  ```
-  iex> alias JoePrices.Boundary.V21.PriceRequest
-  iex> avax_address = "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab"
-  iex> usdc_address = "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
-  iex> bin_step = 15
-  iex> request = %PriceRequest{token_x_address: avax_address, token_y_address: usdc_address, bin_step: bin_step}
-  iex> JoePricesV21.get_price(:avalanche_mainnet, request)
-  ```
 
-  ```
-  alias JoePrices.Boundary.V21.PriceRequest
-  request = %PriceRequest{token_x_address: "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab", token_y_address: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e", bin_step: 15}
-  JoePricesV21.get_price(:avalanche_mainnet, request)
+  ```elixir
+  iex> alias JoePrices.Boundary.V21.PriceRequest
+  iex> request = %PriceRequest{token_x_address: "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab", token_y_address: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e", bin_step: 15}
+  iex> JoePricesV21.get_price(:avalanche_mainnet, request)
   ```
   """
   @spec get_price(atom(), PriceRequest.t()) :: PriceCacheEntry.t()
@@ -74,8 +68,7 @@ defmodule JoePricesV21 do
       {:ok, pairs} ->
         [info] = fetch_pairs_info(pairs, network: network)
         PriceCache.update_prices(network, [info])
-        info
-
+        {:ok, info}
       _ ->
         {:error, "LBFactory contract call error (fetch_pairs_for_tokens)"}
     end
