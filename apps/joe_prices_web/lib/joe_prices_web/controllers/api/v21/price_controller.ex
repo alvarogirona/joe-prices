@@ -23,7 +23,18 @@ defmodule JoePricesWeb.Api.V21.PriceController do
     })
   end
 
-  def batch(conn, opts) do
+  def batch(conn, %{"tokens" => tokens_list} = opts) do
+    parsed_tokens = tokens_list
+    |> Enum.map(&parse_token_request/1)
+
     text(conn, "batch")
+  end
+
+  defp parse_token_request(%{"token_x" => tx, "token_y" => ty, "bin_step" => bs} = token_request) do
+    %PriceRequest{
+      token_x: tx,
+      token_y: ty,
+      bin_step: bs
+    }
   end
 end
