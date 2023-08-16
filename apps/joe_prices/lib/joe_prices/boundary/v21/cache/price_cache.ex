@@ -39,6 +39,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
     update_prices(network, rest)
   end
 
+  @spec update_price(atom, Pair.t()) :: any
   defp update_price(network, pair = %Pair{}) do
     key = cache_key_for_tokens(pair)
     table = get_table_name(network)
