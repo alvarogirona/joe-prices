@@ -11,11 +11,21 @@ export ARB_RPC_URL=https://rpc.ankr.com/arbitrum
 export BSC_RPC_URL=https://rpc.ankr.com/bsc
 ```
 
+### Default chain
+
+The project supports Avalanche, BSC and Arbitrum chains, but Avalanche is set as the default network.
+
+Default network can be changed from the `JoePricesV21`, `JoePricesV2` and `JoePricesV1` modules located at `./apps/joe_prices/lib/joe_prices_v21.ex`:
+
+```elixir
+@default_network Network.avalanche_mainnet()
+```
+
 ## Configuring cache TTL
 
 Cache TTL is set for all caches when they are created on application start. 
 
-App start can be configured in `/apps/joe_prices/lib/joe_prices/application.ex` and the TTL is set as `@cache_ttl_seconds 5`.
+App start can be configured in `./apps/joe_prices/lib/joe_prices/application.ex` and the TTL is set as `@cache_ttl_seconds 5`.
 
 ## Requirements
 
