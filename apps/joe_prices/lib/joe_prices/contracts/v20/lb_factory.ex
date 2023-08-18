@@ -6,9 +6,13 @@ defmodule JoePrices.Contracts.V20.LbFactory do
   alias JoePrices.Core.Network
 
   @doc """
+  Fetches all pairs for the given tokens and bin step for v2.0.
+
   ## Example
 
   iex> JoePrices.Contracts.V20.LbFactory.fetch_pairs_for_tokens(:avalanche_mainnet, "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7", "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e", 1)
+
+    {:ok, [{1, "0x1d7a1a79e2b4ef88d2323f3845246d24a3c20f1d", true, false}]}
   """
   def fetch_pairs_for_tokens(network, token_x, token_y, bin_step) do
     opts = Network.opts_for_call(network, contract_for_network(network))
