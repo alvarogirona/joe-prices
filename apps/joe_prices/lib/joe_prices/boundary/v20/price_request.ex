@@ -1,4 +1,4 @@
-defmodule JoePrices.Boundary.V2.Cache.PriceRequest do
+defmodule JoePrices.Boundary.V20.PriceRequest do
   @moduledoc """
   Struct definition for a v2.0 price request.
   """
