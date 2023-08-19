@@ -7,7 +7,7 @@ defmodule JoePrices.Application do
 
   import Cachex.Spec
 
-  @cache_ttl_seconds 30
+  @cache_ttl_seconds 5
 
   @impl true
   def start(_type, _args) do
@@ -19,12 +19,16 @@ defmodule JoePrices.Application do
       {Finch,
        name: JoePrices.Finch,
        pools: %{
-         :default => [size: 10, count: 20, protocol: :http2],
+         :default => [protocol: :http2],
        }
       },
       {
+        DynamicSupervisor,
+        [name: JoePrices.Supervisor.V21.PairRepository, strategy: :one_for_one]
+      },
+      {
         Registry,
-        [name: JoePrices.Registry.Common.TokenInfoCache, keys: :unique]
+        [name: JoePrices.Registry.V21.PairRepository, keys: :unique]
       }
       # Start a worker by calling: JoePrices.Worker.start_link(arg)
       # {JoePrices.Worker, arg}
@@ -34,12 +38,8 @@ defmodule JoePrices.Application do
       JoePrices.Core.Network.all_networks()
       |> Enum.map(&v21_cache_child_from_network(&1))
 
-    token_caches =
-      JoePrices.Core.Network.all_networks()
-      |> Enum.map(&token_cache_child_from_network(&1))
-
     opts = [strategy: :one_for_one, name: JoePrices.Supervisor]
-    Supervisor.start_link(children ++ v21_caches ++ token_caches, opts)
+    Supervisor.start_link(children ++ v21_caches, opts)
   end
 
   defp v21_cache_child_from_network(network) do
@@ -55,12 +55,5 @@ defmodule JoePrices.Application do
       },
       id: make_ref()
     )
-  end
-
-  defp token_cache_child_from_network(network) do
-    {
-      JoePrices.Boundary.Common.TokenInfoCache,
-      [network: network]
-    }
   end
 end
