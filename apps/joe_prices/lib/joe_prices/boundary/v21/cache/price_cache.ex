@@ -10,7 +10,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   alias JoePrices.Boundary.V21.PriceRequest
   alias JoePrices.Core.V21.Pair
 
-  @spec get_price(atom(), PriceRequest.t()) :: {:ok, term()}
+  @spec get_price(network_name(), PriceRequest.t()) :: {:ok, term()}
   def get_price(network, request = %PriceRequest{}) do
     key = cache_key_for_tokens(request)
     table = get_table_name(network)
@@ -31,7 +31,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   #   end)
   # end
 
-  @spec update_prices(any, [JoePrices.Core.V21.Pair.t()]) :: nil | {:error, boolean} | {:ok, boolean}
+  @spec update_prices(network_name(), [JoePrices.Core.V21.Pair.t()]) :: nil | {:error, boolean} | {:ok, boolean}
   def update_prices(_network, []) do end
   def update_prices(network, [price]), do: update_price(network, price)
   def update_prices(network, [price | rest]) do
