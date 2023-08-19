@@ -1,4 +1,10 @@
 defmodule JoePrices.Boundary.V21.PairRepository do
+  @moduledoc """
+  GenServer definition for a pair repository.
+
+  Used to serialize requests to the same pair to avoid duped calls when cache is invalid.
+  """
+
   use GenServer
 
   alias JoePrices.Boundary.V21.PriceRequest
@@ -8,6 +14,10 @@ defmodule JoePrices.Boundary.V21.PairRepository do
 
   @bad_resp_addr "0x0000000000000000000000000000000000000000"
 
+  @doc """
+  Returns the price for a given pair.
+  """
+  @spec get_price(PriceRequest.t()) :: PriceCacheEntry.t()
   def get_price(request = %PriceRequest{}) do
     with {:ok, pid} <- fetch_process(request) do
       GenServer.call(pid, :fetch_price)
@@ -68,6 +78,7 @@ defmodule JoePrices.Boundary.V21.PairRepository do
     end)
   end
 
+  @spec init(any) :: {:ok, any}
   def init(args) do
     {:ok, args}
   end
@@ -81,6 +92,8 @@ defmodule JoePrices.Boundary.V21.PairRepository do
     }
   end
 
+  @spec start_link(JoePrices.Boundary.V21.PriceRequest.t()) ::
+          :ignore | {:error, any} | {:ok, pid}
   def start_link(request = %PriceRequest{}) do
     GenServer.start_link(
       __MODULE__,
@@ -97,9 +110,8 @@ defmodule JoePrices.Boundary.V21.PairRepository do
     }
   end
 
+  @spec fetch_process(JoePrices.Boundary.V21.PriceRequest.t()) :: {:error, any} | {:ok, pid()}
   def fetch_process(request = %PriceRequest{}) do
-    child_spec = child_spec(request)
-
     child = DynamicSupervisor.start_child(
       JoePrices.Supervisor.V21.PairRepository,
       {__MODULE__, request}
