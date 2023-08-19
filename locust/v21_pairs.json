@@ -1,0 +1,122 @@
+[
+    {
+        "bin_step": 1,
+        "pair_name": "Dai Stablecoin-USD Coin",
+        "token_x": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 15,
+        "pair_name": "Wrapped Ether-USD Coin",
+        "token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 1,
+        "pair_name": "Tether USD-USD Coin",
+        "token_x": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 10,
+        "pair_name": "Bitcoin-USD Coin",
+        "token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 10,
+        "pair_name": "Chainlink Token-Wrapped AVAX",
+        "token_x": "0x5947bb275c521040051d82396192181b413227a3",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 1,
+        "pair_name": "Tether USD-TetherToken",
+        "token_x": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+        "token_y": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7"
+    },
+    {
+        "bin_step": 5,
+        "pair_name": "Moremoney USD-USD Coin",
+        "token_x": "0x0f577433bf59560ef2a79c124e9ff99fca258948",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 25,
+        "pair_name": "Moremoney USD-Wrapped AVAX",
+        "token_x": "0x0f577433bf59560ef2a79c124e9ff99fca258948",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "Good Bridging Good Subnets-Wrapped AVAX",
+        "token_x": "0x78dd359ccb9546a36fa2df88235a9fffa4bf6b5f",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "Avalaunch-Wrapped AVAX",
+        "token_x": "0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "VersoToken-Wrapped AVAX",
+        "token_x": "0x846d50248baf8b7ceaa9d9b53bfd12d7d7fbb25a",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "XEN Crypto-Wrapped AVAX",
+        "token_x": "0xc0c5aa69dbe4d6dddfbc89c0957686ec60f24389",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "JoeToken-Wrapped AVAX",
+        "token_x": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "Wrapped AVAX-USD Coin",
+        "token_x": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "STEAK-USD Coin",
+        "token_x": "0xb279f8dd152b99ec1d84a489d32c35bc0c7f5674",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "agEUR-USD Coin",
+        "token_x": "0xaec8318a9a59baeb39861d10ff6c7f7bf1f96c57",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "Wrapped Ether-Wrapped AVAX",
+        "token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "GMX-Wrapped AVAX",
+        "token_x": "0x62edc0692bd897d2295872a9ffcac5425011c661",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "StargateToken-USD Coin",
+        "token_x": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+    },
+    {
+        "bin_step": 100,
+        "pair_name": "chikn egg-Wrapped AVAX",
+        "token_x": "0x7761e2338b35bceb6bda6ce477ef012bde7ae611",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+    }
+]
