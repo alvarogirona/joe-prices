@@ -7,7 +7,7 @@ defmodule JoePrices.Application do
 
   import Cachex.Spec
 
-  @cache_ttl_seconds 5
+  @cache_ttl_seconds 30
 
   @impl true
   def start(_type, _args) do
@@ -16,20 +16,27 @@ defmodule JoePrices.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: JoePrices.PubSub},
       # Start Finch
-      {Finch, name: JoePrices.Finch},
+      {Finch,
+       name: JoePrices.Finch,
+       pools: %{
+         :default => [size: 10, count: 20, protocol: :http2],
+       }
+      },
       {
         Registry,
         [name: JoePrices.Registry.Common.TokenInfoCache, keys: :unique]
-      },
+      }
       # Start a worker by calling: JoePrices.Worker.start_link(arg)
       # {JoePrices.Worker, arg}
     ]
 
-    v21_caches = JoePrices.Core.Network.all_networks
-     |> Enum.map(&v21_cache_child_from_network(&1))
+    v21_caches =
+      JoePrices.Core.Network.all_networks()
+      |> Enum.map(&v21_cache_child_from_network(&1))
 
-    token_caches = JoePrices.Core.Network.all_networks
-     |> Enum.map(&token_cache_child_from_network(&1))
+    token_caches =
+      JoePrices.Core.Network.all_networks()
+      |> Enum.map(&token_cache_child_from_network(&1))
 
     opts = [strategy: :one_for_one, name: JoePrices.Supervisor]
     Supervisor.start_link(children ++ v21_caches ++ token_caches, opts)
@@ -42,7 +49,8 @@ defmodule JoePrices.Application do
         [
           name: JoePrices.Boundary.V21.Cache.PriceCache.get_table_name(network),
           expiration: expiration(default: :timer.seconds(@cache_ttl_seconds)),
-          interval: nil, # Just lazy expiration, no background ttl process.
+          # Just lazy expiration, no background ttl process.
+          interval: nil
         ]
       },
       id: make_ref()
