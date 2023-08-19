@@ -33,8 +33,8 @@ defmodule Mix.Tasks.LoadAllPairs do
   def load_pairs(network) do
     pairs = JoePrices.Contracts.V21.LbFactory.fetch_pairs(network)
 
-    pairs
-    |> Enum.take(5)
+    {:ok, json} = pairs
+    |> Enum.take(20)
     |> Parallel.pmap(fn pair ->
       [token_x, token_y] = JoePrices.Contracts.V21.LbPair.fetch_tokens(network, pair)
 
@@ -47,10 +47,12 @@ defmodule Mix.Tasks.LoadAllPairs do
         :token_x => token_x,
         :token_y => token_y,
         :pair_name => "#{token_x_name}-#{token_y_name}",
-        :bin_step => bin_step,
+        :bin_step => bin_step
       }
     end)
+    |> Jason.encode()
 
+    IO.puts(json)
   end
 
   def fetch_token_name(network, token_address) do
