@@ -14,10 +14,6 @@ class JoeLocustTester(HttpUser):
         bs = pair['bin_step']
         self.client.get(f"/v2_1/prices/{tx}/{ty}/{bs}")
 
-    # @task
-    # def v21_batch(self):
-    #     self.client.post("/v21/", json={"username":"foo", "password":"bar"})
-
     def random_v21_pair(self):
         # Opening JSON file
         f = open('v21_pairs.json')
