@@ -6,13 +6,15 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCacheEntry do
   defstruct token_x: "",
             token_y: "",
             bin_step: 0,
-            active_bin: 0
+            active_bin: 0,
+            price: 0
 
   @type t :: %__MODULE__{
           token_x: String.t(),
           token_y: String.t(),
           bin_step: integer(),
-          active_bin: integer()
+          active_bin: integer(),
+          price: float()
         }
 
   @doc """
@@ -24,7 +26,8 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCacheEntry do
       token_x: pair.token_x,
       token_y: pair.token_y,
       bin_step: pair.bin_step,
-      active_bin: pair.active_bin
+      active_bin: pair.active_bin,
+      price: JoePrices.Core.V21.Bin.get_price_from_id(pair.active_bin, pair.bin_step)
     }
   end
 end

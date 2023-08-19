@@ -44,11 +44,11 @@ defmodule JoePricesWeb.Api.V21.PriceController do
     Enum.map(prices, &render_price/1)
   end
 
-  defp render_price(price) do
+  defp render_price(price = %PriceCacheEntry{}) do
     %{
       token_x: price.token_x,
       token_y: price.token_y,
-      price: JoePrices.Core.V21.Bin.get_price_from_id(price.active_bin, price.bin_step)
+      price: price.price
     }
   end
 end

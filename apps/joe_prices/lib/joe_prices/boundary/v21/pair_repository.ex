@@ -34,7 +34,7 @@ defmodule JoePrices.Boundary.V21.PairRepository do
       {:ok, pairs} ->
         [info] = fetch_pairs_info(pairs, network: network)
         PriceCache.update_prices(network, [info])
-        {:ok, info}
+        {:ok, PriceCacheEntry.new(info)}
       _ ->
         {:error, "LBFactory contract call error (fetch_pairs_for_tokens)"}
     end
