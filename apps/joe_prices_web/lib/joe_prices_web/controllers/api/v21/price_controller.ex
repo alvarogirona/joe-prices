@@ -15,12 +15,14 @@ defmodule JoePricesWeb.Api.V21.PriceController do
       bin_step: bin_step
     }
 
-    price = JoePricesV21.get_price(price_request)
-
-    json(conn, render_price(price))
+    case JoePricesV21.get_price(price_request) do
+      {:ok, price} -> json(conn, render_price(price))
+      {:error, _} -> text(conn, "error")
+      price -> json(conn, render_price(price))
+    end
   end
 
-  def batch(conn, %{"tokens" => tokens_list} = opts) do
+  def batch(conn, %{"tokens" => tokens_list} = _opts) do
     parsed_tokens = tokens_list
     |> Enum.map(&parse_token_request/1)
 
@@ -30,7 +32,7 @@ defmodule JoePricesWeb.Api.V21.PriceController do
     json(conn, prices)
   end
 
-  defp parse_token_request(%{"token_x" => tx, "token_y" => ty, "bin_step" => bs} = token_request) do
+  defp parse_token_request(%{"token_x" => tx, "token_y" => ty, "bin_step" => bs} = _token_request) do
     %PriceRequest{
       token_x: tx,
       token_y: ty,
