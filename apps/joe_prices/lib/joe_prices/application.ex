@@ -12,10 +12,7 @@ defmodule JoePrices.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      # Start the PubSub system
       {Phoenix.PubSub, name: JoePrices.PubSub},
-      # Start Finch
       {Finch,
        name: JoePrices.Finch,
        pools: %{
@@ -30,8 +27,6 @@ defmodule JoePrices.Application do
         Registry,
         [name: JoePrices.Registry.V21.PairRepository, keys: :unique]
       }
-      # Start a worker by calling: JoePrices.Worker.start_link(arg)
-      # {JoePrices.Worker, arg}
     ]
 
     v21_caches =
@@ -49,7 +44,20 @@ defmodule JoePrices.Application do
         [
           name: JoePrices.Boundary.V21.Cache.PriceCache.get_table_name(network),
           expiration: expiration(default: :timer.seconds(@cache_ttl_seconds)),
-          # Just lazy expiration, no background ttl process.
+          interval: nil
+        ]
+      },
+      id: make_ref()
+    )
+  end
+
+  defp v20_cache_child_from_network(network) do
+    Supervisor.child_spec(
+      {
+        Cachex,
+        [
+          name: JoePrices.Boundary.V20.Cache.PriceCache.get_table_name(network),
+          expiration: expiration(default: :timer.seconds(@cache_ttl_seconds)),
           interval: nil
         ]
       },

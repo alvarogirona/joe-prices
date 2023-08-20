@@ -1,14 +1,14 @@
-defmodule JoePrices.Boundary.V21.Cache.PriceCache do
-  @table_suffix :prices_cache_v21
+defmodule JoePrices.Boundary.V20.Cache.PriceCache do
+  @table_suffix :prices_cache_v20
 
   @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 
   @moduledoc """
   Module for managin Cachex access for prices.
   """
-  alias JoePrices.Boundary.V21.Cache.PriceCacheEntry
-  alias JoePrices.Boundary.V21.PriceRequest
-  alias JoePrices.Core.V21.Pair
+  alias JoePrices.Boundary.V20.Cache.PriceCacheEntry
+  alias JoePrices.Boundary.V20.PriceRequest
+  alias JoePrices.Core.V20.Pair
 
   @spec get_price(network_name(), PriceRequest.t()) :: {:ok, term()}
   def get_price(network, request = %PriceRequest{}) do
@@ -31,7 +31,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   #   end)
   # end
 
-  @spec update_prices(network_name(), [JoePrices.Core.V21.Pair.t()]) :: nil | {:error, boolean} | {:ok, boolean}
+  @spec update_prices(network_name(), [Pair.t()]) :: nil | {:error, boolean} | {:ok, boolean}
   def update_prices(_network, []) do end
   def update_prices(network, [price]), do: update_price(network, price)
   def update_prices(network, [price | rest]) do

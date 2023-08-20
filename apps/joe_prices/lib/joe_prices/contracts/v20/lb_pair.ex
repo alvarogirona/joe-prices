@@ -18,6 +18,7 @@ defmodule JoePrices.Contracts.V20.LbPair do
 
     case __MODULE__.fetch_active_bin(network, pair_addres) do
       {:error, reason} -> {:error, reason}
+      {:error, _} = error -> error
       active_bin -> active_bin
     end
   end

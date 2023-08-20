@@ -5,11 +5,13 @@ defmodule JoePrices.Boundary.V20.PriceRequest do
 
   defstruct token_x: "",
             token_y: "",
-            bin_step: 0
+            bin_step: 0,
+            network: :avalanche_mainnet
 
   @type t :: %__MODULE__{
           token_x: String.t(),
           token_y: String.t(),
-          bin_step: integer()
+          bin_step: integer(),
+          network: atom()
         }
 end
