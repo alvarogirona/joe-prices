@@ -49,9 +49,9 @@ defmodule JoePrices.Boundary.V20.Cache.PriceCache do
   end
 
   @spec get_table_name(atom) :: atom
-  def get_table_name(:arbitrum_mainnet), do: :arbitrum_mainnet_prices_cache_v21
-  def get_table_name(:avalanche_mainnet), do: :avalanche_mainnet_prices_cache_v21
-  def get_table_name(:bsc_mainnet), do: :bsc_mainnet_prices_cache_v21
+  def get_table_name(:arbitrum_mainnet), do: :arbitrum_mainnet_prices_cache_v20
+  def get_table_name(:avalanche_mainnet), do: :avalanche_mainnet_prices_cache_v20
+  def get_table_name(:bsc_mainnet), do: :bsc_mainnet_prices_cache_v20
 
   @spec cache_key_for_tokens(%{
           :bin_step => any,

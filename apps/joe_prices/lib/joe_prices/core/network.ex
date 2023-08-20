@@ -24,7 +24,7 @@ defmodule JoePrices.Core.Network do
   @doc """
   Returns network atom from network string.
   """
-  @spec network_from_string(String.t()) :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnnet
+  @spec network_from_string(String.t()) :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
   def network_from_string("avalanche_mainnet"), do: avalanche_mainnet()
   def network_from_string("arbitrum_mainnet"), do: arbitrum_mainnet()
   def network_from_string("bsc_mainnet"), do: bsc_mainnet()
@@ -34,13 +34,13 @@ defmodule JoePrices.Core.Network do
   def arbitrum_mainnet(), do: :arbitrum_mainnet
   @spec avalanche_mainnet :: :avalanche_mainnet
   def avalanche_mainnet(), do: :avalanche_mainnet
-  @spec bsc_mainnet :: :bsc_mainnnet
-  def bsc_mainnet(), do: :bsc_mainnnet
+  @spec bsc_mainnet :: :bsc_mainnet
+  def bsc_mainnet(), do: :bsc_mainnet
 
   @doc """
   Returns a list with all the supported networks.
   """
-  @spec all_networks :: [:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnnet, ...]
+  @spec all_networks :: [:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet, ...]
   def all_networks(), do: [arbitrum_mainnet(), avalanche_mainnet(), bsc_mainnet()]
 
   @doc """
