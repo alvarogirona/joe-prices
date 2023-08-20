@@ -16,9 +16,8 @@ defmodule JoePrices.Application do
       {Finch,
        name: JoePrices.Finch,
        pools: %{
-         :default => [protocol: :http2],
-       }
-      },
+         :default => [protocol: :http2]
+       }},
       {
         DynamicSupervisor,
         [name: JoePrices.Supervisor.V21.PairRepository, strategy: :one_for_one]
@@ -26,6 +25,14 @@ defmodule JoePrices.Application do
       {
         Registry,
         [name: JoePrices.Registry.V21.PairRepository, keys: :unique]
+      },
+      {
+        DynamicSupervisor,
+        [name: JoePrices.Supervisor.TokenInfoRepository, strategy: :one_for_one]
+      },
+      {
+        Registry,
+        [name: JoePrices.Registry.TokenInfoRepository, keys: :unique]
       }
     ]
 
