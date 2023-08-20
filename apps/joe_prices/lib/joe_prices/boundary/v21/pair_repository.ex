@@ -1,6 +1,6 @@
 defmodule JoePrices.Boundary.V21.PairRepository do
   @moduledoc """
-  GenServer definition for a pair repository.
+  GenServer definition for a v2.1 pair repository.
 
   Used to serialize requests to the same pair to avoid duped calls when cache is invalid.
   """
@@ -40,7 +40,7 @@ defmodule JoePrices.Boundary.V21.PairRepository do
   defp maybe_update_cache?({:ok, nil} = _resp, request = %PriceRequest{}, network) do
     %{:token_x => tx, :token_y => ty, :bin_step => bin_step} = request
 
-    case JoePrices.Contracts.V21.LbFactory.fetch_pairs_for_tokens(network, tx, ty, bin_step) do
+    case lb_factory_module(:v21).fetch_pairs_for_tokens(network, tx, ty, bin_step) do
       {:ok, pairs} ->
         [info] = fetch_pairs_info(pairs, network: network)
         PriceCache.update_prices(network, [info])
@@ -123,4 +123,7 @@ defmodule JoePrices.Boundary.V21.PairRepository do
       {:error, _} = err -> err
     end
   end
+
+  defp lb_factory_module(:v20), do: JoePrices.Contracts.V20.LbFactory
+  defp lb_factory_module(:v21), do: JoePrices.Contracts.V21.LbFactory
 end

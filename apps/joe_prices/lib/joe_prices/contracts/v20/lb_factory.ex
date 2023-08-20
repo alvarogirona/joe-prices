@@ -5,6 +5,13 @@ defmodule JoePrices.Contracts.V20.LbFactory do
 
   alias JoePrices.Core.Network
 
+  @type network :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
+  @type pair_info :: {non_neg_integer, binary, boolean, boolean}
+  @type error_message :: {:error, binary}
+  @type success_result ::
+          {:ok,
+           binary | [pair_info] | %{data: binary, selector: ABI.FunctionSelector.t(), to: binary}}
+
   @doc """
   Fetches all pairs for the given tokens and bin step for v2.0.
 
@@ -14,6 +21,7 @@ defmodule JoePrices.Contracts.V20.LbFactory do
 
     {:ok, [{1, "0x1d7a1a79e2b4ef88d2323f3845246d24a3c20f1d", true, false}]}
   """
+  @spec fetch_pairs_for_tokens(network, binary, binary, non_neg_integer) :: error_message | success_result
   def fetch_pairs_for_tokens(network, token_x, token_y, bin_step) do
     opts = Network.opts_for_call(network, contract_for_network(network))
 

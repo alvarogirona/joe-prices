@@ -3,25 +3,6 @@ defmodule JoePrices.Contracts.V20.LbPair do
     abi_file: "priv/abis/v20/LBPair.json"
 
   alias JoePrices.Core.Network
-  alias JoePrices.Contracts.V20.LbRouter
-
-  @doc """
-
-  ## Example
-
-  ```
-  iex> JoePrices.Contracts.V20.LbPair.fetch_price(:avalanche_mainnet, "0x5851e2d6396bcc26fb9eee21effbf99e0d2b2148")
-  ```
-  """
-  def fetch_price(network, pair_addres) do
-    opts = Network.opts_for_call(network, pair_addres)
-
-    case __MODULE__.fetch_active_bin(network, pair_addres) do
-      {:error, reason} -> {:error, reason}
-      {:error, _} = error -> error
-      active_bin -> active_bin
-    end
-  end
 
   @doc """
   Fetches active bin for a given pair.

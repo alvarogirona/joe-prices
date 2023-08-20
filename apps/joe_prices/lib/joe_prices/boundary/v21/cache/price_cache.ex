@@ -13,7 +13,7 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   @spec get_price(network_name(), PriceRequest.t()) :: {:ok, term()}
   def get_price(network, request = %PriceRequest{}) do
     key = cache_key_for_tokens(request)
-    table = get_table_name(network)
+    table = get_table_name(network, :v21)
 
     Cachex.get(table, key)
   end
@@ -42,16 +42,20 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   @spec update_price(atom, Pair.t()) :: any
   defp update_price(network, pair = %Pair{}) do
     key = cache_key_for_tokens(pair)
-    table = get_table_name(network)
+    table = get_table_name(network, :v21)
     cache_entry = PriceCacheEntry.new(pair)
 
     Cachex.put(table, key, cache_entry)
   end
 
-  @spec get_table_name(network_name()) :: atom
-  def get_table_name(:arbitrum_mainnet), do: :arbitrum_mainnet_prices_cache_v21
-  def get_table_name(:avalanche_mainnet), do: :avalanche_mainnet_prices_cache_v21
-  def get_table_name(:bsc_mainnet), do: :bsc_mainnet_prices_cache_v21
+  @spec get_table_name(network_name(), atom) :: atom
+  def get_table_name(:arbitrum_mainnet, :v21), do: :arbitrum_mainnet_prices_cache_v21
+  def get_table_name(:avalanche_mainnet, :v21), do: :avalanche_mainnet_prices_cache_v21
+  def get_table_name(:bsc_mainnet, :v21), do: :bsc_mainnet_prices_cache_v21
+
+  def get_table_name(:arbitrum_mainnet, :v20), do: :arbitrum_mainnet_prices_cache_v20
+  def get_table_name(:avalanche_mainnet, :v20), do: :avalanche_mainnet_prices_cache_v20
+  def get_table_name(:bsc_mainnet, :v20), do: :bsc_mainnet_prices_cache_v20
 
   @spec cache_key_for_tokens(%{
           :bin_step => any,
