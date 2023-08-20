@@ -62,7 +62,7 @@ defmodule JoePrices.Application do
   end
 
   defp v20_cache_child_from_network(network) do
-    cache_name = JoePrices.Boundary.V20.Cache.PriceCache.get_table_name(network)
+    cache_name = JoePrices.Boundary.V21.Cache.PriceCache.get_table_name(network, :v20)
 
     Supervisor.child_spec(
       {Cachex,

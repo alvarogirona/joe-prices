@@ -31,30 +31,30 @@ defmodule JoePrices.Boundary.V21.PairRepository do
   ```
   """
   def handle_call(:fetch_price, _from, request = %PriceRequest{}) do
-    pair_info = JoePrices.Boundary.V21.Cache.PriceCache.get_price(:avalanche_mainnet, request)
-    |> maybe_update_cache?(request, request.network)
+    pair_info = PriceCache.get_price(:avalanche_mainnet, request)
+    |> maybe_update_cache?(request)
 
     {:reply, pair_info, request}
   end
 
-  defp maybe_update_cache?({:ok, nil} = _resp, request = %PriceRequest{}, network) do
+  defp maybe_update_cache?({:ok, nil} = _resp, request = %PriceRequest{}) do
     %{:token_x => tx, :token_y => ty, :bin_step => bin_step} = request
 
-    case lb_factory_module(:v21).fetch_pairs_for_tokens(network, tx, ty, bin_step) do
+    case lb_factory_module(request.version).fetch_pairs_for_tokens(request.network, tx, ty, bin_step) do
       {:ok, pairs} ->
-        [info] = fetch_pairs_info(pairs, network: network)
-        PriceCache.update_prices(network, [info])
+        [info] = fetch_pairs_info(pairs, network: request.network, version: request.version)
+        PriceCache.update_prices(request.network, [info])
         {:ok, PriceCacheEntry.new(info)}
       _ ->
         {:error, "LBFactory contract call error (fetch_pairs_for_tokens)"}
     end
   end
 
-  defp maybe_update_cache?({:ok, value} = _resp, _request, _network) do
+  defp maybe_update_cache?({:ok, value} = _resp, _request) do
     value
   end
 
-  defp fetch_pairs_info(pairs, network: network) do
+  defp fetch_pairs_info(pairs, network: network, version: version) do
     pairs
     |> Enum.map(fn pair ->
       case pair do
@@ -62,10 +62,10 @@ defmodule JoePrices.Boundary.V21.PairRepository do
           nil
 
         {_, addr, _, _} ->
-          [token_x, token_y] = JoePrices.Contracts.V21.LbPair.fetch_tokens(network, addr)
+          [token_x, token_y] = lb_pair_module(version).fetch_tokens(network, addr)
 
-          {:ok, bin_step} = JoePrices.Contracts.V21.LbPair.fetch_bin_step(network, addr)
-          {:ok, [active_bin]} = JoePrices.Contracts.V21.LbPair.fetch_active_bin_id(network, addr)
+          {:ok, bin_step} = lb_pair_module(version).fetch_bin_step(network, addr)
+          {:ok, [active_bin]} = lb_pair_module(version).fetch_active_bin_id(network, addr)
 
           %Pair{
             name: "",
@@ -110,7 +110,7 @@ defmodule JoePrices.Boundary.V21.PairRepository do
     }
   end
 
-  @spec fetch_process(JoePrices.Boundary.V21.PriceRequest.t()) :: {:error, any} | {:ok, pid()}
+  @spec fetch_process(PriceRequest.t()) :: {:error, any} | {:ok, pid()}
   def fetch_process(request = %PriceRequest{}) do
     child = DynamicSupervisor.start_child(
       JoePrices.Supervisor.V21.PairRepository,
@@ -124,6 +124,13 @@ defmodule JoePrices.Boundary.V21.PairRepository do
     end
   end
 
+  @spec lb_factory_module(atom()) :: any()
   defp lb_factory_module(:v20), do: JoePrices.Contracts.V20.LbFactory
   defp lb_factory_module(:v21), do: JoePrices.Contracts.V21.LbFactory
+  defp lb_factory_module(_), do: raise "Invalid version provided to lb_factory_module"
+
+  @spec lb_factory_module(atom()) :: any()
+  defp lb_pair_module(:v20), do: JoePrices.Contracts.V20.LbPair
+  defp lb_pair_module(:v21), do: JoePrices.Contracts.V21.LbPair
+  defp lb_pair_module(_), do: raise "Invalid version provided to lb_factory_module"
 end
