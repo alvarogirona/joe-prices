@@ -33,7 +33,8 @@ defmodule JoePrices.Application do
       {
         Registry,
         [name: JoePrices.Registry.TokenInfoRepository, keys: :unique]
-      }
+      },
+      {JoePrices.Boundary.Token.TokenInfoFetcher, []}
     ]
 
     v21_caches =
