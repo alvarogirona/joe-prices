@@ -47,7 +47,7 @@ defmodule JoePricesWeb.Api.V21.PriceController do
   end
 
   defp render_price({:ok, price} = _ok), do: render_price(price)
-  defp render_price({:error, _} = error), do: %{error: "could not fetch price"}
+  defp render_price({:error, _}), do: %{error: "could not fetch price"}
   defp render_price(%PriceCacheEntry{} = cache_entry) do
     %{
       token_x: cache_entry.token_x,
