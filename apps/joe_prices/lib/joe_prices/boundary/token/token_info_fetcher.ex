@@ -23,7 +23,9 @@ defmodule JoePrices.Boundary.Token.TokenInfoFetcher do
   defp start_agent(_error, _key), do: {:error, :failed_to_fetch_decimals}
   @doc """
   Gets the decimal value for a token.
-  If the token information is not in the cache, it fetches the token information and stores it in the cache.
+  First it checks if a previous agent was spawned and added to JoePrices.TokenRegistry.
+  If it is not spawned then it will call `start_link`.
+  If the token information is not in the cache, it fetches the token information and stores it in the cache (agent).
   If the fetch fails, it does not store the result and returns the error.
 
   ## Example
