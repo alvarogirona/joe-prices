@@ -12,10 +12,11 @@ defmodule JoePricesWeb.Api.V21.PriceController do
     price_request = %PriceRequest{
       token_x: tx,
       token_y: ty,
-      bin_step: bin_step
+      bin_step: bin_step,
+      version: :v21
     }
 
-    case JoePricesV21.get_price(price_request) do
+    case JoePricesV2.get_price(price_request) do
       {:ok, price} -> json(conn, render_price(price))
       {:error, _} -> text(conn, "error")
       price -> json(conn, render_price(price))
@@ -26,7 +27,7 @@ defmodule JoePricesWeb.Api.V21.PriceController do
     parsed_tokens = tokens_list
     |> Enum.map(&parse_token_request/1)
 
-    prices = JoePricesV21.get_prices(parsed_tokens)
+    prices = JoePricesV2.get_prices(parsed_tokens)
     |> render_prices()
 
     json(conn, prices)
@@ -36,7 +37,8 @@ defmodule JoePricesWeb.Api.V21.PriceController do
     %PriceRequest{
       token_x: tx,
       token_y: ty,
-      bin_step: bs
+      bin_step: bs,
+      version: :v21
     }
   end
 
@@ -44,11 +46,13 @@ defmodule JoePricesWeb.Api.V21.PriceController do
     Enum.map(prices, &render_price/1)
   end
 
-  defp render_price(price = %PriceCacheEntry{}) do
+  defp render_price({:ok, price} = _ok), do: render_price(price)
+  defp render_price({:error, _} = error), do: %{error: "could not fetch price"}
+  defp render_price(%PriceCacheEntry{} = cache_entry) do
     %{
-      token_x: price.token_x,
-      token_y: price.token_y,
-      price: price.price
+      token_x: cache_entry.token_x,
+      token_y: cache_entry.token_y,
+      price: cache_entry.price
     }
   end
 end

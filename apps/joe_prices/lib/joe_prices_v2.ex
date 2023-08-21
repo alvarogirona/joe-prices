@@ -18,8 +18,6 @@ defmodule JoePricesV2 do
   def get_prices(pairs) do
     pairs
     |> Parallel.pmap(&get_price(&1))
-    |> Enum.filter(&match?({:ok, _}, &1))
-    |> Enum.map(fn {:ok, info} -> info end)
   end
 
   @doc """
