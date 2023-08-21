@@ -48,9 +48,9 @@ defmodule JoePrices.Core.Network do
 
   This method helps building the options for making calls to a specific network and contract.
 
-  Returns a keyword list like
+  Returns a keyword list like:
 
-  ```
+  ```elixir
   [rpc_opts: [rpc_opts: [url: network_rpc]], to: contract_address]
   ```
 
