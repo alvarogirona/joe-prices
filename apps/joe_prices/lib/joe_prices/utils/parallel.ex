@@ -1,7 +1,12 @@
 defmodule JoePrices.Utils.Parallel do
+  require Logger
+
   def pmap(collection, func) do
     collection
-    |> Enum.map(&(Task.async(fn -> func.(&1) end)))
-    |> Enum.map(&Task.await/1)
+    |> Task.async_stream(func)
+    |> Enum.map(fn
+      {:ok, result} -> result
+      {:error, _} = error -> error
+    end)
   end
 end
