@@ -8,7 +8,13 @@ defmodule JoePrices.Umbrella.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       aliases: aliases(),
-      extra_applications: [:observer, :wx]
+      extra_applications: [:observer, :wx],
+      releases: [
+        joe_prices_release: [
+          applications:
+            [joe_prices: :permanent, joe_prices_web: :permanent]
+        ]
+      ]
     ]
   end
 
