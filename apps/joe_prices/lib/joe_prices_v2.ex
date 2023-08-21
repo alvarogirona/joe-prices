@@ -1,9 +1,14 @@
-defmodule JoePricesV21 do
-  alias JoePrices.Core.Network
-  alias JoePrices.Boundary.V2.Cache.PriceCache
+defmodule JoePricesV2 do
+  @moduledoc """
+  This module provides functions to fetch and manage prices for token pairs on v2.0 and v2.1.
+
+  It provides functions to get prices for a list of pairs (`get_prices/1`) and for a single pair (`get_price/1`).
+
+  The prices are fetched from the `JoePrices.Boundary.V2.PairRepository` which caches them.
+  """
+
   alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Boundary.V2.Cache.PriceCacheEntry
-  alias JoePrices.Core.V21.Pair
   alias JoePrices.Utils.Parallel
 
   @doc """
