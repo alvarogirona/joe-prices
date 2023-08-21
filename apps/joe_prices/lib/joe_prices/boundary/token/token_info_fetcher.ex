@@ -9,18 +9,18 @@ defmodule JoePrices.Boundary.Token.TokenInfoFetcher do
   alias JoePrices.Core.Network
 
   @spec start_link({atom, binary}) :: {:error, any} | {:ok, pid}
-  def start_link({network, token}) do
-    case fetch_decimals(network, token) do
-      {:ok, decimals} ->
-        Agent.start_link(fn -> decimals end,
-          name: {:via, Registry, {JoePrices.TokenRegistry, {network, token}}}
-        )
-
-      _error ->
-        {:error, :failed_to_fetch_decimals}
-    end
+  def start_link({network, token} = key) do
+    fetch_decimals(network, token)
+    |> start_agent(key)
   end
 
+  defp start_agent({:ok, decimals}, key) do
+    Agent.start_link(fn -> decimals end,
+      name: {:via, Registry, {JoePrices.TokenRegistry, key}}
+    )
+  end
+
+  defp start_agent(_error, _key), do: {:error, :failed_to_fetch_decimals}
   @doc """
   Gets the decimal value for a token.
   If the token information is not in the cache, it fetches the token information and stores it in the cache.
