@@ -7,7 +7,7 @@ defmodule JoePrices.Application do
 
   import Cachex.Spec
 
-  @cache_ttl_seconds 20
+  @cache_ttl_seconds 2
 
   @impl true
   def start(_type, _args) do
