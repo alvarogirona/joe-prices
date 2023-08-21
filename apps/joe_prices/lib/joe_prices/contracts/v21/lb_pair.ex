@@ -28,7 +28,7 @@ defmodule JoePrices.Contracts.V21.LbPair do
   def fetch_bin_step(network, contract_address) do
     opts = Network.opts_for_call(network, contract_address)
 
-    case JoePrices.Contracts.V21.LbPair.get_bin_step(opts) do
+    case __MODULE__.get_bin_step(opts) do
       {:ok, [bin_step]} -> {:ok, bin_step}
       {:error, reason} -> {:error, reason}
       _ -> {:error, :unknown}
