@@ -42,14 +42,14 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   end
 
   defp maybe_update_cache?({:ok, nil}, request = %PriceRequest{}), do: update_cache(request)
-  defp maybe_update_cache?({:ok, value}, _request), do: value
+  defp maybe_update_cache?(cache_entry = {:ok, value}, _request), do: cache_entry
 
   defp update_cache(request = %PriceRequest{}) do
     %{:token_x => tx, :token_y => ty, :bin_step => bin_step} = request
 
     case lb_factory_module(request.version).fetch_pairs_for_tokens(request.network, tx, ty, bin_step) do
       {:ok, pairs} ->
-        [info] = fetch_pairs_info(pairs, network: request.network, version: request.version, bin_step: request.bin_step)
+        [info] = fetch_pairs_info(pairs, request)
         PriceCache.update_prices(request.network, request.version, [info])
         {:ok, PriceCacheEntry.new(info)}
       _ ->
@@ -57,7 +57,7 @@ defmodule JoePrices.Boundary.V2.PairRepository do
     end
   end
 
-  defp fetch_pairs_info(pairs, network: network, version: version, bin_step: bin_step) do
+  defp fetch_pairs_info(pairs, request = %PriceRequest{}) do
     pairs
     |> Enum.map(fn pair ->
       case pair do
@@ -65,14 +65,13 @@ defmodule JoePrices.Boundary.V2.PairRepository do
           nil
 
         {_, addr, _, _} ->
-          [token_x, token_y] = lb_pair_module(version).fetch_tokens(network, addr)
-          {:ok, [active_bin]} = lb_pair_module(version).fetch_active_bin_id(network, addr)
+          {:ok, [active_bin]} = lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
           %Pair{
             name: "",
-            token_x: token_x,
-            token_y: token_y,
-            bin_step: bin_step,
+            token_x: request.token_x,
+            token_y: request.token_y,
+            bin_step: request.bin_step,
             active_bin: active_bin
           }
       end
