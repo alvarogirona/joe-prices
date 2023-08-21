@@ -1,10 +1,10 @@
 import time
-from locust import HttpUser, task, between
+from locust import HttpUser, task, between, constant_throughput
 import json
 import random
 
 class JoeLocustTester(HttpUser):
-    wait_time = between(1, 5)
+    wait_time = constant_throughput(1)
 
     @task
     def v21_simple(self):
