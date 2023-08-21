@@ -20,14 +20,13 @@ defmodule JoePricesWeb.Router do
     end
 
     scope "/v2" do
-
+      post "/batch-prices", Api.V20.PriceController, :batch
+      get "/prices/:token_x/:token_y/:bin_step", Api.V20.PriceController, :index
     end
 
     scope "/v2_1" do
       post "/batch-prices", Api.V21.PriceController, :batch
-      scope "/prices" do
-        get "/:token_x/:token_y/:bin_step", Api.V21.PriceController, :index
-      end
+      get "/prices/:token_x/:token_y/:bin_step", Api.V21.PriceController, :index
     end
   end
 
