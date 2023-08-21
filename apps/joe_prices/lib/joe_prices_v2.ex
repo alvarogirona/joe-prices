@@ -31,7 +31,7 @@ defmodule JoePricesV2 do
   iex> JoePricesV21.get_price(:avalanche_mainnet, request)
   ```
   """
-  @spec get_price(PriceRequest.t()) :: PriceCacheEntry.t()
+  @spec get_price(PriceRequest.t()) :: {:ok, PriceCacheEntry.t()} | {:error, any()}
   def get_price(request = %PriceRequest{}) do
     JoePrices.Boundary.V2.PairRepository.get_price(request)
   end
