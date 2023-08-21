@@ -1,4 +1,4 @@
-defmodule JoePrices.Boundary.V21.Cache.PriceCacheEntry do
+defmodule JoePrices.Boundary.V2.Cache.PriceCacheEntry do
   @moduledoc """
   Module with struct definition of a cache entry for v2.1
   """

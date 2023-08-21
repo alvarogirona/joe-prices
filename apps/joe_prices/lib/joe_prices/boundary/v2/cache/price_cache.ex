@@ -1,4 +1,4 @@
-defmodule JoePrices.Boundary.V21.Cache.PriceCache do
+defmodule JoePrices.Boundary.V2.Cache.PriceCache do
   @table_suffix :prices_cache_v21
 
   @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
@@ -6,14 +6,14 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   @moduledoc """
   Module for managin Cachex access for prices.
   """
-  alias JoePrices.Boundary.V21.Cache.PriceCacheEntry
-  alias JoePrices.Boundary.V21.PriceRequest
+  alias JoePrices.Boundary.V2.Cache.PriceCacheEntry
+  alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Core.V21.Pair
 
   @spec get_price(network_name(), PriceRequest.t()) :: {:ok, term()}
   def get_price(network, request = %PriceRequest{}) do
     key = cache_key_for_tokens(request)
-    table = get_table_name(network, :v21)
+    table = get_table_name(network, request.version)
 
     Cachex.get(table, key)
   end
@@ -31,18 +31,18 @@ defmodule JoePrices.Boundary.V21.Cache.PriceCache do
   #   end)
   # end
 
-  @spec update_prices(network_name(), [JoePrices.Core.V21.Pair.t()]) :: nil | {:error, boolean} | {:ok, boolean}
-  def update_prices(_network, []) do end
-  def update_prices(network, [price]), do: update_price(network, price)
-  def update_prices(network, [price | rest]) do
-    update_price(network, price)
-    update_prices(network, rest)
+  @spec update_prices(network_name(), atom, [JoePrices.Core.V21.Pair.t()]) :: nil | {:error, boolean} | {:ok, boolean}
+  def update_prices(_, _, []) do end
+  def update_prices(network, version, [price]), do: update_price(network, version, price)
+  def update_prices(network, version, [price | rest]) do
+    update_price(network, version, price)
+    update_prices(network, version, rest)
   end
 
-  @spec update_price(atom, Pair.t()) :: any
-  defp update_price(network, pair = %Pair{}) do
+  @spec update_price(atom, atom, Pair.t()) :: any
+  defp update_price(network, version, pair = %Pair{}) do
     key = cache_key_for_tokens(pair)
-    table = get_table_name(network, :v21)
+    table = get_table_name(network, version)
     cache_entry = PriceCacheEntry.new(pair)
 
     Cachex.put(table, key, cache_entry)

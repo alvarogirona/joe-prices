@@ -28,7 +28,7 @@ defmodule Mix.Tasks.LoadAllPairs do
 
   @doc """
   ## Example
-    iex> JoePrices.Boundary.V21.TokenPairsWorker.load_prices(:avalanche_mainnet)
+    iex> JoePrices.Boundary.V2.TokenPairsWorker.load_prices(:avalanche_mainnet)
   """
   def load_pairs(network) do
     pairs = JoePrices.Contracts.V21.LbFactory.fetch_pairs(network)

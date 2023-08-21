@@ -1,8 +1,8 @@
 defmodule JoePricesWeb.Api.V21.PriceController do
   use JoePricesWeb, :controller
 
-  alias JoePrices.Boundary.V21.Cache.PriceCacheEntry
-  alias JoePrices.Boundary.V21.PriceRequest
+  alias JoePrices.Boundary.V2.Cache.PriceCacheEntry
+  alias JoePrices.Boundary.V2.PriceRequest
 
   def index(conn, opts) do
     %{"bin_step" => bin_step, "token_x" => tx, "token_y" => ty} = opts
