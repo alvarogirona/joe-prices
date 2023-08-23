@@ -1,6 +1,4 @@
 defmodule JoePrices.Boundary.V2.Cache.PriceCache do
-  @table_suffix :prices_cache_v21
-
   @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 
   @moduledoc """
