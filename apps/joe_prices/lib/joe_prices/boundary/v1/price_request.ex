@@ -3,10 +3,10 @@ defmodule JoePrices.Boundary.V1.PriceRequest do
   Struct definition for a v1 price request.
   """
 
-  defstruct [:token_x, :token_y]
+  defstruct [:base_asset, :quote_asset]
 
   @type t :: %__MODULE__{
-    token_x: String.t(),
-    token_y: String.t()
+    base_asset: String.t(),
+    quote_asset: String.t()
   }
 end
