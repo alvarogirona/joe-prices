@@ -5,10 +5,12 @@ defmodule JoePrices.Core.Network do
 
   defstruct name: :name
 
+  @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
+
   @doc """
   Returns the rpc url for a network
   """
-  @spec get_rpc_from_network(:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet) :: String.t()
+  @spec get_rpc_from_network(network_name()) :: String.t()
   def get_rpc_from_network(:arbitrum_mainnet),
     do:
       "https://rpc.ankr.com/arbitrum/f93fa4bad7bb8f056d11b7e5b4de970adab31200521184e6a883476738a395ac"
@@ -24,7 +26,7 @@ defmodule JoePrices.Core.Network do
   @doc """
   Returns network atom from network string.
   """
-  @spec network_from_string(String.t()) :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
+  @spec network_from_string(String.t()) :: network_name()
   def network_from_string("avalanche_mainnet"), do: avalanche_mainnet()
   def network_from_string("arbitrum_mainnet"), do: arbitrum_mainnet()
   def network_from_string("bsc_mainnet"), do: bsc_mainnet()
@@ -63,7 +65,7 @@ defmodule JoePrices.Core.Network do
   LbPair.get_number_of_lb_pairs!(opts)
   ```
   """
-  @spec opts_for_call(:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet, String.t()) ::
+  @spec opts_for_call(network_name(), String.t()) ::
           [{:rpc_opts, [{any, any}, ...]} | {:to, any}]
   def opts_for_call(network, contract_address) do
     network_rpc = get_rpc_from_network(network)
