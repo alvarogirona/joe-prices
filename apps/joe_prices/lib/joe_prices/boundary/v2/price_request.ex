@@ -1,6 +1,6 @@
 defmodule JoePrices.Boundary.V2.PriceRequest do
   @moduledoc """
-  Struct definition for a v2.1 price request.
+  Struct definition for a v2 price request.
 
   ```
   alias JoePrices.Boundary.V2.PriceRequest
