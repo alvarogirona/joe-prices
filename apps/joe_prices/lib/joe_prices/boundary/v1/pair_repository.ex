@@ -15,19 +15,19 @@ defmodule JoePrices.Boundary.V1.PairRepository do
     {:ok, params}
   end
 
-  def start_link([_token_x, _token_y] = tokens) do
+  def start_link({[_token_x, _token_y], network} = params) do
     GenServer.start_link(
       __MODULE__,
-      tokens,
-      name: via(tokens)
+      params,
+      name: via(params)
     )
   end
 
-  def via([_token_x, _token_y] = tokens) do
+  def via({tokens, network} = params) do
     {
       :via,
       Registry,
-      {JoePrices.Registry.V1.PairSupervisor, tokens}
+      {JoePrices.Registry.V1.PairSupervisor, {tokens, network}}
     }
   end
 
@@ -36,7 +36,7 @@ defmodule JoePrices.Boundary.V1.PairRepository do
 
     child = DynamicSupervisor.start_child(
       JoePrices.Supervisor.V1.PairRepository,
-      {__MODULE__, proc_key}
+      {__MODULE__, {proc_key, request.network}}
     )
 
     case child do
