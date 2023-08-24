@@ -16,7 +16,8 @@ defmodule JoePricesWeb.Router do
 
   scope "/", JoePricesWeb do
     scope "/v1" do
-
+      post "/batch-prices", Api.V1.PriceController, :batch
+      get "/prices/:base_asset/:quote_asset", Api.V1.PriceController, :index
     end
 
     scope "/v2" do
