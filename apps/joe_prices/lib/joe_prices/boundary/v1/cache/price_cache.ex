@@ -5,20 +5,12 @@ defmodule JoePrices.Boundary.V1.Cache.PriceCache do
 
   @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 
-  @spec get_price(PriceRequest.t(), network_name()) :: float()
-  def get_price(%PriceRequest{:base_asset => base_asset, :quote_asset => quote_asset} = request, network) do
+  @spec get_price(PriceRequest.t()) :: float()
+  def get_price(%PriceRequest{:base_asset => base_asset, :quote_asset => quote_asset, :network => network} = request) do
     table_name = get_table_name(network)
     key = cache_key_for_tokens(request)
 
-    case Cachex.get(table_name, key) do
-      {:ok, nil} -> {:ok, nil}
-      {:ok, pair} ->
-        if base_asset < quote_asset do
-          pair.price
-        else
-          pair.inverse_price
-        end
-    end
+    Cachex.get(table_name, key)
   end
 
   @spec update_prices(network_name(), [JoePair.t()]) :: any()
