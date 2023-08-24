@@ -66,8 +66,8 @@ defmodule JoePrices.Contracts.V1.JoePair do
         %__MODULE__{
           token_x: quote_asset,
           token_y: base_asset,
-          price: price,
-          inverse_price: 1 / price
+          price: 1 / price,
+          inverse_price: price
         }
       end
     end
