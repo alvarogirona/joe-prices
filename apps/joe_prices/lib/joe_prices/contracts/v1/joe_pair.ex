@@ -43,7 +43,7 @@ defmodule JoePrices.Contracts.V1.JoePair do
   %JoePrices.Contracts.V1.JoePair{..., price: 4.125873440370472}
   ```
   """
-  @spec fetch_price(String.t(), String.t(), String.t(), atom()) :: %__MODULE__{}
+  @spec fetch_price(String.t(), String.t(), String.t(), atom()) ::{:ok, %__MODULE__{}} | {:error, term()}
   def fetch_price(base_asset, quote_asset, pair, network) do
     opts = Network.opts_for_call(network, pair)
 
@@ -54,21 +54,21 @@ defmodule JoePrices.Contracts.V1.JoePair do
       if base_asset < quote_asset do
         price = (reserve_y / reserve_x) * :math.pow(10, base_asset_decimals - quote_asset_decimals)
 
-        %__MODULE__{
+        {:ok, %__MODULE__{
           token_x: base_asset,
           token_y: quote_asset,
           price: price,
           inverse_price: 1 / price
-        }
+        }}
       else
         price = (reserve_x / reserve_y) * :math.pow(10, base_asset_decimals - quote_asset_decimals)
 
-        %__MODULE__{
+        {:ok, %__MODULE__{
           token_x: quote_asset,
           token_y: base_asset,
           price: 1 / price,
           inverse_price: price
-        }
+        }}
       end
     end
   end
