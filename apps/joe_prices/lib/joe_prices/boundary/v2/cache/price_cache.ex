@@ -58,8 +58,7 @@ defmodule JoePrices.Boundary.V2.Cache.PriceCache do
   @spec cache_key_for_tokens(%{
           :bin_step => any,
           :token_x => any,
-          :token_y => any,
-          optional(any) => any
+          :token_y => any
         }) :: nonempty_binary
   def cache_key_for_tokens(%{:token_x => tx, :token_y => ty, :bin_step => bin_step} = _tokens) do
     joined_tokens = [tx, ty]
