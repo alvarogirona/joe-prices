@@ -45,8 +45,8 @@ defmodule JoePrices.Contracts.V20.LbPair do
   def fetch_tokens(network, contract_address) do
     opts = Network.opts_for_call(network, contract_address)
 
-    with {:ok, [token_x]} <- __MODULE__.get_token_x(opts),
-         {:ok, [token_y]} <- __MODULE__.get_token_y(opts) do
+    with {:ok, [token_x]} <- __MODULE__.token_x(opts),
+         {:ok, [token_y]} <- __MODULE__.token_y(opts) do
       [token_x, token_y]
     end
   end
