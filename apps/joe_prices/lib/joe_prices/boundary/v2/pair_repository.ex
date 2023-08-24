@@ -90,15 +90,6 @@ defmodule JoePrices.Boundary.V2.PairRepository do
     {:ok, args}
   end
 
-  def child_spec(request = %PriceRequest{}) do
-    %{
-      id: {__MODULE__, {request.network, request.token_x, request.token_y, request.bin_step}},
-      start: {__MODULE__, :start_link, [request]},
-      restart: :temporary,
-      name: via(request)
-    }
-  end
-
   @spec start_link(PriceRequest.t()) ::
           :ignore | {:error, any} | {:ok, pid}
   def start_link(request = %PriceRequest{}) do
