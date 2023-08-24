@@ -9,8 +9,8 @@ defmodule JoePrices.Boundary.Token.TokenInfoFetcher do
   alias JoePrices.Core.Network
 
   @spec start_link({atom, binary}) :: {:error, any} | {:ok, pid}
-  def start_link({network, token} = key) do
-    fetch_decimals(network, token)
+  def start_link({token, network} = key) do
+    fetch_decimals(token, network)
     |> start_agent(key)
   end
 
@@ -34,7 +34,7 @@ defmodule JoePrices.Boundary.Token.TokenInfoFetcher do
   18
   ```
   """
-  def get_decimals_for_token(network, token) do
+  def get_decimals_for_token(token, network \\ :avalanche_mainnet) do
     case Registry.whereis_name({JoePrices.TokenRegistry, {network, token}}) do
       :undefined ->
         case start_link({network, token}) do
@@ -48,7 +48,7 @@ defmodule JoePrices.Boundary.Token.TokenInfoFetcher do
     end
   end
 
-  defp fetch_decimals(network, token) do
+  defp fetch_decimals(token, network) do
     opts = Network.opts_for_call(network, token)
 
     with {:ok, [decimals]} <- Ethers.Contracts.ERC20.decimals(opts) do

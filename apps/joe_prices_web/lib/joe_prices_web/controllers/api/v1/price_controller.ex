@@ -24,7 +24,7 @@ defmodule JoePricesWeb.Api.V1.PriceController do
     |> Enum.map(&parse_token_request/1)
 
     pairs = JoePricesV1.get_prices(parsed_requests)
-    |> render_pairs()
+    |> render_pairs(tokens_list)
 
     json(conn, pairs)
   end
@@ -36,8 +36,8 @@ defmodule JoePricesWeb.Api.V1.PriceController do
     }
   end
 
-  @spec render_pairs(list(JoePair.t())) :: any()
-  defp render_pairs(pairs) do
+  @spec render_pairs(list(JoePair.t()), list()) :: any()
+  defp render_pairs(pairs, requests) do
     Enum.map(pairs, fn pair_response ->
       case pair_response do
         {:ok, pair} -> render_ok_pair(pair)
