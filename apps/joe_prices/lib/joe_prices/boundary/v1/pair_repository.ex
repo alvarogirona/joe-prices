@@ -10,25 +10,8 @@ defmodule JoePrices.Boundary.V1.PairRepository do
     end
   end
 
-
-  def init(params) do
-    {:ok, params}
-  end
-
-  def start_link({[_token_x, _token_y], network} = params) do
-    GenServer.start_link(
-      __MODULE__,
-      params,
-      name: via(params)
-    )
-  end
-
-  def via({tokens, network} = params) do
-    {
-      :via,
-      Registry,
-      {JoePrices.Registry.V1.PairSupervisor, {tokens, network}}
-    }
+  def handle_call(:fetch_price, from,  request) do
+    {:reply, "asdf", request}
   end
 
   def fetch_process(%PriceRequest{} = request) do
@@ -46,8 +29,30 @@ defmodule JoePrices.Boundary.V1.PairRepository do
     end
   end
 
+  @impl
+  def init(params) do
+    {:ok, params}
+  end
+
+  @impl
+  def start_link({[_token_x, _token_y], network} = params) do
+    GenServer.start_link(
+      __MODULE__,
+      params,
+      name: via(params)
+    )
+  end
+
+  defp via({tokens, network} = params) do
+    {
+      :via,
+      Registry,
+      {JoePrices.Registry.V1.PairSupervisor, {tokens, network}}
+    }
+  end
+
   @spec process_key_for_request(PriceRequest.t()) :: list()
-  def process_key_for_request(%PriceRequest{} = request) do
+  defp process_key_for_request(%PriceRequest{} = request) do
     [request.base_asset, request.quote_asset]
     |> Enum.sort()
   end
