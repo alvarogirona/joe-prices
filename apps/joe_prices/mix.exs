@@ -38,10 +38,8 @@ defmodule JoePrices.MixProject do
     [
       {:phoenix_pubsub, "~> 2.1"},
       {:jason, "~> 1.2"},
-      {:swoosh, "~> 1.3"},
       {:finch, "~> 0.13"},
       {:ethers, "~> 0.0.4"},
-      {:quantum, "~> 3.0"},
       {:ex_doc, "~> 0.30.5", only: :dev, runtime: false},
       {:cachex, "~> 3.6"}
     ]

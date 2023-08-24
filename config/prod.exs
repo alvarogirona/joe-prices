@@ -10,9 +10,6 @@ config :joe_prices_web, JoePricesWeb.Endpoint,
   url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
-# Configures Swoosh API Client
-config :swoosh, :api_client, JoePrices.Finch
-
 # Do not print debug messages in production
 config :logger, level: :info
 
