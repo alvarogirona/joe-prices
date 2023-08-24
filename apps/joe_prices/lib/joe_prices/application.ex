@@ -34,7 +34,17 @@ defmodule JoePrices.Application do
         Registry,
         [name: JoePrices.Registry.TokenInfoRepository, keys: :unique]
       },
-      {Registry, keys: :unique, name: JoePrices.TokenRegistry}
+      {
+        Registry, keys: :unique, name: JoePrices.TokenRegistry
+      },
+      {
+        DynamicSupervisor,
+        [name: JoePrices.Supervisor.V1.PairRepository, strategy: :one_for_one]
+      },
+      {
+        Registry,
+        [name: JoePrices.Registry.V1.PairSupervisor, keys: :unique]
+      }
     ]
 
     v21_caches =
