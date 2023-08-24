@@ -8,11 +8,15 @@ defmodule JoePrices.Contracts.V1.JoeFactory do
     alias JoePrices.Core.Network
 
     @doc """
-    0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7
+    Fetches the pair for 2 given tokens.
 
-    0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e
+    ## Example
 
-    JoePrices.Contracts.V1.JoeFactory.fetch_pair("0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7", "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e")
+    ```
+    iex> JoePrices.Contracts.V1.JoeFactory.fetch_pair("0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7", "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e")
+
+    iex> JoePrices.Contracts.V1.JoeFactory.fetch_pair("0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd", "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e")
+    ```
     """
     @spec fetch_pair(String.t(), String.t(), atom()) :: {:ok, binary()} | {:error, any()}
     def fetch_pair(token_x, token_y, network \\ :avalanche_mainnet) do
