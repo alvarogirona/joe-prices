@@ -13,7 +13,7 @@ defmodule JoePrices.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
     ]
   end
 
@@ -23,7 +23,7 @@ defmodule JoePrices.MixProject do
   def application do
     [
       mod: {JoePrices.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :observer, :wx]
     ]
   end
 
