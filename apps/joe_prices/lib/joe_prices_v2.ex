@@ -8,7 +8,7 @@ defmodule JoePricesV2 do
   """
 
   alias JoePrices.Boundary.V2.PriceRequest
-  alias JoePrices.Boundary.V2.Cache.PriceCacheEntry
+  alias JoePrices.Boundary.V2.PriceCache.PriceCacheEntry
   alias JoePrices.Utils.Parallel
 
   @doc """

@@ -10,8 +10,8 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   use GenServer
 
   alias JoePrices.Boundary.V2.PriceRequest
-  alias JoePrices.Boundary.V2.Cache.PriceCache
-  alias JoePrices.Boundary.V2.Cache.PriceCacheEntry
+  alias JoePrices.Boundary.V2.PriceCache.PriceCache
+  alias JoePrices.Boundary.V2.PriceCache.PriceCacheEntry
   alias JoePrices.Core.V21.Pair
   alias JoePrices.Utils.Parallel
 

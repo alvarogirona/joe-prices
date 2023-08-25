@@ -1,7 +1,7 @@
 defmodule JoePrices.Boundary.V1.Cache.PriceCache do
   alias JoePrices.Boundary.V1.PriceRequest
   alias JoePrices.Contracts.V1.JoePair
-  alias JoePrices.Boundary.V1.Cache.PriceCacheEntry
+  alias JoePrices.Boundary.V1.PriceCache.PriceCacheEntry
 
   @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 

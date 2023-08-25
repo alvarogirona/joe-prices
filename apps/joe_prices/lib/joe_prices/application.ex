@@ -44,7 +44,8 @@ defmodule JoePrices.Application do
       {
         Registry,
         [name: JoePrices.Registry.V1.PairSupervisor, keys: :unique]
-      }
+      },
+      JoePrices.Boundary.V2.PairInfoCache.Cache
     ]
 
     v21_caches =

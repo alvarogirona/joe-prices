@@ -1,10 +1,10 @@
-defmodule JoePrices.Boundary.V2.Cache.PriceCache do
+defmodule JoePrices.Boundary.V2.PriceCache.PriceCache do
   @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 
   @moduledoc """
   Module for managin Cachex access for prices.
   """
-  alias JoePrices.Boundary.V2.Cache.PriceCacheEntry
+  alias JoePrices.Boundary.V2.PriceCache.PriceCacheEntry
   alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Core.V21.Pair
 
