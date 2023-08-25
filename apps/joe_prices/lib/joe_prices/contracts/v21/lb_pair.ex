@@ -55,4 +55,22 @@ defmodule JoePrices.Contracts.V21.LbPair do
       [token_x, token_y]
     end
   end
+
+  def has_enough_liquidity() do
+
+  end
+
+  @doc"""
+  ## Example
+
+  ```
+  iex> JoePrices.Contracts.V21.LbPair.fetch_bin_reserves("0xD446eb1660F766d533BeCeEf890Df7A69d26f7d1", 8375933, :avalanche_mainnet)
+  ```
+  """
+  @spec fetch_bin_reserves(String.t(), non_neg_integer(), network_name()) :: any()
+  def fetch_bin_reserves(pair_address, bin_id, network \\ :avalanche_mainnet) do
+    opts = Network.opts_for_call(network, pair_address)
+
+    __MODULE__.get_bin(bin_id, opts)
+  end
 end
