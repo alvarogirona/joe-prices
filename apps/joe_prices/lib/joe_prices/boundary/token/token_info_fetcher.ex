@@ -49,7 +49,7 @@ defmodule JoePrices.Boundary.Token.TokenInfoFetcher do
   end
 
   defp fetch_decimals(token, network) do
-    opts = Network.opts_for_call(network, token)
+    opts = Network.opts_for_call(token, network)
 
     with {:ok, [decimals]} <- Ethers.Contracts.ERC20.decimals(opts) do
       {:ok, decimals}

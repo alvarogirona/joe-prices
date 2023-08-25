@@ -47,8 +47,8 @@ defmodule JoePrices.Contracts.V1.JoePair do
   def fetch_price(base_asset, quote_asset, pair, network) do
     opts = Network.opts_for_call(network, pair)
 
-    base_asset_decimals = TokenInfoFetcher.get_decimals_for_token(network, base_asset)
-    quote_asset_decimals = TokenInfoFetcher.get_decimals_for_token(network, quote_asset)
+    base_asset_decimals = TokenInfoFetcher.get_decimals_for_token(base_asset, network)
+    quote_asset_decimals = TokenInfoFetcher.get_decimals_for_token(quote_asset, network)
 
     with {:ok, [reserve_x, reserve_y, _block_timestamp]} <- __MODULE__.get_reserves(opts) do
       if base_asset < quote_asset do
