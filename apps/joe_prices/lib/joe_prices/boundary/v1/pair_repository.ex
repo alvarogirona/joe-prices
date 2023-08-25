@@ -27,7 +27,7 @@ defmodule JoePrices.Boundary.V1.PairRepository do
   defp maybe_update_cache?({:ok, nil}, %PriceRequest{} = request), do: update_cache(request)
   defp maybe_update_cache?(cache_entry, _request), do: cache_entry
 
-  @spec update_cache(JoePrices.Boundary.V1.PriceRequest.t()) :: %JoePair{}
+  @spec update_cache(JoePrices.Boundary.V1.PriceRequest.t()) :: JoePair.t()
   def update_cache(%PriceRequest{base_asset: base_asset, quote_asset: quote_asset, network: network} = request) do
     {:ok, pair} = JoePrices.Contracts.V1.JoeFactory.fetch_pair(quote_asset, base_asset, network)
     price_response = JoePair.fetch_price(base_asset, quote_asset, pair, network)
