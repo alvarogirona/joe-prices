@@ -11,16 +11,16 @@ defmodule JoePrices.Boundary.V2.PairRepository do
 
   alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Boundary.V2.PriceCache.PriceCache
-  alias JoePrices.Boundary.V2.PriceCache.PriceCacheEntry
   alias JoePrices.Core.V21.Pair
   alias JoePrices.Utils.Parallel
+  alias JoePrices.Boundary.Token.TokenInfoFetcher
 
   @bad_resp_addr "0x0000000000000000000000000000000000000000"
 
   @doc """
   Returns the price for a given pair.
   """
-  @spec get_price(PriceRequest.t()) :: PriceCacheEntry.t()
+  @spec get_price(PriceRequest.t()) :: Pair.t()
   def get_price(request = %PriceRequest{}) do
     with {:ok, pid} <- fetch_process(request) do
       GenServer.call(pid, :fetch_price)
@@ -46,28 +46,21 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   defp maybe_update_cache?({:ok, nil}, request = %PriceRequest{}), do: update_cache(request)
   defp maybe_update_cache?(cache_entry, _request), do: cache_entry
 
-  defp update_cache(request = %PriceRequest{}) do
-    %{:token_x => tx, :token_y => ty, :bin_step => bin_step} = request
-
-    case lb_factory_module(request.version).fetch_pairs_for_tokens(
+  defp update_cache(%PriceRequest{:token_x => tx, :token_y => ty, :bin_step => bin_step} = request) do
+    case lb_factory_module(request.version).fetch_pair_for_tokens(
            request.network,
            tx,
            ty,
            bin_step
          ) do
-      {:ok, pairs} ->
-        [info] = fetch_pairs_info(pairs, request)
-        PriceCache.update_prices(request.network, request.version, [info])
-        {:ok, PriceCacheEntry.new(info)}
+      {:ok, [pair]} ->
+        info = process_pair(pair, request)
+        PriceCache.update_price(request.network, request.version, info)
+        {:ok, info}
 
       _ ->
-        {:error, "LBFactory contract call error (fetch_pairs_for_tokens)"}
+        {:error, "LBFactory contract call error (fetch_pair_for_tokens)"}
     end
-  end
-
-  defp fetch_pairs_info(pairs, request = %PriceRequest{}) do
-    pairs
-    |> Parallel.pmap(fn pair -> process_pair(pair, request) end)
   end
 
   defp process_pair({_, @bad_resp_addr, _, _}, _request), do: nil
@@ -76,12 +69,26 @@ defmodule JoePrices.Boundary.V2.PairRepository do
     {:ok, [active_bin]} =
       lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
+    token_x_decimals = TokenInfoFetcher.get_decimals_for_token(request.token_x)
+    token_y_decimals = TokenInfoFetcher.get_decimals_for_token(request.token_y)
+
+    raw_price = JoePrices.Core.V21.Bin.get_price_from_id(active_bin, request.bin_step)
+    price_multiplier = :math.pow(10, token_x_decimals - token_y_decimals)
+
+    price =
+      if request.token_x < request.token_y do
+        raw_price * price_multiplier
+      else
+        1 / raw_price * price_multiplier
+      end
+
     %Pair{
       name: "",
       token_x: request.token_x,
       token_y: request.token_y,
       bin_step: request.bin_step,
-      active_bin: active_bin
+      active_bin: active_bin,
+      price: price
     }
   end
 

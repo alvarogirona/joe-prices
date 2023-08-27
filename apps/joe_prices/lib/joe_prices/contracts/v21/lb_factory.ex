@@ -38,8 +38,8 @@ defmodule JoePrices.Contracts.V21.LbFactory do
     |> Enum.map(fn {:ok, [result]} -> result end)
   end
 
-  @spec fetch_pairs_for_tokens(atom(), String.t(), String.t(), integer()) :: any
-  def fetch_pairs_for_tokens(network, token_x, token_y, bin_step) do
+  @spec fetch_pair_for_tokens(atom(), String.t(), String.t(), integer()) :: any
+  def fetch_pair_for_tokens(network, token_x, token_y, bin_step) do
     opts = Network.opts_for_call(network, contract_for_network(network))
 
     case JoePrices.Contracts.V21.LbFactory.get_lb_pair_information(

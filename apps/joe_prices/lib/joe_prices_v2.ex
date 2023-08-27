@@ -7,14 +7,14 @@ defmodule JoePricesV2 do
   The prices are fetched from the `JoePrices.Boundary.V2.PairRepository` which caches them.
   """
 
+  alias JoePrices.Core.V21.Pair
   alias JoePrices.Boundary.V2.PriceRequest
-  alias JoePrices.Boundary.V2.PriceCache.PriceCacheEntry
   alias JoePrices.Utils.Parallel
 
   @doc """
   Get prices for a given network and tokens.
   """
-  @spec get_prices(list(PriceRequest.t())) :: [PriceCacheEntry.t()]
+  @spec get_prices(list(PriceRequest.t())) :: list({:ok, Pair.t()} | {:error, any()})
   def get_prices(pairs) do
     pairs
     |> Parallel.pmap(&get_price(&1))
@@ -31,7 +31,7 @@ defmodule JoePricesV2 do
   iex> JoePricesV21.get_price(:avalanche_mainnet, request)
   ```
   """
-  @spec get_price(PriceRequest.t()) :: {:ok, PriceCacheEntry.t()} | {:error, any()}
+  @spec get_price(PriceRequest.t()) :: {:ok, Pair.t()} | {:error, any()}
   def get_price(request = %PriceRequest{}) do
     JoePrices.Boundary.V2.PairRepository.get_price(request)
   end

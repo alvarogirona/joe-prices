@@ -1,7 +1,7 @@
 defmodule JoePricesWeb.Api.V20.PriceController do
   use JoePricesWeb, :controller
 
-  alias JoePrices.Boundary.V2.PriceCache.PriceCacheEntry
+  alias JoePrices.Core.V21.Pair
   alias JoePrices.Boundary.V2.PriceRequest
 
   def index(conn, opts) do
@@ -39,11 +39,11 @@ defmodule JoePricesWeb.Api.V20.PriceController do
 
   defp render_price({:ok, price} = _ok), do: render_price(price)
   defp render_price({:error, _}), do: %{error: "could not fetch price"}
-  defp render_price(%PriceCacheEntry{} = cache_entry) do
+  defp render_price(%Pair{} = pair) do
     %{
-      token_x: cache_entry.token_x,
-      token_y: cache_entry.token_y,
-      price: cache_entry.price
+      token_x: pair.token_x,
+      token_y: pair.token_y,
+      price: pair.price
     }
   end
 end

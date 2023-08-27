@@ -4,11 +4,10 @@ defmodule JoePrices.Boundary.V2.PriceCache.PriceCache do
   @moduledoc """
   Module for managin Cachex access for prices.
   """
-  alias JoePrices.Boundary.V2.PriceCache.PriceCacheEntry
   alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Core.V21.Pair
 
-  @spec get_price(network_name(), PriceRequest.t()) :: {:ok, term()}
+  @spec get_price(network_name(), PriceRequest.t()) :: {:ok, term()} | {:ok, nil}
   def get_price(network, request = %PriceRequest{}) do
     key = cache_key_for_tokens(request)
     table = get_table_name(network, request.version)
@@ -16,34 +15,12 @@ defmodule JoePrices.Boundary.V2.PriceCache.PriceCache do
     Cachex.get(table, key)
   end
 
-  # TODO: batch implementation for updating cache
-  # def update_prices(network, prices) do
-  #   table = get_table_name(network)
-
-  #   Cachex.execute!(table, fn cache ->
-  #     Enum.each(prices, fn pair ->
-  #       key = cache_key_for_tokens(pair)
-  #       cache_entry = PriceCacheEntry.new(pair)
-  #       Cachex.put(cache, key, cache_entry)
-  #     end)
-  #   end)
-  # end
-
-  @spec update_prices(network_name(), atom, [JoePrices.Core.V21.Pair.t()]) :: nil | {:error, boolean} | {:ok, boolean}
-  def update_prices(_, _, []) do end
-  def update_prices(network, version, [price]), do: update_price(network, version, price)
-  def update_prices(network, version, [price | rest]) do
-    update_price(network, version, price)
-    update_prices(network, version, rest)
-  end
-
-  @spec update_price(atom, atom, Pair.t()) :: any
-  defp update_price(network, version, pair = %Pair{}) do
+  @spec update_price(atom, atom, Pair.t()) :: {:ok | :error, boolean()}
+  def update_price(network, version, pair = %Pair{}) do
     key = cache_key_for_tokens(pair)
     table = get_table_name(network, version)
-    cache_entry = PriceCacheEntry.new(pair)
 
-    Cachex.put(table, key, cache_entry)
+    Cachex.put(table, key, pair)
   end
 
   @spec get_table_name(network_name(), atom) :: atom
