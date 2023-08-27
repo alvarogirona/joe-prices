@@ -46,16 +46,18 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   defp maybe_update_cache?({:ok, nil}, request = %PriceRequest{}), do: update_cache(request)
   defp maybe_update_cache?(cache_entry, _request), do: cache_entry
 
-  defp update_cache(%PriceRequest{:token_x => tx, :token_y => ty, :bin_step => bin_step} = request) do
-    case lb_factory_module(request.version).fetch_pair_for_tokens(
-           request.network,
+  defp update_cache(
+    request = %PriceRequest{:token_x => tx, :token_y => ty, :bin_step => bin_step, :network => network, :version => version}
+  ) do
+    case lb_factory_module(version).fetch_pair_for_tokens(
+           network,
            tx,
            ty,
            bin_step
          ) do
       {:ok, [pair_address]} ->
         pair_info = process_pair(pair_address, request)
-        PriceCache.update_price(request.network, request.version, pair_info)
+        PriceCache.update_price(network, version, pair_info)
         {:ok, pair_info}
 
       _ ->
