@@ -53,10 +53,10 @@ defmodule JoePrices.Boundary.V2.PairRepository do
            ty,
            bin_step
          ) do
-      {:ok, [pair]} ->
-        info = process_pair(pair, request)
-        PriceCache.update_price(request.network, request.version, info)
-        {:ok, info}
+      {:ok, [pair_address]} ->
+        pair_info = process_pair(pair_address, request)
+        PriceCache.update_price(request.network, request.version, pair_info)
+        {:ok, pair_info}
 
       _ ->
         {:error, "LBFactory contract call error (fetch_pair_for_tokens)"}
