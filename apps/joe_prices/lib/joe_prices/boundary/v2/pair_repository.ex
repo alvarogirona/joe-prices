@@ -9,6 +9,7 @@ defmodule JoePrices.Boundary.V2.PairRepository do
 
   use GenServer
 
+  alias JoePrices.Core.Tokens.Stable
   alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Boundary.V2.PriceCache.PriceCache
   alias JoePrices.Core.V21.Pair
@@ -71,6 +72,28 @@ defmodule JoePrices.Boundary.V2.PairRepository do
     {:ok, [active_bin]} =
       lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
+    price = compute_price(request, active_bin)
+
+    %Pair{
+      name: "",
+      token_x: request.token_x,
+      token_y: request.token_y,
+      bin_step: request.bin_step,
+      active_bin: active_bin,
+      price: price
+    }
+  end
+
+  @spec compute_price(PriceRequest.t(), non_neg_integer()) :: float()
+  defp compute_price(request = %PriceRequest{}, active_bin) do
+    if has_stable_in_tokens(request) do
+      compute_price_with_stable(request, active_bin)
+    else
+
+    end
+  end
+
+  defp compute_price_with_stable(request = %PriceRequest{}, active_bin) do
     token_x_decimals = TokenInfoFetcher.get_decimals_for_token(request.token_x)
     token_y_decimals = TokenInfoFetcher.get_decimals_for_token(request.token_y)
 
@@ -83,15 +106,14 @@ defmodule JoePrices.Boundary.V2.PairRepository do
       else
         1 / raw_price * price_multiplier
       end
+  end
 
-    %Pair{
-      name: "",
-      token_x: request.token_x,
-      token_y: request.token_y,
-      bin_step: request.bin_step,
-      active_bin: active_bin,
-      price: price
-    }
+  defp compute_price_without_stable(request = %PriceRequest{}, active_bin) do
+    
+  end
+
+  defp has_stable_in_tokens(%PriceRequest{token_x: tx, token_y: ty}) do
+    Stable.is_token_stable(tx) or Stable.is_token_stable(ty)
   end
 
   @spec init(any) :: {:ok, any}

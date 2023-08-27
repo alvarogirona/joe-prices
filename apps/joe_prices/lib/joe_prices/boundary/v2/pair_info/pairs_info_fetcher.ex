@@ -17,6 +17,7 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
   alias JoePrices.Utils.Parallel
   alias JoePrices.Core.Network
   alias JoePrices.Boundary.V2.PairInfoCache.PairCacheEntry
+  alias JoePrices.Core.Tokens.Stable
 
   @type available_versions() :: :v20 | :v21
   @type available_networks() :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
@@ -31,6 +32,17 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
       start: {__MODULE__, :start_link, [[]]},
       type: :worker
     }
+  end
+
+  def find_stable_pairs_with_token(token, version, network) do
+    get_pairs(version, network)
+    |> Enum.filter(fn entry ->
+      (String.downcase(entry.token_x) == String.downcase(token) or String.downcase(entry.token_y) == String.downcase(token)) and pair_has_stable(entry.token_x, entry.token_y, network)
+    end)
+  end
+
+  defp pair_has_stable(token_x, token_y, network) do
+    Stable.is_token_stable(token_x, network) or Stable.is_token_stable(token_y, network)
   end
 
   @doc """

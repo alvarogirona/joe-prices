@@ -21,9 +21,11 @@ defmodule JoePrices.Core.Tokens.Stable do
       false
   """
   def is_token_stable(token_address, network) do
+    downcased_token = String.downcase(token_address)
+
     stable_coin_modules()
     |> Enum.map(fn module -> apply(module, :address_for_network, [network]) end)
-    |> Enum.member?(token_address)
+    |> Enum.member?(downcased_token)
   end
 
   defp stable_coin_modules(), do: [USDC, USDT, USDCe]
