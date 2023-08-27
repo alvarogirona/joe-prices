@@ -45,7 +45,7 @@ defmodule JoePrices.Application do
         Registry,
         [name: JoePrices.Registry.V1.PairSupervisor, keys: :unique]
       },
-      JoePrices.Boundary.V2.PairInfoCache.Cache
+      JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher
     ]
 
     v21_caches =
@@ -65,7 +65,7 @@ defmodule JoePrices.Application do
   end
 
   defp v21_cache_child_from_network(network) do
-    cache_name = JoePrices.Boundary.V2.Cache.PriceCache.get_table_name(network, :v21)
+    cache_name = JoePrices.Boundary.V2.PriceCache.PriceCache.get_table_name(network, :v21)
 
     Supervisor.child_spec(
       {Cachex,
@@ -77,7 +77,7 @@ defmodule JoePrices.Application do
   end
 
   defp v20_cache_child_from_network(network) do
-    cache_name = JoePrices.Boundary.V2.Cache.PriceCache.get_table_name(network, :v20)
+    cache_name = JoePrices.Boundary.V2.PriceCache.PriceCache.get_table_name(network, :v20)
 
     Supervisor.child_spec(
       {Cachex,
@@ -89,7 +89,7 @@ defmodule JoePrices.Application do
   end
 
   defp v1_cache_child_from_network(network) do
-    cache_name = JoePrices.Boundary.V1.Cache.PriceCache.get_table_name(network)
+    cache_name = JoePrices.Boundary.V1.PriceCache.PriceCache.get_table_name(network)
 
     Supervisor.child_spec(
       {Cachex,

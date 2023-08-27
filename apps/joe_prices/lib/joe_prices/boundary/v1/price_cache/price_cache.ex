@@ -1,12 +1,11 @@
-defmodule JoePrices.Boundary.V1.Cache.PriceCache do
+defmodule JoePrices.Boundary.V1.PriceCache.PriceCache do
   alias JoePrices.Boundary.V1.PriceRequest
   alias JoePrices.Contracts.V1.JoePair
-  alias JoePrices.Boundary.V1.PriceCache.PriceCacheEntry
 
   @type network_name :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 
-  @spec get_price(PriceRequest.t()) :: float()
-  def get_price(%PriceRequest{:base_asset => base_asset, :quote_asset => quote_asset, :network => network} = request) do
+  @spec get_price(JoePrices.Boundary.V1.PriceRequest.t()) :: {atom, any}
+  def get_price(%PriceRequest{:network => network} = request) do
     table_name = get_table_name(network)
     key = cache_key_for_tokens(request)
 
@@ -18,7 +17,7 @@ defmodule JoePrices.Boundary.V1.Cache.PriceCache do
     Enum.each(pairs, fn price -> update_price(network, price) end)
   end
 
-  @spec update_price(atom, JoePair.t()) :: any()
+  @spec update_price(network_name(), JoePair.t()) :: {:error, boolean} | {:ok, boolean}
   def update_price(network, %JoePair{} = pair) do
     key = cache_key_for_tokens(pair)
     table = get_table_name(network)
@@ -31,7 +30,8 @@ defmodule JoePrices.Boundary.V1.Cache.PriceCache do
   def get_table_name(:avalanche_mainnet), do: :avalanche_mainnet_prices_cache_v1
   def get_table_name(:bsc_mainnet), do: :bsc_mainnet_prices_cache_v1
 
-  def cache_key_for_tokens(%PriceRequest{base_asset: token_x, quote_asset: token_y} = request) do
+  @spec cache_key_for_tokens(%{:__struct__ => JoePrices.Boundary.V1.PriceRequest | JoePrices.Contracts.V1.JoePair}) :: list
+  def cache_key_for_tokens(%PriceRequest{base_asset: token_x, quote_asset: token_y}) do
     [token_x, token_y]
     |> Enum.sort()
   end

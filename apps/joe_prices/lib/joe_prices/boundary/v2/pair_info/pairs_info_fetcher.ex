@@ -10,7 +10,8 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
 
   Having a cache for all the available pairs of a version allows to quickly lookup for it.
 
-  TODO: implement the path 
+  TODO: Implement the path finding. *Currently Joe v2 limits the base assets that people can use to create
+  pairs, so we can asume just 1 hop between pairs to get the USDC value.
   """
 
   alias JoePrices.Utils.Parallel
@@ -56,7 +57,6 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
   defp load_pairs_for_version(:v21, network) do
     network
     |> JoePrices.Contracts.V21.LbFactory.fetch_pairs()
-    |> Enum.take(10)
     |> Parallel.pmap(fn pair ->
       [token_x, token_y] = JoePrices.Contracts.V21.LbPair.fetch_tokens(network, pair)
 

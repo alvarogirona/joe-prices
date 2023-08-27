@@ -1,5 +1,5 @@
 defmodule JoePrices.Boundary.V1.PairRepository do
-  alias JoePrices.Boundary.V1.Cache.PriceCache
+  alias JoePrices.Boundary.V1.PriceCache.PriceCache
   alias JoePrices.Contracts.V1.JoePair
   alias JoePrices.Boundary.V1.PriceRequest
   use GenServer
