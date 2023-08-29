@@ -9,12 +9,10 @@ defmodule JoePrices.Boundary.V2.PairRepository do
 
   use GenServer
 
-  alias JoePrices.Core.Tokens.Stable
   alias JoePrices.Boundary.V2.PriceRequest
+  alias JoePrices.Boundary.V2.PriceComputator
   alias JoePrices.Boundary.V2.PriceCache.PriceCache
   alias JoePrices.Core.V21.Pair
-  alias JoePrices.Utils.Parallel
-  alias JoePrices.Boundary.Token.TokenInfoFetcher
 
   @bad_resp_addr "0x0000000000000000000000000000000000000000"
 
@@ -66,13 +64,13 @@ defmodule JoePrices.Boundary.V2.PairRepository do
     end
   end
 
-  defp fetch_pair_info(@bad_resp_addr, _request), do: nil
+  def fetch_pair_info(@bad_resp_addr, _request), do: nil
 
-  defp fetch_pair_info(addr, request = %PriceRequest{}) do
+  def fetch_pair_info(addr, request = %PriceRequest{}) do
     {:ok, [active_bin]} =
       lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
-    price = compute_price(request, active_bin)
+    price = PriceComputator.compute_price(request, active_bin)
 
     %Pair{
       name: "",
@@ -85,38 +83,6 @@ defmodule JoePrices.Boundary.V2.PairRepository do
       network: request.network,
       version: request.version
     }
-  end
-
-  @spec compute_price(PriceRequest.t(), non_neg_integer()) :: float()
-  defp compute_price(request = %PriceRequest{}, active_bin) do
-    if has_stable_in_tokens(request) do
-      compute_price_with_stable(request, active_bin)
-    else
-
-    end
-  end
-
-  defp compute_price_with_stable(request = %PriceRequest{}, active_bin) do
-    token_x_decimals = TokenInfoFetcher.get_decimals_for_token(request.token_x)
-    token_y_decimals = TokenInfoFetcher.get_decimals_for_token(request.token_y)
-
-    raw_price = JoePrices.Core.V21.Bin.get_price_from_id(active_bin, request.bin_step)
-    price_multiplier = :math.pow(10, token_x_decimals - token_y_decimals)
-
-    price =
-      if request.token_x < request.token_y do
-        raw_price * price_multiplier
-      else
-        1 / raw_price * price_multiplier
-      end
-  end
-
-  defp compute_price_without_stable(request = %PriceRequest{}, active_bin) do
-    
-  end
-
-  defp has_stable_in_tokens(%PriceRequest{token_x: tx, token_y: ty, network: nw}) do
-    Stable.is_token_stable(tx, nw) or Stable.is_token_stable(ty, nw)
   end
 
   @spec init(any) :: {:ok, any}
