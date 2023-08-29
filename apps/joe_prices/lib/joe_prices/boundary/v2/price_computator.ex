@@ -72,11 +72,7 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
         %Pair{price: related_price} =
           p_info = PairRepository.fetch_pair_info(stable_related_pair.pair_address, request_for_x)
 
-        IO.inspect(p_info)
-
         price = compute_x_div_y_price(request, active_bin)
-
-        IO.inspect(price)
 
         -2
 
