@@ -56,8 +56,8 @@ defmodule JoePrices.Boundary.V2.PairRepository do
            ty,
            bin_step
          ) do
-      {:ok, [pair_address]} ->
-        pair_info = process_pair(pair_address, request)
+      {:ok, [{_, pair_address, _, _}]} ->
+        pair_info = fetch_pair_info(pair_address, request)
         PriceCache.update_price(network, version, pair_info)
         {:ok, pair_info}
 
@@ -66,9 +66,9 @@ defmodule JoePrices.Boundary.V2.PairRepository do
     end
   end
 
-  defp process_pair({_, @bad_resp_addr, _, _}, _request), do: nil
+  defp fetch_pair_info(@bad_resp_addr, _request), do: nil
 
-  defp process_pair({_, addr, _, _}, request = %PriceRequest{}) do
+  defp fetch_pair_info(addr, request = %PriceRequest{}) do
     {:ok, [active_bin]} =
       lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
