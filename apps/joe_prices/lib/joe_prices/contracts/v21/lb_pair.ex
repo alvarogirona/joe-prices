@@ -1,5 +1,8 @@
 defmodule JoePrices.Contracts.V21.LbPair do
+  alias JoePrices.Core.V21.Pair
+  alias JoePrices.Boundary.Token.TokenInfoFetcher
   alias JoePrices.Core.Network
+  alias JoePrices.Utils.Parallel
 
   @type network_name() :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 
@@ -73,4 +76,47 @@ defmodule JoePrices.Contracts.V21.LbPair do
 
     __MODULE__.get_bin(bin_id, opts)
   end
+
+  def pair_has_enough_reserves_around_active_bin?(%Pair{} = pair, price_in_dollars) do
+    [above, below] = get_reserves_around_active_bin(pair)
+  end
+
+  @doc """
+  ## Example
+    iex> btc_avax_pair = %JoePrices.Core.V21.Pair{
+      address: "0xd9fa522f5bc6cfa40211944f2c8da785773ad99d",
+      network: :avalanche_mainnet,
+      version: :v21,
+      name: "",
+      token_x: "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+      token_y: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      bin_step: 10,
+      active_bin: 8419498,
+      price: 27621.785201428967
+    }
+    iex> JoePrices.Contracts.V21.LbPair.get_reserves_around_active_bin(btc_avax_pair)
+  """
+  def get_reserves_around_active_bin(%Pair{active_bin: active_bin} = pair) do
+    opts = Network.opts_for_call(pair.network, pair.address)
+
+    token_x_decimals = TokenInfoFetcher.get_decimals_for_token(pair.token_x)
+    token_y_decimals = TokenInfoFetcher.get_decimals_for_token(pair.token_y)
+
+    reserves_above = Enum.to_list(active_bin + 1..active_bin + 5)
+      |> Parallel.pmap(fn bin_id ->
+        {:ok, reserves} = __MODULE__.fetch_bin_reserves(pair.address, bin_id, pair.network)
+        reserves
+      end)
+
+    reserves_below = Enum.to_list(active_bin - 5..active_bin - 1)
+      |> Parallel.pmap(fn bin_id ->
+        {:ok, reserves} = __MODULE__.fetch_bin_reserves(pair.address, bin_id, pair.network)
+        reserves
+      end)
+
+    {reserves_below, reserves_above}
+    # Enum.to_list(active_bin - 5..active_bin)
+  end
 end
+
+# 0xd446eb1660f766d533beceef890df7a69d26f7d1
