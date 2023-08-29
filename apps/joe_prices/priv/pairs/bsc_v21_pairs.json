@@ -1,0 +1,730 @@
+[
+    {
+        "name": "Injective Protocol-Wrapped BNB",
+        "token_x": "0xa2b726b1145a4773f68593cf171187d8ebe4d495",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x60c7598b4b06dd54abadddee8553ad89bd26c1c2"
+    },
+    {
+        "name": "Bitcoin BR-Tether USD",
+        "token_x": "0x0cf8e180350253271f4b917ccfb0accc4862f262",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0x99378a45e58fd01aa342ba3107313d386bd098c8"
+    },
+    {
+        "name": "MAC-Tether USD",
+        "token_x": "0x66fc96560042c1b9a7fd92072f25703525470e89",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0xbc053c7f3aa9007556cb3f1a5bec5f70b82ef810"
+    },
+    {
+        "name": "Wrapped BNB-Tether USD",
+        "token_x": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0x695b0690e2fe1d033de798c883363a8d25f3112d"
+    },
+    {
+        "name": "Tether USD-BUSD Token",
+        "token_x": "0x55d398326f99059ff775485246999027b3197955",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 100,
+        "pair_address": "0x40da534c00bbf41cc167d027c38ee82d732e23af"
+    },
+    {
+        "name": "Level Token-Tether USD",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0xdce12347b429a32a177708646d4024449827a69a"
+    },
+    {
+        "name": "DegenReborn Token-Tether USD",
+        "token_x": "0x1a131f7b106d58f33eaf0fe5b47db2f2045e5732",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0x5fd601a58c1ec17c805330213f4a28f345654531"
+    },
+    {
+        "name": "AlpacaToken-Wrapped BNB",
+        "token_x": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x9a6f7f8f37856e7cbe67e3a7d7c565726c79debf"
+    },
+    {
+        "name": "Wrapped BNB-Tether USD",
+        "token_x": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 15,
+        "pair_address": "0xf258929a659f68ace4732e36f626d6d1544878ac"
+    },
+    {
+        "name": "JoeToken-Wrapped BNB",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 20,
+        "pair_address": "0x722edd360b53029e287dd4d1ebcfd6cb3710912f"
+    },
+    {
+        "name": "Radiant-Wrapped BNB",
+        "token_x": "0xf7de7e8a6bd59ed41a4b5fe50278b3b7f31384df",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x017839edd9a2320f5ea72b9cf1bbd6850166d89a"
+    },
+    {
+        "name": "Radiant-Wrapped BNB",
+        "token_x": "0xf7de7e8a6bd59ed41a4b5fe50278b3b7f31384df",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xdf41c34dc3adcce16e1a9e96af74972a21473799"
+    },
+    {
+        "name": "PancakeSwap Token-Wrapped BNB",
+        "token_x": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 20,
+        "pair_address": "0xc0506dc4b79f63560ff85028900e7e5da36f4013"
+    },
+    {
+        "name": "BTCB Token-Wrapped BNB",
+        "token_x": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 10,
+        "pair_address": "0xfd83d084777143b726dd32d9424c789ad7df1632"
+    },
+    {
+        "name": "Ethereum Token-Wrapped BNB",
+        "token_x": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 10,
+        "pair_address": "0x944b4c01026ee4a314d4640b4aec0545e799033b"
+    },
+    {
+        "name": "USD Coin-Tether USD",
+        "token_x": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 1,
+        "pair_address": "0xaec97c3465d83b1952c3a251036df88a635c060c"
+    },
+    {
+        "name": "BUSD Token-Tether USD",
+        "token_x": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 1,
+        "pair_address": "0x023ff63aa03060cfe97018e2854318bea9873fd5"
+    },
+    {
+        "name": "USD Coin-BUSD Token",
+        "token_x": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 1,
+        "pair_address": "0xab08e5131b4a847bade496771e139faca20291ef"
+    },
+    {
+        "name": "Level Token-Tether USD",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 50,
+        "pair_address": "0x7e6857d4b2efaf9ff29f88f6d7d083a160e0849e"
+    },
+    {
+        "name": "Liquid Staking BNB-Wrapped BNB",
+        "token_x": "0x1bdd3cf7f79cfb8edbb955f20ad99211551ba275",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0xf37001f901a5a5f5a03896febb12f52b58228542"
+    },
+    {
+        "name": "Level Token-Wrapped BNB",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0x1b0ed506e66621b3e0938001b014c65098802e3c"
+    },
+    {
+        "name": "Level Token-Wrapped BNB",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 20,
+        "pair_address": "0x9dad2f00bd587ce2dc030d53d5efcdb0d8d170a4"
+    },
+    {
+        "name": "Level Token-Tether USD",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 20,
+        "pair_address": "0x3708d924f627d8109687ce10f6c324445c28347c"
+    },
+    {
+        "name": "SafeMoney UP-Wrapped BNB",
+        "token_x": "0xa5522ae272b74b014bc20ef7ef2e2b87af0787d8",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x54ba5342828363d118d2e2e23e0f8a2a3d620bd3"
+    },
+    {
+        "name": "BUSD Token-Wrapped BNB",
+        "token_x": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x7a62968a5b71d03160b8deb3cb6e2d1bc2689245"
+    },
+    {
+        "name": "GoldPepe-Wrapped BNB",
+        "token_x": "0xf24fad33fa9fd5584a672956faa3e8d69580badf",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x6567f7579c81fe8b741d7dd894edc13e3486b1be"
+    },
+    {
+        "name": "CZ BUY PEPE-Wrapped BNB",
+        "token_x": "0x00b8e6bbb24077c7c508c9d83920c898e6b4e67f",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xed69644ae1baa29c15963d040520673c87294045"
+    },
+    {
+        "name": "USD Coin-Tether USD",
+        "token_x": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0x116fe6649f21d7d466702c5d3aa207336c2b04de"
+    },
+    {
+        "name": "USD Coin-Wrapped BNB",
+        "token_x": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0xa6e9b388cfc7b520636500de2dc55230bc548509"
+    },
+    {
+        "name": "Rejuve Token-BUSD Token",
+        "token_x": "0x1135883a1bc6776bf90c97845adc491922106dfb",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 50,
+        "pair_address": "0xa67260434eeff0edd860a0ecf8c4b4aaa2951b43"
+    },
+    {
+        "name": "JoeToken-Tether USD",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0x8fc41a8d87135410c3a2dd226f6dd17a4092d17c"
+    },
+    {
+        "name": "Yellow Lotus-Wrapped BNB",
+        "token_x": "0x16225c83cd48e83dcd4730763054063aea8e8764",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xff49626e6c2e16a9c8326b4aad753a9ad086940c"
+    },
+    {
+        "name": "JoeToken-Wrapped BNB",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xd063032d6866c7f461a8be5e2e48bcbb0e453e9a"
+    },
+    {
+        "name": "StargateToken-Tether USD",
+        "token_x": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 25,
+        "pair_address": "0x4e1c5ef5298a1fc620ec213d28914f2f936093f7"
+    },
+    {
+        "name": "USD Coin-Tether USD",
+        "token_x": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 25,
+        "pair_address": "0x7e84250dce9e347bf0321ea967837b670a859d53"
+    },
+    {
+        "name": "Haddies Bay Club-Wrapped BNB",
+        "token_x": "0x4dbc4a2d36441d3e2cbb515f310aae0bd7dd49a8",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xe80bf6a2703153b6f211b7e0450b672cf4aec54b"
+    },
+    {
+        "name": "USD Coin-Tether USD",
+        "token_x": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 50,
+        "pair_address": "0x431de07731895b44541a7a18bfa78d81638f35c7"
+    },
+    {
+        "name": "Monsta Infinite Token-Wrapped BNB",
+        "token_x": "0x9573c88ae3e37508f87649f87c4dd5373c9f31e0",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x88fe20754f67216539327383027599a0cc79db97"
+    },
+    {
+        "name": "BTCB Token-Wrapped BNB",
+        "token_x": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 5,
+        "pair_address": "0x556b1843562294574ba669734a3fb2a41cc04b87"
+    },
+    {
+        "name": "Ethereum Token-Wrapped BNB",
+        "token_x": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 5,
+        "pair_address": "0x1967f71df1493a4655426a030390ee143f13c8ed"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped BNB",
+        "token_x": "0x65514e537cc690ef780cb04e012f7fd074d86fe4",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x0efeeb6ed945da2bc5b6b4285c168a8f4b02c927"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped BNB",
+        "token_x": "0x338d4aa0c833a3f0cc6194c63023b8a998af364d",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xd4cd52da7ce55fde6688db7fb91a47b9695573bc"
+    },
+    {
+        "name": "DANG-Wrapped BNB",
+        "token_x": "0x943d709c58735f820d8cb588bc433d2ab9c63414",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x9782e5616c48c229dcf99bdbff2b6a2701db0e8f"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped BNB",
+        "token_x": "0x5b763bb6c4d91160e73d51a516c7fdd37b56825b",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x211ac0ee57a966c71fed88d94d0687998abd28e3"
+    },
+    {
+        "name": "JoeToken-BUSD Token",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 100,
+        "pair_address": "0x3bd791df5a3f69bc7b4b0adb5c96cf592b852de8"
+    },
+    {
+        "name": "DANK-Wrapped BNB",
+        "token_x": "0x5b3fc34a1b50d5b247287f3038f8c0ba9936f7f3",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xe1b8b1c15c01218e518aaee91ada605b9f25b496"
+    },
+    {
+        "name": "DANK-Wrapped BNB",
+        "token_x": "0xea6357103488df83d772367db99e3656eda07267",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xea116b87aad4641cea367f0c74c47a6d64d7e457"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped BNB",
+        "token_x": "0x3cd4dc979416d8df45f958508cbf93756bcecd58",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xc82221ba15ded0ddfa88932c78c8539349d4f014"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped BNB",
+        "token_x": "0xaadd4d5ff47b37886776e14b26b66562458b9fb7",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x69d9c0502b61d7bd01b3ff393f54d3b41cf5eada"
+    },
+    {
+        "name": "Tether USD-Wrapped BNB",
+        "token_x": "0x55d398326f99059ff775485246999027b3197955",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xa6f3a5567a95720de89058bd6b513317469bbd17"
+    },
+    {
+        "name": "DBXen Token on Binance-Wrapped BNB",
+        "token_x": "0xccd09b80453335aa914f5d9174984b6586c315ec",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x7e1d34242b7dde43106c40778b56b2074087dd74"
+    },
+    {
+        "name": "XEN Crypto-Wrapped BNB",
+        "token_x": "0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x3ad7fc688f577459d250c5fcb637c5ba35e70b21"
+    },
+    {
+        "name": "Bitcoin-Wrapped BNB",
+        "token_x": "0x2297aebd383787a160dd0d9f71508148769342e3",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x717d06b4d8bc6b71d5a2c45d8cc417930aec073d"
+    },
+    {
+        "name": "PancakeSwap Token-Tether USD",
+        "token_x": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0xd2c612a5394d3a63ad6ae58e9d6978291a5f5e40"
+    },
+    {
+        "name": "Mobox-Wrapped BNB",
+        "token_x": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x05c45cc3e11b08aeace36c6a03acc7e5d36fecfc"
+    },
+    {
+        "name": "USD Coin-Wrapped BNB",
+        "token_x": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x90c6ea5bf3dd055649ed7034f6bdbbabfd12f6ae"
+    },
+    {
+        "name": "Level Token-Wrapped BNB",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x9feed368fca5c75349d259a9f057aad873260927"
+    },
+    {
+        "name": "FlorK-Wrapped BNB",
+        "token_x": "0xf615c872e4d32bff2d176e87b78528357b6314ce",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xbc67797fed818be307359c385cd6070964d56cc9"
+    },
+    {
+        "name": "PancakeSwap Token-Tether USD",
+        "token_x": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 50,
+        "pair_address": "0x9b25f9f34718ace27f7afbe890bd5a7151e3a532"
+    },
+    {
+        "name": "BFG Token-Tether USD",
+        "token_x": "0xbb46693ebbea1ac2070e59b4d043b47e2e095f86",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0xbab0024920ba40314c9734221735271ae4c8cd0e"
+    },
+    {
+        "name": "Scallop-Tether USD",
+        "token_x": "0x9222006960912f623a46e3d437091bec57bbcd40",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 25,
+        "pair_address": "0xd07f1e179b643a8d67d69bc8cf2b341f9e7ef1df"
+    },
+    {
+        "name": "WhiteHouseCryptoSecretary-Wrapped BNB",
+        "token_x": "0xa28d1f8d9aaec6171950deb531eb7b8093b1c602",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xf8cdff0417e7284ce7192c31a0a382f2792089ec"
+    },
+    {
+        "name": "YESTOKEN-Wrapped BNB",
+        "token_x": "0x47c95dc4a37f08656855ca80556b0fdee397b118",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xca1aabb6629a870060dc277ec563fd8a5953d5e6"
+    },
+    {
+        "name": "WhiteHouseCryptoSecretary-Wrapped BNB",
+        "token_x": "0xa28d1f8d9aaec6171950deb531eb7b8093b1c602",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0xf97cc614194562f6f7481daf49979ee91b514da2"
+    },
+    {
+        "name": "Bitcoin-Tether USD",
+        "token_x": "0x2297aebd383787a160dd0d9f71508148769342e3",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0x0ac98729bda8f011fb13e4d2070bd2dee05b751c"
+    },
+    {
+        "name": "PancakeSwap Token-Wrapped BNB",
+        "token_x": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x8ed8e93ef7419caaaa110df8c0efdf1b0f98b9d1"
+    },
+    {
+        "name": "Level Token-Tether USD",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 25,
+        "pair_address": "0xffe83b744918650bb4122c53786ec17ef4a9162a"
+    },
+    {
+        "name": "XRP Token-Wrapped BNB",
+        "token_x": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x4116380614e693800d7b657b1ee6404d0401ef8e"
+    },
+    {
+        "name": "Filecoin-Wrapped BNB",
+        "token_x": "0x0d8ce2a99bb6e3b7db580ed848240e4a0f9ae153",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x3310cbba60ab2e5a73e79c58185aacdf93ab2aaf"
+    },
+    {
+        "name": "Trust Wallet-Wrapped BNB",
+        "token_x": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x36c95fcc451fd03a586d5c2555c2c8e76d4b119d"
+    },
+    {
+        "name": "Bitcoin-Ethereum Token",
+        "token_x": "0x2297aebd383787a160dd0d9f71508148769342e3",
+        "token_y": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "bin_step": 10,
+        "pair_address": "0xac3e25ea542b471921ecfdfe19d5f23add1c73e7"
+    },
+    {
+        "name": "Vibrance-Wrapped BNB",
+        "token_x": "0x0797907abbbc526c042e8f0e708b957f18a34c1a",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x4366b5801160b06af799b74711678109fb265f17"
+    },
+    {
+        "name": "StargateToken-Wrapped BNB",
+        "token_x": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x45b612bf038494ec2ece3ca36897efd718bd52ba"
+    },
+    {
+        "name": "StargateToken-Wrapped BNB",
+        "token_x": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0xfac2d2fae6a30b43eece86e9b266a04fcc1c28e6"
+    },
+    {
+        "name": "StargateToken-Wrapped BNB",
+        "token_x": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x78675cd873eb6f6ad8e1a3329b1b13ae2ca1df9b"
+    },
+    {
+        "name": "Wrapped BNB-BUSD Token",
+        "token_x": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 50,
+        "pair_address": "0x776d23fd125d987cd1ef772c10e5cfa5a1305c94"
+    },
+    {
+        "name": "eTHENA-Wrapped BNB",
+        "token_x": "0xafbe3b8b0939a5538de32f7752a78e08c8492295",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x2321748da474a17023f6d1f2787b536dc4157d6e"
+    },
+    {
+        "name": "Venus-Wrapped BNB",
+        "token_x": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xea050ebf31da1c341e51e5ebff2935e8d3bd3c11"
+    },
+    {
+        "name": "Wrapped BNB-BUSD Token",
+        "token_x": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 25,
+        "pair_address": "0x5288ec498e4432485527fe5595fc092c57b260d2"
+    },
+    {
+        "name": "Kingdom-BUSD Token",
+        "token_x": "0xa9c04f23ee2298613285a102a41267922c6cc205",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 100,
+        "pair_address": "0x9729faada776dfaee65bbed68962ff57f20c9660"
+    },
+    {
+        "name": "XOF-Franc Cfa-Tether USD",
+        "token_x": "0xceb048cf6acd03e335864ebf094b075430ee37ee",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 50,
+        "pair_address": "0xde68cfb8b4dc44ca34c3686ae4e488a1df6c7caf"
+    },
+    {
+        "name": "XOF-Franc Cfa-BUSD Token",
+        "token_x": "0xceb048cf6acd03e335864ebf094b075430ee37ee",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 100,
+        "pair_address": "0x45b9367ca0bfa6abe3e2677ade7ac6a844eb75c3"
+    },
+    {
+        "name": "BetSwirl Token-Wrapped BNB",
+        "token_x": "0x3e0a7c7db7bb21bda290a80c9811de6d47781671",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x17b65b98b41c566ebe248e1f68f72997725996f5"
+    },
+    {
+        "name": "PancakeSwap Token-Wrapped BNB",
+        "token_x": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0xea7444a5fd3ebdc1fca71deab8dc0351ba6191d7"
+    },
+    {
+        "name": "Core DAO | t.me/BitcoinCoreGroup-Tether USD",
+        "token_x": "0xcdf54b14a9609768765a86f4c8d17b02ea698a9e",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0x551857dec2f25bf5884689b595aa12160d570c4d"
+    },
+    {
+        "name": "Clico Token-Wrapped BNB",
+        "token_x": "0xdf0c4950a33f04c227120e84d1a052564c4f62fd",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xb813752eb240078368627064c4510f0d7e5a86ee"
+    },
+    {
+        "name": "The DONS-Wrapped BNB",
+        "token_x": "0x95c91eef65f50570cfc3f269961a00108cf7bf59",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x77210c4b29776f99b1c93af0f70aef01abd27a3f"
+    },
+    {
+        "name": "JoeToken-Tether USD",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 50,
+        "pair_address": "0x9974f3fb5f0145bb75021e234d48212c37aa4356"
+    },
+    {
+        "name": "Stable Pepe-Wrapped BNB",
+        "token_x": "0x4f377c2becd225b8dcfa7b559154a271731c5a88",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x1b3fdb11be8bf8780f82f953f52b3cdb8f60665e"
+    },
+    {
+        "name": "Kingdom-Wrapped BNB",
+        "token_x": "0xa9c04f23ee2298613285a102a41267922c6cc205",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xbc73947a564f56eb06e20a6e4c610809c1d520f5"
+    },
+    {
+        "name": "Arkham BNB Launchpad-Wrapped BNB",
+        "token_x": "0xef08db51c0d34a83542f5b54a5b2ef360b90becc",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0x5f4650815bcb4b598834cf1be735675bcdd18551"
+    },
+    {
+        "name": "Metis Token-Wrapped BNB",
+        "token_x": "0xe552fb52a4f19e44ef5a967632dbc320b0820639",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xd09e070b8d5178e1dba0193ccbbdd769414995f4"
+    },
+    {
+        "name": "GOAT-Wrapped BNB",
+        "token_x": "0xff19952351e9bf7dc3c71d91f84d3f535df7515f",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0xd072ae088a27fa2707c73970a1bad144ddab3003"
+    },
+    {
+        "name": "StargateToken-BUSD Token",
+        "token_x": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
+        "token_y": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "bin_step": 100,
+        "pair_address": "0x75573b27a9888153ac8ad55bfddadf0e4882b40f"
+    },
+    {
+        "name": "GOAT-Wrapped BNB",
+        "token_x": "0xf748bc4c3de988155b482c133707f146701e958d",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xfdaa8272ebf9f322ad82dbc46960ac259c8bafbd"
+    },
+    {
+        "name": "BetSwirl v2-Wrapped BNB",
+        "token_x": "0x94025780a1ab58868d9b2dbbb775f44b32e8e6e5",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 100,
+        "pair_address": "0xa3723406999da9a654902b80ef46fb60f8b0746e"
+    },
+    {
+        "name": "FlorK-Wrapped BNB",
+        "token_x": "0xf615c872e4d32bff2d176e87b78528357b6314ce",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0x8a5b7a0cc376b111b398dfa6ba34cb3632840b3c"
+    },
+    {
+        "name": "XRP Token-Tether USD",
+        "token_x": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0x8b937ca1578f6eb320cbada30e415d8bfc58b91e"
+    },
+    {
+        "name": "SNOW-Wrapped BNB",
+        "token_x": "0xa5392aacc64bb6d2b38b31b7ca34b376ddf1b5c3",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xb00b43173eb19e806d17ebc4b47e717038b5c63e"
+    },
+    {
+        "name": "POCOINU-Wrapped BNB",
+        "token_x": "0xab75cc7733398cb011eb3e193cea40341ae3dff4",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0xeb711e1b75c98b082e3813f3c109e08970c9af20"
+    },
+    {
+        "name": "shiba token-Wrapped BNB",
+        "token_x": "0x038402a3d2c90e480c7f08fdee9b29ce2f8124d7",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x2e95e2e5e71e4b039a8499233b5cac9fa88c71e6"
+    },
+    {
+        "name": "Absi token-Wrapped BNB",
+        "token_x": "0x53c5b9e1580eed2e7c834072efc2c6eff02cc034",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 25,
+        "pair_address": "0x29ca474a70355edda3cf8298f8250d00fad5563d"
+    },
+    {
+        "name": "Mcatinu-Wrapped BNB",
+        "token_x": "0xf2599f3e3dcd0d06194b688ec40225e9faec5820",
+        "token_y": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "bin_step": 50,
+        "pair_address": "0x42d10fde70dacac653caaf7aef25a66a53f1bd70"
+    },
+    {
+        "name": "Pleasure Coin-Tether USD",
+        "token_x": "0xaa076b62efc6f357882e07665157a271ab46a063",
+        "token_y": "0x55d398326f99059ff775485246999027b3197955",
+        "bin_step": 100,
+        "pair_address": "0xad71e26a2a1a9f0d30a571d3ec41db08805f20c9"
+    }
+]

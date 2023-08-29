@@ -1,0 +1,2431 @@
+[
+    {
+        "name": "Dai Stablecoin-USD Coin (Arb1)",
+        "token_x": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 1,
+        "pair_address": "0x500173f418137090dad96421811147b63b448a0f"
+    },
+    {
+        "name": "Bitcoin-Wrapped Ether",
+        "token_x": "0x2297aebd383787a160dd0d9f71508148769342e3",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 10,
+        "pair_address": "0xdf34e7548af638cc37b8923ef1139ea98644735a"
+    },
+    {
+        "name": "Wrapped BTC-USD Coin (Arb1)",
+        "token_x": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 10,
+        "pair_address": "0xd8053763b1179bd412a5a5a42fa2d15851518cfb"
+    },
+    {
+        "name": "Wrapped BTC-Wrapped Ether",
+        "token_x": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 10,
+        "pair_address": "0xcfa09b20c85933b197e8901226ad0d6daca7f114"
+    },
+    {
+        "name": "Pendle-Wrapped Ether",
+        "token_x": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x987cdd61b093fb740e7eb04183ee2d29da014af9"
+    },
+    {
+        "name": "Plutus-Wrapped Ether",
+        "token_x": "0x51318b7d00db7acc4026c88c3952b66278b6a67f",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xc7f394b9515c0ff15a7d755d456dcd0b4aa67b59"
+    },
+    {
+        "name": "Arbitrum-USD Coin (Arb1)",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x3136010d266152f3890d303c8ac8bcf3b2fe30e3"
+    },
+    {
+        "name": "Factor-USD Coin (Arb1)",
+        "token_x": "0x6dd963c510c2d2f09d5eddb48ede45fed063eb36",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x2e5ed926b403eca8dc69eb47f86da79d24e195f8"
+    },
+    {
+        "name": "Perpy-Token-Wrapped Ether",
+        "token_x": "0x1824a51c106efc27d35a74efb56d9bf54ddb22d4",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xcab119f0540a29acec07ae400875c3646ab886aa"
+    },
+    {
+        "name": "StargateToken-Wrapped Ether",
+        "token_x": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x7cf1581a1e1d02cf3d3004e0f664630950b30f5a"
+    },
+    {
+        "name": "Pendle-Tether USD",
+        "token_x": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x67b7bcd78ab514cd2d531edbe7454ee9cef94f57"
+    },
+    {
+        "name": "Pendle-USD Coin (Arb1)",
+        "token_x": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x5de999098b3531782b1eed7d0c6b139f98f6e4ee"
+    },
+    {
+        "name": "Trident-USD Coin (Arb1)",
+        "token_x": "0x602eb0d99a5e3e76d1510372c4d2020e12eaea8a",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x7e9f60b420e7554a28b80e67817f92552f8c8956"
+    },
+    {
+        "name": "STEAK-Wrapped Ether",
+        "token_x": "0xddbfbd5dc3ba0feb96cb513b689966b2176d4c09",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x4ea899c99d2ba0943f756eda492a9aa9bb514602"
+    },
+    {
+        "name": "Governance OHM-USD Coin (Arb1)",
+        "token_x": "0x8d9ba570d6cb60c7e3e0f31343efe75ab8e65fb1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xf76ace92afbc7de471ecf39a80f08cfa243ff702"
+    },
+    {
+        "name": "Y2K-Wrapped Ether",
+        "token_x": "0x65c936f008bc34fe819bce9fa5afd9dc2d49977f",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x393d336cfb3e2185ba2a3a81a1abc06c1f863ff4"
+    },
+    {
+        "name": "Lido DAO Token-USD Coin (Arb1)",
+        "token_x": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xaf696683b5f6fa307d891256751701fbada75c15"
+    },
+    {
+        "name": "Lido DAO Token-Tether USD",
+        "token_x": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x4593b94fb2c0988fa1ff4516c0758b9bc58740c5"
+    },
+    {
+        "name": "WINR-USD Coin (Arb1)",
+        "token_x": "0xd77b108d4f6cefaa0cae9506a934e825becca46e",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xa4eb0161af6de3aab28fcc48e20c16fd8ce1c47d"
+    },
+    {
+        "name": "Tether USD-USD Coin (Arb1)",
+        "token_x": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 1,
+        "pair_address": "0x0242dd3b2e792cdbd399cc6195951bc202aee97b"
+    },
+    {
+        "name": "GMD-Wrapped Ether",
+        "token_x": "0x4945970efeec98d393b4b979b9be265a3ae28a8b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0xee3073e63f6464c9e8f614e8efa18c61c9f0fcb2"
+    },
+    {
+        "name": "Gains Network-Wrapped Ether",
+        "token_x": "0x18c11fd286c5ec11c3b683caa813b77f5163a122",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x6362592e1d84d7bc356c5d81fa0cdc116b9b419b"
+    },
+    {
+        "name": "StargateToken-Wrapped Ether",
+        "token_x": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 15,
+        "pair_address": "0xc5a7c9d6653218dccca5633595b8604200f84855"
+    },
+    {
+        "name": "Flashstake-Wrapped Ether",
+        "token_x": "0xc628534100180582e43271448098cb2c185795bd",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0cfa1e64146b9e5948cdd05b8dedd887b8515b74"
+    },
+    {
+        "name": "Rocket Pool Protocol-Wrapped Ether",
+        "token_x": "0xb766039cc6db368759c1e56b79affe831d0cc507",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x3e76a39b77d952ec2be67eda8ef7950f1a93c878"
+    },
+    {
+        "name": "Unidex-Tether USD",
+        "token_x": "0x5429706887fcb58a595677b73e9b0441c25d993d",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xb9e1b4f7a4e0f52ce941816e7f60c054c1016577"
+    },
+    {
+        "name": "JoeToken-USD Coin (Arb1)",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x24871d2797a54e1959ca8aea781cba5723171d09"
+    },
+    {
+        "name": "Lodestar-Wrapped Ether",
+        "token_x": "0xf19547f9ed24aa66b03c3a552d181ae334fbb8db",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x7c5c54ecbf3bf9a928890ee675f8591f2cf52e09"
+    },
+    {
+        "name": "Wrapped Ether-USD Coin (Arb1)",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xa84f451d93a42ae3627d3adfc78a39f34ae17f92"
+    },
+    {
+        "name": "StargateToken-USD Coin (Arb1)",
+        "token_x": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x12129f22cfb4aa7a4033f185df0fd54fddf7a2eb"
+    },
+    {
+        "name": "Dopex Rebate Token-USD Coin (Arb1)",
+        "token_x": "0x32eb7902d4134bf98a28b963d26de779af92a212",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x3d0e366446fb2e06613df619ac60a58cba3de21d"
+    },
+    {
+        "name": "GMD-Wrapped Ether",
+        "token_x": "0x4945970efeec98d393b4b979b9be265a3ae28a8b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x5b6c39428d7c1d1ac3d032450a69f589a22c5f3f"
+    },
+    {
+        "name": "Carbon Negative Token-USD Coin (Arb1)",
+        "token_x": "0xc9bb9fe8b51070551035edffd3a61e6238972a77",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xf74ad243d7e02a127c11f71182502b2ef6dedb0b"
+    },
+    {
+        "name": "Arbitrum-Wrapped Ether",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x9a8cbb4cb9bc153042ab3a9b1c8c77b9bb6d7af0"
+    },
+    {
+        "name": "FOX-Wrapped Ether",
+        "token_x": "0xf929de51d91c77e42f5090069e0ad7a09e513c73",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x4a039213a513e76e25354c7ada3228e8f6157401"
+    },
+    {
+        "name": "Wombat Token-Tether USD",
+        "token_x": "0x7b5eb3940021ec0e8e463d5dbb4b7b09a89ddf96",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x3fe0203ecf75c7ce0ab4de710708b20f34530c51"
+    },
+    {
+        "name": "Gains Network-USD Coin (Arb1)",
+        "token_x": "0x18c11fd286c5ec11c3b683caa813b77f5163a122",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x2e5f7e7b2f59d16e7fc733cbe3e138e6b92f86da"
+    },
+    {
+        "name": "Arbitrum-Tether USD",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xb557bdc3c55c4494cab60fe820705c5e1850a17a"
+    },
+    {
+        "name": "ChainLink Token-Wrapped Ether",
+        "token_x": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x804f3ffd7e25ac83467ce2bf5592a44bd49d8090"
+    },
+    {
+        "name": "Acid-USD Coin (Arb1)",
+        "token_x": "0x29c1ea5ed7af53094b1a79ef60d20641987c867e",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x68d2ad63e470ebfab4d61601b84d0ab50e200a9f"
+    },
+    {
+        "name": "Vesta-Wrapped Ether",
+        "token_x": "0xa684cd057951541187f288294a1e1c2646aa2d24",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xe296cd0397e56043bfc4025003380712b4742f9c"
+    },
+    {
+        "name": "Synapse-Wrapped Ether",
+        "token_x": "0x080f6aed32fc474dd5717105dba5ea57268f46eb",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x7dc3bb59c6692be5a9e1726126fbbf45b1cc07cf"
+    },
+    {
+        "name": "AIDOGE-Wrapped Ether",
+        "token_x": "0x09e18590e8f76b6cf471b3cd75fe1a1a9d2b2c2b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xee8c38fb8090df74c7389cb8ec8014d363d3701a"
+    },
+    {
+        "name": "Radiant-Wrapped Ether",
+        "token_x": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xbf1a4bc6afa2736dea3c16c570f973d67ca8fa02"
+    },
+    {
+        "name": "mWOM-Wrapped Ether",
+        "token_x": "0x509fd25ee2ac7833a017f17ee8a6fb4aaf947876",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x7df77fbd0db1355c7f7e34f2aff1cf840590844d"
+    },
+    {
+        "name": "Hydranet-Tether USD",
+        "token_x": "0xf4fe727c855c2d395852ca43f645cab4b504af23",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x20196d4e95fa588b536280580c6df104b74ce17c"
+    },
+    {
+        "name": "AIDOGE-Tether USD",
+        "token_x": "0x09e18590e8f76b6cf471b3cd75fe1a1a9d2b2c2b",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xafba2b62830f628b9da45abf6b2cd18c1daccaea"
+    },
+    {
+        "name": "JoeToken-Tether USD",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x6d3b5acad2f484ec2019d2844626cd96cb780983"
+    },
+    {
+        "name": "VelaToken-USD Coin (Arb1)",
+        "token_x": "0x088cd8f5ef3652623c22d48b1605dcfe860cd704",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x31052154746282e41acccc5085a898db3c0ed7ff"
+    },
+    {
+        "name": "MAGIC-Wrapped Ether",
+        "token_x": "0x539bde0d7dbd336b79148aa742883198bbf60342",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 20,
+        "pair_address": "0x0f475257b6e2fa9a48ef84cb4a91d4288729f39e"
+    },
+    {
+        "name": "GMX-Wrapped Ether",
+        "token_x": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 20,
+        "pair_address": "0x60563686ca7b668e4a2d7d31448e5f10456ecaf8"
+    },
+    {
+        "name": "Radiant-Wrapped Ether",
+        "token_x": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x003ad0975250c810ad75fd83e989f54625cac514"
+    },
+    {
+        "name": "JoeToken-USD Coin (Arb1)",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0xc2dfb4f5530e3d80f99c0b615ce6be6d63085678"
+    },
+    {
+        "name": "JoeToken-Wrapped Ether",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x9f576823a06b208c99150beda118433df3124d28"
+    },
+    {
+        "name": "JoeToken-Wrapped Ether",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 20,
+        "pair_address": "0x4b9bfed1dd4e6780454b2b02213788f31ffba74a"
+    },
+    {
+        "name": "1xETH-Wrapped Ether",
+        "token_x": "0x70befa2dc2689012aa0e28c4c044040f416a5b66",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x8ea461a25535c87e4efa26e72d108bc6e873722e"
+    },
+    {
+        "name": "AIDOGE-USD Coin (Arb1)",
+        "token_x": "0x09e18590e8f76b6cf471b3cd75fe1a1a9d2b2c2b",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x62f52ff9b34f1918eb30104b248a91d3e4fa6598"
+    },
+    {
+        "name": "Magpie Token-Wrapped Ether",
+        "token_x": "0xa61f74247455a40b01b0559ff6274441fafa22a3",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x9522453f1ea2ad8ae9626cc153b1a988ae2b61de"
+    },
+    {
+        "name": "Arbitrum-Wrapped Ether",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 20,
+        "pair_address": "0xee1d31ab646056f549a78feacb73be45332fa078"
+    },
+    {
+        "name": "Wrapped Ether-USD Coin (Arb1)",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 15,
+        "pair_address": "0x94d53be52706a155d27440c4a2434bea772a6f7c"
+    },
+    {
+        "name": "Wootrade Network-Tether USD",
+        "token_x": "0xcafcd85d8ca7ad1e1c6f82f651fa15e33aefd07b",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x793658e45a0bc7db3332c77f23a8b1812c75571b"
+    },
+    {
+        "name": "Arken Token-USD Coin (Arb1)",
+        "token_x": "0xaf5db6e1cc585ca312e8c8f7c499033590cf5c98",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xe0950b425ae098a4d4e17dfecb0d33f487a00ecf"
+    },
+    {
+        "name": "ZZZ-Tether USD",
+        "token_x": "0x7a2c1b8e26c48a5b73816b7ec826fd4053f5f34b",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xdfd2104ccb58b0140b80e23fd427c56d7137a6df"
+    },
+    {
+        "name": "Tether USD-USD Coin (Arb1)",
+        "token_x": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x63afabee5a5e4c1b91bc9ffaf7a5b5fb2cd6df7b"
+    },
+    {
+        "name": "ChainLink Token-USD Coin (Arb1)",
+        "token_x": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x516d285542e9a89c20f387d36bc512640084c677"
+    },
+    {
+        "name": "Wrapped Ether-Tether USD",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x8728574af6a374fa9920be639267e78f45c4ea02"
+    },
+    {
+        "name": "Acid-Wrapped Ether",
+        "token_x": "0x29c1ea5ed7af53094b1a79ef60d20641987c867e",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x12a0abcd32e4544182f3d3122e7639185b170503"
+    },
+    {
+        "name": "Neutra Token-USD Coin (Arb1)",
+        "token_x": "0xda51015b73ce11f77a115bb1b8a7049e02ddecf0",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x5fea8c1cbd99ae6289ba51a61bce709db7cb9e5e"
+    },
+    {
+        "name": "Radiant-Wrapped Ether",
+        "token_x": "0x0c4681e6c0235179ec3d4f4fc4df3d14fdd96017",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x6d635ce3a38fe125c6f1252a7c09783e719d9cf6"
+    },
+    {
+        "name": "Escrowed GMX-Wrapped Ether",
+        "token_x": "0xf42ae1d54fd613c9bb14810b0588faaa09a426ca",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xc2c443a79b893af999ee27f3b4da5db4be85982d"
+    },
+    {
+        "name": "Mai Stablecoin-Wrapped Ether",
+        "token_x": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x939f9e2797b5b2bd06d969119e71b3e84839d945"
+    },
+    {
+        "name": "GMX-Wrapped Ether",
+        "token_x": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xb5328b073b04a3f7032ca3ff86436a887bc34bf8"
+    },
+    {
+        "name": "Dopex Governance Token-USD Coin (Arb1)",
+        "token_x": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xca804c1d736fca03ed139e43b6f8abac07406753"
+    },
+    {
+        "name": "Plutus-Tether USD",
+        "token_x": "0x51318b7d00db7acc4026c88c3952b66278b6a67f",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x85ccfcd221b3ce0d59da1f101806e8acd510b785"
+    },
+    {
+        "name": "Plutus-USD Coin (Arb1)",
+        "token_x": "0x51318b7d00db7acc4026c88c3952b66278b6a67f",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xf628ba0a1be0f7b4650a9c9f427685964431011b"
+    },
+    {
+        "name": "Camelot token-Wrapped Ether",
+        "token_x": "0x3d9907f9a368ad0a51be60f7da3b97cf940982d8",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0fc0ec46c7f8ffe4376fac68c518ad697cbc1b7b"
+    },
+    {
+        "name": "Buccaneer V3-Tether USD",
+        "token_x": "0x6048df2d0db43477ee77ff2e6d86e4339d3d5a66",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xe4441ee6d3bb84ff1b8a9fe8ef4830a4db57015c"
+    },
+    {
+        "name": "Wrapped BTC-USD Coin (Arb1)",
+        "token_x": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x7d2a049b155077b72fdc4ddc4d6a058b84767013"
+    },
+    {
+        "name": "Buccaneer V3-USD Coin (Arb1)",
+        "token_x": "0x6048df2d0db43477ee77ff2e6d86e4339d3d5a66",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xfd908fa00f1d914e946ec23547a0f836e1c195cc"
+    },
+    {
+        "name": "Wrapped BTC-Tether USD",
+        "token_x": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x90724137ed37c6f7d08e72508edf9cb02551929e"
+    },
+    {
+        "name": "Buccaneer V3-Wrapped Ether",
+        "token_x": "0x6048df2d0db43477ee77ff2e6d86e4339d3d5a66",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x38b1c0b4439e4a0c87a3e33f9714c899f0e2b655"
+    },
+    {
+        "name": "REKT-Wrapped Ether",
+        "token_x": "0x1d987200df3b744cfa9c14f713f5334cb4bc4d5d",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x5c0fef1370439763f28023f85178b1176404b6da"
+    },
+    {
+        "name": "Spool DAO Token-USD Coin (Arb1)",
+        "token_x": "0xeca14f81085e5b8d1c9d32dcb596681574723561",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xa1f655b56e31c1c879b292eab17e1ea4cde5dd55"
+    },
+    {
+        "name": "Arbitrum-USD Coin (Arb1)",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 20,
+        "pair_address": "0xf8a60082039a1acbe43b045f87aa0c5f24a358a4"
+    },
+    {
+        "name": "Wrapped Ether-Tether USD",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 15,
+        "pair_address": "0xd387c40a72703b38a5181573724bcaf2ce6038a5"
+    },
+    {
+        "name": "Wrapped Ether-USD Coin (Arb1)",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x2862788cd3d46a5109305689dd9ad0ef7cdb03f0"
+    },
+    {
+        "name": "GMD-USD Coin (Arb1)",
+        "token_x": "0x4945970efeec98d393b4b979b9be265a3ae28a8b",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0xf192c74304a0b27c235f982002697685442bba7e"
+    },
+    {
+        "name": "Curve DAO Token-Wrapped Ether",
+        "token_x": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x293e7e20107126ee06b8c40a214f858f1745c16e"
+    },
+    {
+        "name": "OPEN AI-USD Coin (Arb1)",
+        "token_x": "0x4c70eadacaca24681d2dffa297138f9f436e1c91",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x9eb267f837e0170cd5b6abac41cf9d5bf2595fd9"
+    },
+    {
+        "name": "Wrapped Ether-Tether USD",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 50,
+        "pair_address": "0x114aee703ff8ef904774b691ce840e1a06cab2f3"
+    },
+    {
+        "name": "Frax Share-Wrapped Ether",
+        "token_x": "0x9d2f299715d94d8a7e6f5eaa8e654e8c74a988a7",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x905a99bd55dec07b4793f025e51b730e5b388109"
+    },
+    {
+        "name": "Arbitrum-USD Coin (Arb1)",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x4df58a2c15f2d55c00bd807f2840533e0fe7301d"
+    },
+    {
+        "name": "CyberConnect Token-USD Coin (Arb1)",
+        "token_x": "0x10a625d21bbb6ae379b2b402d9907dcb9fe1700d",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x02badf2553062eb030d87f7c23b88a74786c32a9"
+    },
+    {
+        "name": "Radiant-USD Coin (Arb1)",
+        "token_x": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xe7495bc7528e27267fc5ad98b8009c107b40183d"
+    },
+    {
+        "name": "Arbitrum-Tether USD",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 50,
+        "pair_address": "0xbfa70e5c18cc2d19c142be6cbf32d3714b218e88"
+    },
+    {
+        "name": "Tether USD V5-Tether USD",
+        "token_x": "0xceb62ecdc1d5d144fcdbdd7b49b2ec3d63e7e337",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xbb8be347aa30523e46170427aecfb3a57c98019c"
+    },
+    {
+        "name": "CH_V5-USD Coin (Arb1)",
+        "token_x": "0x47f0d5aa497ec35afa7d7a97abb24702f2c1d08d",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x36af9bbd5af5ca2779d05656882583353b96c368"
+    },
+    {
+        "name": "CH_V5-USD Coin (Arb1)",
+        "token_x": "0x47f0d5aa497ec35afa7d7a97abb24702f2c1d08d",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x867a33d8e0f61d54cb8225f691077430ebac9e45"
+    },
+    {
+        "name": "LOTUS-Wrapped Ether",
+        "token_x": "0x31a1d129318a758c33db75bfabd520a48360cc1b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x4655352529aa9baf76e06f7500978430269fa948"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x32ccba3ff8dbb58319468b6ae35ad9f32767e918",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x212beb3441d7a812b63a6a463a69caa7b00fa470"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x30c8f6511ea7c5af3df239625e3db2809c5f5f73",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0e8ec15fd1bdf77e570132d267a9cfeb63378e9e"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xea7e17c22cbca993bb88ca57ddfb3df6e2e66fed",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x07a2c50c9bba7eafa52e37b1875f107daf380e83"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x306a45780c48023eb9bb9a4a303cdfd9da55357f",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xbd19fe7f6ba2416c65bb79c1a6912eeae99b42d8"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x351e5ec093fe75579f5049fed7982883f0f37dac",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x4090dedb9d5dc673e650483b00994be15159d6f4"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x87512525e4d4d63965e87ad9f9b730d503ee8431",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xbabadc038a521875044c190472f87dd5b1843e05"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xd8e17e787d88164a66eca0cdf3b9a74cefa9fb05",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x14c1cf3cfa22dd2c92710662e24e220d11bd4ce5"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x1d99b58c69e763f6e587dea70eb474cd1f00ad59",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xe24a37bbcaf2032f474611427eadd297eb06c467"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xc67a07d319d635b4a128f9f15f617df0fb417815",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x953dec73e935219812ce5eb61a2d571b41d72ab1"
+    },
+    {
+        "name": "SHI-Wrapped Ether",
+        "token_x": "0x2c9a8c781af110ec8797adbaef0cbc381036e584",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x07e9aa1152d1fbfdcb3482c39a84936ced5b7df4"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x49a0f96d1901f5aa9ccdc564098f825c3a4caf97",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xa7c68dda567d142fa8b6d481069799004c2a103d"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x422d2389192fcd3535ac9298b68f5ae787517bc1",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x15f52850534555c174386b64e12e169fa67cd0c0"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x17585bd5323d75542b9bfe33703338bd0e2dd012",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0668377218b0b3f3efc3adce8ff4d0f0b277500a"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xd1589a6f904db93aead106b7d150405811ae13ba",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x249c7781964ec19f071e735c14fb1d3383160371"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x74c4bc90ff04dc7299bea942600857def9e4433b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x7289252e020358694388b5ae1d17df34d4c0e90a"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xf493283ca3aaf02acd22b84991c4d56f23c4ee8c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x82a0ad57be54066c02c10d588d015dcdc313a7c2"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x4bb51c9ef2ec75b150a3c565fda1d6abe9ee5dfd",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x6b4f8ca2f03a2095634b0b6e9d451fa6e499a36a"
+    },
+    {
+        "name": "Biggest Bull Trap-Wrapped Ether",
+        "token_x": "0xe64cb38b97f6180cf2b9dbb3526af83326c07ff8",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x53a0b207073c9562f04aab4a828ccbbcec2c79d3"
+    },
+    {
+        "name": "AICODE-Wrapped Ether",
+        "token_x": "0x7c8a1a80fdd00c9cccd6ebd573e9ecb49bfa2a59",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xd6372bdffb9e77f5913e826cc5b0dcdae28e530d"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xd979f365f8a1d9f73ae8cee70b9a9a2e7e9e3568",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x067739bed37f9b972664a979d970c88bf2337e7d"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xfd957635fdfb0f35666456da64007784604c6148",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x4dc7ed2b06550b514d94606994f49cada2c01ff7"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xce5867c133b430990695c830b56681226a82673d",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x2550d0d613e1ebc6cb0cefbf1a93d585d5531e05"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x5bf17b781e25597c0e56bff2ef4d7c73f07feb17",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x2976d67cbd64af02d0affc259543626c393a0588"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x1ce60e921455a2fabfc5ef1414368885545c61c9",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x78c10805492b77e15887adb02fe66c66cf46e222"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x5332c1b24728cb988b859f958e2f6d726f932e91",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x798a60376f347abb1b725a859533ad11e921ce40"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x87f211a3ea0af477f69cf74db0068958538d5f0d",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x77a49b47326ca8eedb84f62548a20078e7dd5ad9"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x322599ac3991b2f51d84cc911f2591015954162a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xdc4a0b4180ca8f76713bb07513976a00a93d536f"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x788a869383f9b714fb9371c2102ab8281f05a38c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x73a6cca4536a70626049a30f6f95cbc788218b88"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xb0d97a8bd126ec45ed0cdcab790c18dc50a2100a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x9c6b3a45708496edea2080144b6413e52a0b0575"
+    },
+    {
+        "name": "Pepe-Wrapped Ether",
+        "token_x": "0xa54b8e178a49f8e5405a4d44bb31f496e5564a05",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xdf94a8e4d643ba9a98ce329f4fec79f237ebf904"
+    },
+    {
+        "name": "ChainLink Token-USD Coin (Arb1)",
+        "token_x": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0xf6b34bb9259e0c511cb0f08b50ab69ec7aadf1e2"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x7800bda4c7bc22fccd580910cf0ac77c80a431c9",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0e6fef1ff23b1d9ab201f36e1a232eeb998c70f4"
+    },
+    {
+        "name": "Pepe-USD Coin (Arb1)",
+        "token_x": "0xfc44abe4f62122d31e3ff317d60f7bbce7e7b7db",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x195bcdc5ba4d888319b350c352f9b7926d415d46"
+    },
+    {
+        "name": "XDODGE100-Wrapped Ether",
+        "token_x": "0xf4851827051c14be4e324122868beb488682a2f3",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x2ca62fb6d1a754e4f3e844b32230e47bcd44bc6e"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x59c42693d3f90b8561a5a36e79a69bb3ba61ba6f",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xa47cfee28797191b0a3cfbacc54a46a69e7b9c97"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xb6bdd6851492e6909c1c90f0373e8db5de96aab1",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x74cb47e0bf04b4a1a18e1e081536de92295c331c"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xec719fccaccd38460612301257421ca9d1233931",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xb636c3fa1f1e87851d745def43a9ea500d70e1a4"
+    },
+    {
+        "name": "XLOVZ100-Wrapped Ether",
+        "token_x": "0x18d5e0c0cdbeaa98275e3cbff484ddb2e9b69473",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x1906c2445f3b798380d1e934050f770d3d373a80"
+    },
+    {
+        "name": "Harold-Wrapped Ether",
+        "token_x": "0xcfc00ad043516302009c40327542ba169edc2d22",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xabe4a50e3c9a38b3dbf01508717a83e1034e0d88"
+    },
+    {
+        "name": "gmUSD-USD Coin (Arb1)",
+        "token_x": "0xec13336bbd50790a00cdc0feddf11287eaf92529",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0xc7a3280f341d50fd4827b8000d657f1440458873"
+    },
+    {
+        "name": "LSDOGE-Wrapped Ether",
+        "token_x": "0x4c70d32295de15fdf302d3bcbb7fc2631ace1c91",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x1a5b7b3c9403948a543d0fcd3098f483206886ca"
+    },
+    {
+        "name": "ARBCLIPS-Wrapped Ether",
+        "token_x": "0x8835d192c7c1efbc3e74e2260cf2ba32545b5575",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xbb71a5dd39f37db4c0d86e7fcbc133a171868145"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xe51d84fd4e66884c548f7da779cf734c79c5fe6e",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x6ae14c52250a1419a2172cfdab4480af7e9c0e3e"
+    },
+    {
+        "name": "mockUSD-Wrapped Ether",
+        "token_x": "0x3afe0fdddf8a5b744b7cba417526a77d7e435df1",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xb0576dd91206da10e753ba8bede08242dc0a927d"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xaf6bb0f1acd9d830e28d5d380ab084217172062c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xf99910c09cc3f5b59270d3558aa397af059227ef"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0x754b54630e89020e0ee97c7753960f8a2975e9b8",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x40af10a78faaed81bb0022c6d2a14c96178c8590"
+    },
+    {
+        "name": "TESTToken-Wrapped Ether",
+        "token_x": "0xdc6bc51d21095d396981cf891e26b620b7d0b921",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xe7cb7f4e7af84c9ce49857d4ec2a5b63d92b8411"
+    },
+    {
+        "name": "The White Lotus-Wrapped Ether",
+        "token_x": "0xbae92c654defdead027b8dfe9a6314cbda3a2010",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x33784a0b0c6f3899081c8b5a0288904465328a57"
+    },
+    {
+        "name": "mockUSD-Wrapped Ether",
+        "token_x": "0xfa81eb79155134e5ad78bd040bb8408a2ccd9d30",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x2c76042674d8c057a46f9ab4eb98531d4605c301"
+    },
+    {
+        "name": "LOTUS-Wrapped Ether",
+        "token_x": "0xc48a1be0374efbd5325ef5b66109893b8291ad0c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x187fc7457e13d9629199bc769ebd2a4c5161faad"
+    },
+    {
+        "name": "LOTUS-Wrapped Ether",
+        "token_x": "0x8ba354e9ec135e2b05f62e2d38809021e1b91774",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xcfc80d991e20c2858f3beb139426abd947c8efaa"
+    },
+    {
+        "name": "White Lotus-Wrapped Ether",
+        "token_x": "0xef261714f7e5ba6b86f4780eb6e3bf26b10729cf",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xc1bd8c3bc926d25836c325f35cce8f9f538d82d4"
+    },
+    {
+        "name": "White Lotus-USD Coin (Arb1)",
+        "token_x": "0xef261714f7e5ba6b86f4780eb6e3bf26b10729cf",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0xd08376f590087b2a9fa5a1c8cbfefb05cce7b18a"
+    },
+    {
+        "name": "White Lotus-Wrapped Ether",
+        "token_x": "0xef261714f7e5ba6b86f4780eb6e3bf26b10729cf",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x7bc398b8173ebdce0839cca3a349a8af19fa07c1"
+    },
+    {
+        "name": "Curve DAO Token-USD Coin (Arb1)",
+        "token_x": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x1cc0f6c77817df20d581a1ee4a46bffa8f6b9f13"
+    },
+    {
+        "name": "WTFUCK Token-Wrapped Ether",
+        "token_x": "0xdf28f508abc1ce0ae82b7e07a79f6cde15d1f5fe",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xc31d6b54b078bea271f5e059c9de56a65f067b93"
+    },
+    {
+        "name": "White Lotus-Wrapped Ether",
+        "token_x": "0xef261714f7e5ba6b86f4780eb6e3bf26b10729cf",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x9fafd3b40f6ab1f19587325382b3e095dcf882e7"
+    },
+    {
+        "name": "Coinbase Wrapped Staked ETH-Wrapped Ether",
+        "token_x": "0x1debd73e752beaf79865fd6446b0c970eae7732f",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x5668bf0af0d2c9d8f7928106d2487fb0ec2f9cf1"
+    },
+    {
+        "name": "Gains Network-USD Coin (Arb1)",
+        "token_x": "0x18c11fd286c5ec11c3b683caa813b77f5163a122",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0xb8cf4461edc1fa436fdc345188b0be4fbde77230"
+    },
+    {
+        "name": "Gains Network-USD Coin (Arb1)",
+        "token_x": "0x18c11fd286c5ec11c3b683caa813b77f5163a122",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0xec7f078091285ea333c78880e1676d6a3f4f63a1"
+    },
+    {
+        "name": "RunBlox Token-Tether USD",
+        "token_x": "0xc701f86e6d242b97d3035f6c2cecaf8e7087e898",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 50,
+        "pair_address": "0x837214b26b89d3a9aa8ab81f14dc2b66c05613ec"
+    },
+    {
+        "name": "JAM-Wrapped Ether",
+        "token_x": "0xe91c134fd945cc0723fd3eb2c0abee2188fc33e7",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x5c8d908bb3afd3452a4b17ba96c3c9748e0a1025"
+    },
+    {
+        "name": "JAM-Wrapped Ether",
+        "token_x": "0x31d35cc92cdee3ad38d241befda17541e20fb6e4",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x736350a0396ff6adac2a3f883d45b947f951b92b"
+    },
+    {
+        "name": "JAM-Wrapped Ether",
+        "token_x": "0xfa88d5ec17474936273407f2c791340509ab22b7",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x98c7a8a1bfcd1727bc0f8e47017d5b0036a52a20"
+    },
+    {
+        "name": "JAM-Wrapped Ether",
+        "token_x": "0x03954bd3d457c5c97decc395a02d8908ebcf3670",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xa49c042fdbc6e60268b9543a4118bf0d7ca27c08"
+    },
+    {
+        "name": "MOAT-Wrapped Ether",
+        "token_x": "0x110edec10247c81b595f14c42c599d977594b7f4",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xe10c1c05598795cc40a9e5ab029ecc23b5e13f3f"
+    },
+    {
+        "name": "MOAT-USD Coin (Arb1)",
+        "token_x": "0x110edec10247c81b595f14c42c599d977594b7f4",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x5352375298fbf788d86ff177e3f1bfb5b6896001"
+    },
+    {
+        "name": "ROVER-Wrapped Ether",
+        "token_x": "0xda71eec5c248ef321054e69d3e47c8f7476d121c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x266c4b961c7ef98b5243e4033521bd72511d47b8"
+    },
+    {
+        "name": "Burnt lobster-Wrapped Ether",
+        "token_x": "0xabd34886342d849ced0fc42f3b325eb17d5b00b3",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x8a82935448edccfc613168a9f0c6611b6d08138c"
+    },
+    {
+        "name": "BabyPepe-Wrapped Ether",
+        "token_x": "0xf2799ebca7be9773181e644760b9621e518252a7",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xeb6f55476319428d2c984a4deec4e7395fe15e58"
+    },
+    {
+        "name": "BabyPepe-Wrapped Ether",
+        "token_x": "0xf2799ebca7be9773181e644760b9621e518252a7",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0xda05dea6866e0dd22a45562c0fc9974603e1307e"
+    },
+    {
+        "name": "LQTY-Wrapped Ether",
+        "token_x": "0xfb9e5d956d889d91a82737b9bfcdac1dce3e1449",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x24e4a1bf7d7dff8b3817f3145a9010da2b0108d8"
+    },
+    {
+        "name": "Water-Wrapped Ether",
+        "token_x": "0x6c7c8e3b00a9cbe59338bd139c3b8a47a542e25b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x1fe3f09dfa50915ad4a86581cc5677c72ab42b8a"
+    },
+    {
+        "name": "Water-Wrapped Ether",
+        "token_x": "0x253e77b7169ac00be71e9b005d18e4ca19e903db",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0cb368b0e968f18744bbb39aa9e2cc799aa07fa3"
+    },
+    {
+        "name": "Water-Wrapped Ether",
+        "token_x": "0xbf7fa6e94739fd534fba1fbb9f20cc22aeff0249",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x3cb4aa25ad70dec674f4bb21c8fdd2f70154efc1"
+    },
+    {
+        "name": "Water-Wrapped Ether",
+        "token_x": "0xcb70439d00313554422279d7bde7fa6f73100fd1",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x30462964200c85490037e7180d47a4557a096638"
+    },
+    {
+        "name": "HEISENBERG-Wrapped Ether",
+        "token_x": "0xca6704e1efc8f61e8591cd10727183f00f71edbc",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x792a0ed4d9005f422c898c083cf5eb3301a341f1"
+    },
+    {
+        "name": "pepe1-Tether USD",
+        "token_x": "0x7631a2e1e326ee8c6997150ae07bda69bae76f49",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xd64617810a2c10357bf78dec52fd1b0e78af0226"
+    },
+    {
+        "name": "Fury-USD Coin (Arb1)",
+        "token_x": "0xad569e5fd544e9b31e21effecc1d4bd80ff3dbd0",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x5aae3af32143801faec081c86934d01ce80fac05"
+    },
+    {
+        "name": "Fury-USD Coin (Arb1)",
+        "token_x": "0x4a140e073d0220d3d3ddea52a9b85d88c3b6d9d4",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xc27d74e38a351c9a2c999decdd3e6a6b95202c53"
+    },
+    {
+        "name": "Smile-Wrapped Ether",
+        "token_x": "0x43054eae93ad2107c8c17e2e901fe39709eca0c3",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x40d992b89583d5a0aa846d12cfdc8b478c6004bf"
+    },
+    {
+        "name": "Smile-Wrapped Ether",
+        "token_x": "0x1950592188115156a92ecec38f509f51cc5b7390",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x792291030f8b80ecf3e06eed619e0865217ffb98"
+    },
+    {
+        "name": "Germ-USD Coin (Arb1)",
+        "token_x": "0xc66d67fe1e2ce5ec5ece7c73a1b4a182357d85f6",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x5d700264a4daed0c61a2205416de81b19ab63b02"
+    },
+    {
+        "name": "Ben-Wrapped Ether",
+        "token_x": "0xb8b3faa3256e65438b8459e838c598121ff6f1bc",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xf4866fd96af220a82d38f29de5e638b231af143b"
+    },
+    {
+        "name": "Obsidianbud-USD Coin (Arb1)",
+        "token_x": "0x38da5cc8255acb1e96588e26aab5f7fbd4353e7d",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x12c32ccc26c836325966f7fd67ed4ddddd662120"
+    },
+    {
+        "name": "Obsidianbud-USD Coin (Arb1)",
+        "token_x": "0x38da5cc8255acb1e96588e26aab5f7fbd4353e7d",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x2f5e78dc35f85a9c7b24a88cb9702e4b3bfa1a22"
+    },
+    {
+        "name": "Obsidianbud-USD Coin (Arb1)",
+        "token_x": "0xae44b3030e437e9ae83b405ad0b3cb71adeee2f1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x6266115e11c2c857fe3c5df07dd482d527a150d0"
+    },
+    {
+        "name": "ROVER-Wrapped Ether",
+        "token_x": "0xa3c4717aabd40469e7ddf62a5daea83508588022",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xf6db12bf0a2745514c71be3118ae7950e50e47f4"
+    },
+    {
+        "name": "ROVER-Wrapped Ether",
+        "token_x": "0xdb8082ef05134c59e731f6eb7b336754453b00bc",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xd93b59c1c8c56fe1a11717481ea2a0a1ee21bb49"
+    },
+    {
+        "name": "PUMP-Wrapped Ether",
+        "token_x": "0xa7e5041b76ca8b13ff4bf2421f0265d5a4f51dc1",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x88a805417c653318b592ad0bfd3619f850ae4d04"
+    },
+    {
+        "name": "PUMP-Wrapped Ether",
+        "token_x": "0xdacc789da135df9802e0abe879ae9d581fde8129",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xafee60d955694ea3ce635875f5e94549db99a1cc"
+    },
+    {
+        "name": "PUMP-Wrapped Ether",
+        "token_x": "0x5c57b78a270e9d04194d59d42fe371b3b0bc7a92",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x56360ab61bcfbcd4e6105a46f7d2b0e03fab916e"
+    },
+    {
+        "name": "ROVER-Wrapped Ether",
+        "token_x": "0xae5cf0ee42bc2cf974745d250620f7edef79958b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xf638101388a3757305194c711dc11989e98c4785"
+    },
+    {
+        "name": "ROVER-Wrapped Ether",
+        "token_x": "0x2c9ad772250484710cb46205c6fb9651f6b174b4",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x8fc3eaf5954f2bf643e326959e81066bf54bb509"
+    },
+    {
+        "name": "ROVER-Wrapped Ether",
+        "token_x": "0xc2fb82d5749aabb6607512624304e601b5742841",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xaa5727e20c91646d81e98811fd8237cc63ca3a7d"
+    },
+    {
+        "name": "ROVER-Wrapped Ether",
+        "token_x": "0xe4619a5b282576502afd644e34a3a12f2ad74a56",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x68826164135cfe46bf6f696b51a2ac9460cefe17"
+    },
+    {
+        "name": "ROVER-Wrapped Ether",
+        "token_x": "0xedb98fb7aa76cf03ff4ae138fe219c7c9ee8ccc4",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x2335052bd455b29f543a752810606a2e4a6d426b"
+    },
+    {
+        "name": "PADDER-Wrapped Ether",
+        "token_x": "0xd5f08ba8ba941e630401b12e220001a47db85cb9",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x52042ad4891f7bca209f8ee1c47ef73f7f5e7653"
+    },
+    {
+        "name": "PUMP-Wrapped Ether",
+        "token_x": "0xbad975e3c1e18ba8f225b043b659bf67747a558c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xdd2b72cee1b5a3d37ffadc7de68fae8f5a50f036"
+    },
+    {
+        "name": "LADDER-Wrapped Ether",
+        "token_x": "0x6560c5ae3332bd6a036f48239a1d90ba3f51872a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xbd42a558b60ff17394497f687931d41c68f2f167"
+    },
+    {
+        "name": "LADDER-USD Coin (Arb1)",
+        "token_x": "0x6560c5ae3332bd6a036f48239a1d90ba3f51872a",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x71c45e7a0855b2a3cf50525dbf7f3d72e860fa64"
+    },
+    {
+        "name": "DAEER-USD Coin (Arb1)",
+        "token_x": "0x7d45d3384ed19bf001d628862045e532d2a14399",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xbff19fdbff78ab52400c67227c10c095fe0018ed"
+    },
+    {
+        "name": "DAEER-USD Coin (Arb1)",
+        "token_x": "0x4b37437ff1cacf46b20a56be0268ef0450f70454",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xcab8c085e86b9a78b2beb7dbbb5627ebb416febd"
+    },
+    {
+        "name": "DAEER-Wrapped Ether",
+        "token_x": "0x1a44bafa60c80ad1c73bc3ce0334af2c653a3cce",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x4d7215d73651c495c9cc6c67694b71eec54dd922"
+    },
+    {
+        "name": "DAEER-Wrapped Ether",
+        "token_x": "0xe5d6fc5c089cf035d78c80e62558a230ddd5d152",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x56c44a0ddc4942c1b5c290d261bc6587c6302fdc"
+    },
+    {
+        "name": "GMX-USD Coin (Arb1)",
+        "token_x": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0xde6410ed16649fffe4bf9504cace300bd4fab250"
+    },
+    {
+        "name": "AISCODE-USD Coin (Arb1)",
+        "token_x": "0x9b69b837aa66d1ca3365df0efe95908b84140f6a",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xcdaad4be4a156a355213f6ded90cdfda91b02336"
+    },
+    {
+        "name": "niba-Wrapped Ether",
+        "token_x": "0x53409dfad7441f440a8cc97dccf97d6558785835",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x503c77e3e2f2c094b9df922a8e0e527ae0b7260c"
+    },
+    {
+        "name": "White Lotus-Tether USD",
+        "token_x": "0xef261714f7e5ba6b86f4780eb6e3bf26b10729cf",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xe91f9ca5cea6965120cadcd18671061527ce0ea1"
+    },
+    {
+        "name": "Yuri-Tether USD",
+        "token_x": "0x077bc655c8d81b7de71c79318d0eb8f987e12820",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xc3b034aa2573bfdda7b1ddfe76a8eb8d9fd63836"
+    },
+    {
+        "name": "PUMP-Wrapped Ether",
+        "token_x": "0x119b52bb9425030b01c7b7173a1141f470c25be3",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xd80429fae7210bf13d333ce366ddd51d08ee4e8b"
+    },
+    {
+        "name": "JIMBO-Wrapped Ether",
+        "token_x": "0x60af511409dc39d85f2028a786cff5bc76bb5589",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xe9ff03b6bd410c948599b01d2d4609cc48f7e313"
+    },
+    {
+        "name": "JIMBO-Wrapped Ether",
+        "token_x": "0x891bed8249fff9dd87f8eee1447bcf6a3ceaeb60",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x42bfdb71ba706f8aa1019819fce290b1f81770f9"
+    },
+    {
+        "name": "JIMBO-Wrapped Ether",
+        "token_x": "0x33bb4fd83b0be0e4f4e351d5d6c6998c788ad985",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x3ae4ed70a5c236f0db55655b20be493d4171a5ec"
+    },
+    {
+        "name": "JIMBO-Wrapped Ether",
+        "token_x": "0xda594a8e4d9a16f7042e8e890fdc9a43329de011",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x10d128248f4f4aa597c30a3209ab7941205b7789"
+    },
+    {
+        "name": "JIMBO-Wrapped Ether",
+        "token_x": "0xdbc43fdced7c0401d0f0d459cd10879711a6df7b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xd9144c74a59f6d4f9900e3b8f21e6e0ea3a0db1f"
+    },
+    {
+        "name": "JIMBO-Wrapped Ether",
+        "token_x": "0x0fca2bb724c9d82bafc0d34b7e4567da79426c6b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xbbed8c69c46dc9d7c3fa2fe1245742b91edd837b"
+    },
+    {
+        "name": "JIMBO-Wrapped Ether",
+        "token_x": "0xccb97ae0c1bc4ce196b6460395af7df5ee1212bc",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xe9a7637f7f17aa1ee1c180c6d261ca86f72a2dd4"
+    },
+    {
+        "name": "JIMBO-USD Coin (Arb1)",
+        "token_x": "0xccb97ae0c1bc4ce196b6460395af7df5ee1212bc",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xd6f9790fcdf19ec5930e81875c39f1529d98c98f"
+    },
+    {
+        "name": "GMX-Wrapped Ether",
+        "token_x": "0x666547b105905af1b20b8b8ed16ccda96016f2c1",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xf03190564d3aa991e211ff70c4b69f25b4ade176"
+    },
+    {
+        "name": "GMX-Wrapped Ether",
+        "token_x": "0x666547b105905af1b20b8b8ed16ccda96016f2c1",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x81f6b45ecdc3c7817e947782ebd3b5556f2cc92a"
+    },
+    {
+        "name": "Qiang-Wrapped Ether",
+        "token_x": "0xeec0bfc45831bb243cda812ba9d140f78c4f7616",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0xccc92896775a86011a1730e07a9feae5ad4f1083"
+    },
+    {
+        "name": "Wootrade Network-Wrapped Ether",
+        "token_x": "0xcafcd85d8ca7ad1e1c6f82f651fa15e33aefd07b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xb87495219c432fc85161e4283dff131692a528bd"
+    },
+    {
+        "name": "sunlife-Wrapped Ether",
+        "token_x": "0xc9d228bdbf0e382e138fb636af6779b0163f8aae",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x3f129d7a413911d7427f64dad640d2e8b80287a0"
+    },
+    {
+        "name": "sunlife-Wrapped Ether",
+        "token_x": "0xc9d228bdbf0e382e138fb636af6779b0163f8aae",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xe2ec3c0b1452dcfd117dd9cefb22659efa3c808d"
+    },
+    {
+        "name": "Sperax-USD Coin (Arb1)",
+        "token_x": "0x5575552988a3a80504bbaeb1311674fcfd40ad4b",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x852bdf7d0643ad3fea6d262247eb718e950f367a"
+    },
+    {
+        "name": "Pepe Governance Token-USD Coin (Arb1)",
+        "token_x": "0x4fc2a3fb655847b7b72e19eaa2f10fdb5c2addbe",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x6de557d660ef0c2a64bb545eb76782b851e829c5"
+    },
+    {
+        "name": "DMT-USD Coin (Arb1)",
+        "token_x": "0x0be47c0355306aff6166a62b023ae0b2bb85ecb0",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x06fd54c80ddcb83d198dab6ad0fa0aa17c02962e"
+    },
+    {
+        "name": "Choke-USD Coin (Arb1)",
+        "token_x": "0x6fc2680d8ad8e8312191441b4eca9eff8d06b45a",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x09907286b7983289071453f67c604598bc3eb78e"
+    },
+    {
+        "name": "Fief-Wrapped Ether",
+        "token_x": "0xe2105bea3819d3131b5b2306d44eb3271bfcfe0e",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x6e30507d9fab0d161863148f34d905e68111556c"
+    },
+    {
+        "name": "AAA-USD Coin (Arb1)",
+        "token_x": "0xa7903c2d3518ac23ea013403df3fc5c6267259b5",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xdb9a9148bfc23d59c34edd9f8caa85501a23b78d"
+    },
+    {
+        "name": "AAA-USD Coin (Arb1)",
+        "token_x": "0xa7903c2d3518ac23ea013403df3fc5c6267259b5",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0xe1b291d35b41f1f52e00eec338b23bf0492c2ec3"
+    },
+    {
+        "name": "DMT-USD Coin (Arb1)",
+        "token_x": "0x8b0e6f19ee57089f7649a455d89d7bc6314d04e8",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xcc5072e5f2d7d479114cd47649eb6af5ca0ef1ce"
+    },
+    {
+        "name": "LETH-Wrapped Ether",
+        "token_x": "0x0b4a0dc629822a16fac7ef07625bb1fe5cbd7f62",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x9d3849c5d438833002b63c32507a90a0282dc045"
+    },
+    {
+        "name": "LETH-Wrapped Ether",
+        "token_x": "0xb75e328b630f987aecbe7c64f0448052a6baf8fe",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x4cb6256752dcbce7fd78e23d345c60de9149aa2d"
+    },
+    {
+        "name": "AAA-Tether USD",
+        "token_x": "0xa7903c2d3518ac23ea013403df3fc5c6267259b5",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x4b4b1c2008c04bb760e13ba5a0685fceebefa745"
+    },
+    {
+        "name": "LETH-Wrapped Ether",
+        "token_x": "0x2f2c9fa79a3a08e66939a380c695e8a618c5ce97",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xdac6c92fc7b187562d4aaaf0d5eccda5f2025c18"
+    },
+    {
+        "name": "LETH-Wrapped Ether",
+        "token_x": "0x7ccfd2513cddd4ee693ef1d2d400b76da9a3f220",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0a9cbb096208743ad075d2af51805e7b590e9780"
+    },
+    {
+        "name": "LETH-Wrapped Ether",
+        "token_x": "0xd1b33dd777c053e771e5ea62a3447f9a5cafa958",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xb4c00d7ba5cea63e1e1e1eb2c138ab936f56bdc3"
+    },
+    {
+        "name": "BBB-USD Coin (Arb1)",
+        "token_x": "0xea2fb0b18d40d1f6837bdf54749cc9a43469d40b",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x865cd2015510e48d39b1682fcac1138879363028"
+    },
+    {
+        "name": "LETH-Wrapped Ether",
+        "token_x": "0x5a11218a5b93f0a3479187e242fe26874952c77c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x1abe3802e1f6c0891a8388d81bcd02692ca29d39"
+    },
+    {
+        "name": "LETH-Wrapped Ether",
+        "token_x": "0x2f4941cdb45c1b8e3d1b71e3e66bc7df92b1d133",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xd6832baf5f143ada4056c3083f54631b31260a6e"
+    },
+    {
+        "name": "LETH-Wrapped Ether",
+        "token_x": "0xc0ae468310e23afa9135d7cea95f45eceb54024a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xfbadf56d2ef1dda0f1e1b872d2c424843f6fdd3d"
+    },
+    {
+        "name": "ZZZ-USD Coin (Arb1)",
+        "token_x": "0x14ace7a3bfaadf3b696be93798e8867267633fd0",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x36683a1ae405d6afbc1c6c0d0e5e61fc09447aad"
+    },
+    {
+        "name": "YYY-USD Coin (Arb1)",
+        "token_x": "0x01c859181a8d8cf9059b7700ceff37c0a16fee5e",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x6422a1597cd63300691db09c9b5779607c217a6d"
+    },
+    {
+        "name": "Olympus-USD Coin (Arb1)",
+        "token_x": "0xf0cb2dc0db5e6c66b9a70ac27b06b878da017028",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x917b8e6010f6f27a78c5e0a6d298ebd5d85fddbb"
+    },
+    {
+        "name": "White Lotus-USD Coin (Arb1)",
+        "token_x": "0xb51211edcce06fb94f315829d61f3e00f5a67a8a",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x0f4b62e84c3779fc0b1cb502a29980529f81e1a2"
+    },
+    {
+        "name": "JIMBO-Wrapped Ether",
+        "token_x": "0xb3a029fcd11889916b163eb445d2639998823b23",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x507cb9660134f10dd5adf43f097a0d48aab681fd"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped Ether",
+        "token_x": "0x5b763bb6c4d91160e73d51a516c7fdd37b56825b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xcbfc29e1360abb8c4dc51b3c9f1482102de4befb"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped Ether",
+        "token_x": "0xcfd247b8a914058e9e9399a208b7650176c3768b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xf3fcbe05bb390ba5a903ac3770f0ae09cadc43d4"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped Ether",
+        "token_x": "0xfe20516e3e9970ebca13f714fbf0e32d782039f3",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x1cfb0dee5254cb209ebec54c430ff04e5c942c2b"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped Ether",
+        "token_x": "0x639edb2da4f15f0b1c1350dbb9f71d4a6f43741d",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xf8085874a8ce93760b1401872996f104b688ae72"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped Ether",
+        "token_x": "0xa58bdc62cbf4dbef2433786f4841bf7b204ca2c0",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x2dfe38ad2a844f41121e321b434b7f8bbec4ab7f"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped Ether",
+        "token_x": "0xc3813645ad2ea0ac9d4d72d77c3755ac3b819e38",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x16a5d28b20a3fddecdcaf02df4b3935734df1a1f"
+    },
+    {
+        "name": "TURBOJIMBO-USD Coin (Arb1)",
+        "token_x": "0xc3813645ad2ea0ac9d4d72d77c3755ac3b819e38",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x988a8be0438b2a7a614edd24527c29d2246b3789"
+    },
+    {
+        "name": "TURBOJIMBO-Tether USD",
+        "token_x": "0xc3813645ad2ea0ac9d4d72d77c3755ac3b819e38",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xa88914d96437b85a124aeb93ba5395af3d537ca8"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped Ether",
+        "token_x": "0xc3813645ad2ea0ac9d4d72d77c3755ac3b819e38",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x627e175a5a9f5be20dda1c5338393fabe1daa975"
+    },
+    {
+        "name": "StargateToken-Wrapped Ether",
+        "token_x": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0xb782fa425c2ad1ef348257ce38be4e77613cb389"
+    },
+    {
+        "name": "StargateToken-Wrapped Ether",
+        "token_x": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xb477262f83cd2be4bf663f9570e61a2e75c5cdf4"
+    },
+    {
+        "name": "StargateToken-USD Coin (Arb1)",
+        "token_x": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x39898f5235861465cdf3203613a13c759e6d8880"
+    },
+    {
+        "name": "ULTRA JIMBO-Wrapped Ether",
+        "token_x": "0x72c6cce4f2aa231a9d39195f7f56e43c336002d2",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x26dd58092e90486ac46538406ad1f6ba3ae18b17"
+    },
+    {
+        "name": "Unidex-Wrapped Ether",
+        "token_x": "0x5429706887fcb58a595677b73e9b0441c25d993d",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xb674ae0e75ffc892a16d7df564d2cec53426d92a"
+    },
+    {
+        "name": "TURBOJIMBO-Wrapped Ether",
+        "token_x": "0xc3813645ad2ea0ac9d4d72d77c3755ac3b819e38",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x1f869100f4da1868bc7f0a0e79581eca5d963e07"
+    },
+    {
+        "name": "flick-Wrapped Ether",
+        "token_x": "0xdf4f9e07147f97f43a60e18c107ad8dee86e6186",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x4ed26c4ec6a67ffaaf00ea5d99c92f5554591ce7"
+    },
+    {
+        "name": "stakedLOTUS-Wrapped Ether",
+        "token_x": "0xb8a0c91c415cf6cc57188feea571b8dbe36b99fd",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xbbf73ddd399c165c21d9d1805fa44e89e8709da8"
+    },
+    {
+        "name": "Lodestar-USD Coin (Arb1)",
+        "token_x": "0xf19547f9ed24aa66b03c3a552d181ae334fbb8db",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xb83956a069562c92c9ec5d750d4f457ecc261166"
+    },
+    {
+        "name": "Dai Stablecoin-Tether USD",
+        "token_x": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xb519c3879ca970b9ab2726239da772b3b38dffe9"
+    },
+    {
+        "name": "Ghast-Wrapped Ether",
+        "token_x": "0xeca66820ed807c096e1bd7a1a091cd3d3152cc79",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0bb46e23cfcf3a0dbb35dc452115132352064198"
+    },
+    {
+        "name": "Bathtub Token-Wrapped Ether",
+        "token_x": "0xe5b8c3381c0a2544883cff9ddaf1e48d9dea9e49",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x1c43cc18f815bf31a0d15e0f05feec2855f4d6f6"
+    },
+    {
+        "name": "Bitcoin-USD Coin (Arb1)",
+        "token_x": "0x2297aebd383787a160dd0d9f71508148769342e3",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x1ce44a2cc273d6fc355a3c2f18ffbc646051dc6c"
+    },
+    {
+        "name": "Level Token-Tether USD",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0xbacd654a7eef4a50dbf1bc8ed8774a58dfbb440d"
+    },
+    {
+        "name": "Not Level Token-Tether USD",
+        "token_x": "0x7bd43adea98257cf4523045c4519ec4621e0a934",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x9adfefc2822df280b9f65a04e821a5889518ac24"
+    },
+    {
+        "name": "HOLD TOKEN-Wrapped Ether",
+        "token_x": "0xb4bbfe92702730ef7f1d28e4b9e42381182f48a5",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x363cddc18d2a551752faa0813dfcb601a2b3a1e0"
+    },
+    {
+        "name": "HOLD TOKEN-USD Coin (Arb1)",
+        "token_x": "0xb4bbfe92702730ef7f1d28e4b9e42381182f48a5",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x14f1e0ed9db5048f5ff6c2a4ab10be88d770ad3f"
+    },
+    {
+        "name": "Veritaseum-Wrapped Ether",
+        "token_x": "0x28b5b40fa794ecfb36fcaa3576f796f6a02afc84",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xe50e2f78519d618ab572a26370e391ad2d3f9eff"
+    },
+    {
+        "name": "Arbitrove Governance Token-Wrapped Ether",
+        "token_x": "0x982239d38af50b0168da33346d85fb12929c4c07",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xeefe5cf51103975478878514626f903a31ffcc88"
+    },
+    {
+        "name": "QiDao-USD Coin (Arb1)",
+        "token_x": "0xb9c8f0d3254007ee4b98970b94544e473cd610ec",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x52481bf1b800c139e5280f8836463bb4c09b6cdb"
+    },
+    {
+        "name": "Level Token-Tether USD",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 25,
+        "pair_address": "0xa067d656763942a546a2f11cc9a12c57b3d06d53"
+    },
+    {
+        "name": "GMD-USD Coin (Arb1)",
+        "token_x": "0x4945970efeec98d393b4b979b9be265a3ae28a8b",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xd295728c5a806a9393dae8fd35aa3f147749eb31"
+    },
+    {
+        "name": "Jones USDC-USD Coin (Arb1)",
+        "token_x": "0xe66998533a1992ece9ea99cdf47686f4fc8458e0",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x15851c110ef9771ec2fd3b1fbea5b4b3cd16f823"
+    },
+    {
+        "name": "WAR-USD Coin (Arb1)",
+        "token_x": "0x1f6e4b5ffc94cca08cf6bb1479148d6329d4baf5",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x7250795aa54f15fb152b48c26999a60c8f6d64ef"
+    },
+    {
+        "name": "Bitcoin-USD Coin (Arb1)",
+        "token_x": "0x2297aebd383787a160dd0d9f71508148769342e3",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x360fbc3e41b4e990e39dcb404873cfdc2be70304"
+    },
+    {
+        "name": "Aave Arbitrum WBTC-USD Coin (Arb1)",
+        "token_x": "0x078f358208685046a11c85e8ad32895ded33a249",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x5aca59f7d3b61acf11f77168efcced112c759655"
+    },
+    {
+        "name": "Wrapped Ether-USD Coin (Arb1)",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x428c290b3bde2d59687af9207b9738692aaaed3c"
+    },
+    {
+        "name": "Rocket Pool ETH-Wrapped Ether",
+        "token_x": "0xec70dcb4a1efa46b8f2d97c310c9c4790ba5ffa8",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0xd03f17b9dce64d0b3130cc004823ec10fb803302"
+    },
+    {
+        "name": "USD Coin (Arb1)-USD Coin",
+        "token_x": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "token_y": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "bin_step": 1,
+        "pair_address": "0xde568fd89b3349a766f45d5ab2a7c0510f476a80"
+    },
+    {
+        "name": "ALP-Wrapped Ether",
+        "token_x": "0xb49b6a3fd1f4bb510ef776de7a88a9e65904478a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0xea915adff5f22146c2725dcff3c2480063cfb363"
+    },
+    {
+        "name": "USD Coin-Wrapped Ether",
+        "token_x": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0xb83783c9cb35f1b1a6338937f9be3ebb36b46bfe"
+    },
+    {
+        "name": "USD Coin-Wrapped Ether",
+        "token_x": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xe604bd2d8691f1875a2a00940ae7a2556b797e5b"
+    },
+    {
+        "name": "USD Coin-Tether USD",
+        "token_x": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x81a3359116831e330afc4ab3a3da269d707ef4d7"
+    },
+    {
+        "name": "Snowdrop-Wrapped Ether",
+        "token_x": "0x8fdae6c595311f648e3c8206e9eff2afd47c1445",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xd73ede2b3127bbce4f090ed0dfe65257e04d328c"
+    },
+    {
+        "name": "USD Coin-Tether USD",
+        "token_x": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 25,
+        "pair_address": "0xf38655c3d3bf83d846eeb7d9e3c831ba929d6b71"
+    },
+    {
+        "name": "Tether USD-USD Coin (Arb1)",
+        "token_x": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0xd42c728fa93484baf718b2f0b3067dc9764d5e23"
+    },
+    {
+        "name": "Arbitrum-USD Coin (Arb1)",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0xa0521223d69c3223f69c951b7cbbfdf9ac071c47"
+    },
+    {
+        "name": "Wrapped Ether-Tether USD",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 25,
+        "pair_address": "0x6b99d252bcd39a95ef5d53cee376ae715309f52b"
+    },
+    {
+        "name": "Savvy BTC-Wrapped BTC",
+        "token_x": "0xeee18334c414a47fb886a7317e1885b2bfb8c2a6",
+        "token_y": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+        "bin_step": 5,
+        "pair_address": "0x830203b9a16920feb55d58d964ce83e1ba000269"
+    },
+    {
+        "name": "Savvy ETH-Wrapped Ether",
+        "token_x": "0xf7728582002ef82908c8242cf552e969ba863ffa",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 5,
+        "pair_address": "0x2e14e24ec3efbd3b8c8976405351f8233d59650e"
+    },
+    {
+        "name": "Savvy USD-USD Coin",
+        "token_x": "0xf202ab403cd7e90197ec0f010ee897e283037706",
+        "token_y": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "bin_step": 5,
+        "pair_address": "0x3be852ff9f142783c71435524d63e2196e5f305a"
+    },
+    {
+        "name": "Arbitrum-USD Coin",
+        "token_x": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "token_y": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "bin_step": 20,
+        "pair_address": "0xeda3c9894aecb1e509a6c60e30e1770aee0b55b4"
+    },
+    {
+        "name": "Wrapped Ether-USD Coin",
+        "token_x": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "token_y": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "bin_step": 15,
+        "pair_address": "0x69f1216cb2905bf0852f74624d5fa7b5fc4da710"
+    },
+    {
+        "name": "Tether USD-USD Coin",
+        "token_x": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "token_y": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "bin_step": 1,
+        "pair_address": "0xfc43aaf89a71acaa644842ee4219e8eb77657427"
+    },
+    {
+        "name": "svy-Wrapped Ether",
+        "token_x": "0x8a9388a64710267c3992ab317f475004150a202c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xe4ed88dbc70b282436fbd49b7183054321050fe8"
+    },
+    {
+        "name": "svy-Wrapped Ether",
+        "token_x": "0x8a9388a64710267c3992ab317f475004150a202c",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x5b48a09cc58708e36b88e271eeea1a85c372d6be"
+    },
+    {
+        "name": "svy-USD Coin (Arb1)",
+        "token_x": "0xd364430d727ced5a8a9becef4335b1283e359238",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x26d8f73f5e005653d0583fbc236480e69fe0584b"
+    },
+    {
+        "name": "Stably USD-USD Coin (Arb1)",
+        "token_x": "0x097bf766e427f5ccd306f21ba05632e0be849b0e",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x64ff0ee0a199b68eefc2b62d564eba1be517d91c"
+    },
+    {
+        "name": "AlphaToken-Wrapped Ether",
+        "token_x": "0xc9cbf102c73fb77ec14f8b4c8bd88e050a6b2646",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x22b8fd7294c6b1aaab3263902cd2883fc9360fe6"
+    },
+    {
+        "name": "Aura-USD Coin (Arb1)",
+        "token_x": "0x1509706a6c66ca549ff0cb464de88231ddbe213b",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x3d27b4d213da0fceeeea178d5fed50261fbd6349"
+    },
+    {
+        "name": "VelaToken-USD Coin (Arb1)",
+        "token_x": "0x088cd8f5ef3652623c22d48b1605dcfe860cd704",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x471375215568a2b31b6e80282863e8b6f98426d1"
+    },
+    {
+        "name": "CCC the CCCdoor-Wrapped Ether",
+        "token_x": "0xcc3b48f1dc0c06ea69a8ec89ed2e8fe9e8176411",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0xbb23e86210f77178c39de696ddceb11720f60160"
+    },
+    {
+        "name": "TETH-Wrapped Ether",
+        "token_x": "0x4c98cbb9a614aad5d1ca964ade37e80b65380640",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x959925f700686f1196d6091e936b2bd259ea948d"
+    },
+    {
+        "name": "WODIU-Wrapped Ether",
+        "token_x": "0xe5fe528d6eeb113529990b723a69089fbe96c904",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xaf9c6bb6b9c37d8d41b3ffd4faad5b8aaa0f6632"
+    },
+    {
+        "name": "WODIU-Wrapped Ether",
+        "token_x": "0x8fb0d0c8941212f21b56c047f5fe4a7e49fb375d",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0xff2344ec24341b3d2f3b1ff19112aba361e47b63"
+    },
+    {
+        "name": "Hold the door-Wrapped Ether",
+        "token_x": "0x24fbedf688f0cf924331c486b5fd7089571b33d8",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x4e86478037f45db866c0f8d993b9510c41c61fe7"
+    },
+    {
+        "name": "Hold the door-Wrapped Ether",
+        "token_x": "0x5ef3e7df9d58258190367b27097cc17c02c8fe9b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x94d2102057f9cd9fb8f89083f98d6dde35352c70"
+    },
+    {
+        "name": "Hold the door-Wrapped Ether",
+        "token_x": "0x4129660bc2771288492095a3aedbbbeb26e6b5ce",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x1bddd6656165b50b1c374e6bca5368976505c081"
+    },
+    {
+        "name": "Arbipad-USD Coin (Arb1)",
+        "token_x": "0x07dd5beaffb65b8ff2e575d500bdf324a05295dc",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x39f9ec4b426ccc532735c1ef5d724b3fadac56e7"
+    },
+    {
+        "name": "Penpie Token-Wrapped Ether",
+        "token_x": "0x2ac2b254bc18cd4999f64773a966e4f4869c34ee",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x0069962eb2f1ebdf989083dbff12eeb72d00f71e"
+    },
+    {
+        "name": "VeinFi-Wrapped Ether",
+        "token_x": "0xc4a70668dec1da9862d9d20bf67d1ef4ee182450",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x2d9e5b6cd1373942b603679e171d6e4b67193cf8"
+    },
+    {
+        "name": "Governance OHM-USD Coin (Arb1)",
+        "token_x": "0x8d9ba570d6cb60c7e3e0f31343efe75ab8e65fb1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x1f333c29f2b0cd8f60a236dee1f4dc26108e2228"
+    },
+    {
+        "name": "Level Token-Wrapped Ether",
+        "token_x": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x3c94cd83edac07f29cfd857788dc68fa89c53e8a"
+    },
+    {
+        "name": "StargateToken-USD Coin (Arb1)",
+        "token_x": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x2ba27ea3a172f75b120fd498d763496b23e3041d"
+    },
+    {
+        "name": "ShanHe University-Wrapped Ether",
+        "token_x": "0xeaf41f5a20923daaae234853a45b5d40d1547097",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x25065f678c60a091651b6e2f846b4fd66578265c"
+    },
+    {
+        "name": "BetSwirl Token-Wrapped Ether",
+        "token_x": "0xe26ae3d881f3d5def58d795f611753804e7a6b26",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x03b1193acf4090bfa056ddc73e4e25a98c858efa"
+    },
+    {
+        "name": "JoeToken-USD Coin (Arb1)",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0x60d1f054dd2c479dddbbafe3e19e6899ddf048a7"
+    },
+    {
+        "name": "JoeToken-Wrapped Ether",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x75a3805e7d2c4d522a2294bbaff1aff0ac58d5f1"
+    },
+    {
+        "name": "VEIN 2.0-Wrapped Ether",
+        "token_x": "0x343617713439f6e6c0fd9df40bc0501aba52771b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xa0c17cc02f70944d8a6ad496dd6d1805be4d420c"
+    },
+    {
+        "name": "JoeToken-Tether USD",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 50,
+        "pair_address": "0xab90ca15e852babeb50dc08bbf7918197eef2f62"
+    },
+    {
+        "name": "Fief-USD Coin (Arb1)",
+        "token_x": "0xe2105bea3819d3131b5b2306d44eb3271bfcfe0e",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 25,
+        "pair_address": "0x1248f578f719cbd95c0d31d26f1cef792934db9b"
+    },
+    {
+        "name": "Wrapped liquid staked Ether 2.0-USD Coin (Arb1)",
+        "token_x": "0x5979d7b546e38e414f7e9822514be443a4800529",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x638d2a13dc9f47d68c148b4369313ac91d27ac2a"
+    },
+    {
+        "name": "Dai Stablecoin-Tether USD",
+        "token_x": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 50,
+        "pair_address": "0x5ab7ec725e0fc1de19a9f1ad9a90f40b5bdf8931"
+    },
+    {
+        "name": "Archi token-USD Coin (Arb1)",
+        "token_x": "0x93d504070ab0eede5449c89c5ea0f5e34d8103f8",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 50,
+        "pair_address": "0xd1479ba2fe68f029a12bc3e123700f186252851c"
+    },
+    {
+        "name": "JoeToken-Tether USD",
+        "token_x": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 25,
+        "pair_address": "0x9ec884b8847a9df5b59d9f0b2568d2c07db68d30"
+    },
+    {
+        "name": "HORSE-Wrapped Ether",
+        "token_x": "0x8a657231559ae11aab13a3014d9747b935a9002b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xb8b9c742db3fe720220b52ce87e20256f4f146ab"
+    },
+    {
+        "name": "Aura-Wrapped Ether",
+        "token_x": "0x1509706a6c66ca549ff0cb464de88231ddbe213b",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xbcb20823b5bea8ed82d9817f95df6e50bc26bd11"
+    },
+    {
+        "name": "GMX-Wrapped Ether",
+        "token_x": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x7b93913e1ea39131113c9833a6626d0de67df4bf"
+    },
+    {
+        "name": "Dopex Governance Token-Wrapped Ether",
+        "token_x": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x30099a306860c51913ba8fd286958781fc1ae461"
+    },
+    {
+        "name": "ALP-Wrapped Ether",
+        "token_x": "0xb49b6a3fd1f4bb510ef776de7a88a9e65904478a",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0xb0a4c5237c905f07118a87ffef40ba58266104f6"
+    },
+    {
+        "name": "Unidex-USD Coin (Arb1)",
+        "token_x": "0x5429706887fcb58a595677b73e9b0441c25d993d",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0xf041b2676bdd653fab34277812fa05be95b45a67"
+    },
+    {
+        "name": "BetSwirl v2-Wrapped Ether",
+        "token_x": "0x94025780a1ab58868d9b2dbbb775f44b32e8e6e5",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x49804711f7aa3e3d6a8a6ff3cae258bb0f1721bc"
+    },
+    {
+        "name": "agEUR-Wrapped Ether",
+        "token_x": "0xfa5ed56a203466cbbc2430a43c66b9d8723528e7",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 25,
+        "pair_address": "0x371d9b9395dc98c62048fe2a20b4e34f3c98a617"
+    },
+    {
+        "name": "Buffer Token-Tether USD",
+        "token_x": "0x1a5b0aaf478bf1fda7b934c76e7692d722982a6d",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x4fbf92572215bd92e34f9ce3b788a430bbbb4a4c"
+    },
+    {
+        "name": "Dai Stablecoin-USD Coin (Arb1)",
+        "token_x": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x1c80d6f433be7be3eea3454a9fe7e07fbe8cb66f"
+    },
+    {
+        "name": "Dai Stablecoin-Wrapped Ether",
+        "token_x": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x2c723827462c66807536b61a55769152d01cc690"
+    },
+    {
+        "name": "Savvy-Wrapped Ether",
+        "token_x": "0x43ab8f7d2a8dd4102ccea6b438f6d747b1b9f034",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x9f28b1eacf17f64cd952deaa14f0487b9f74bbb6"
+    },
+    {
+        "name": "Savvy-USD Coin (Arb1)",
+        "token_x": "0x43ab8f7d2a8dd4102ccea6b438f6d747b1b9f034",
+        "token_y": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+        "bin_step": 100,
+        "pair_address": "0x8bad231974ba388c74adbcaa20b0a66cf608c04e"
+    },
+    {
+        "name": "Savvy-Wrapped Ether",
+        "token_x": "0x43ab8f7d2a8dd4102ccea6b438f6d747b1b9f034",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 50,
+        "pair_address": "0x4dce04aca642772c62754a3881ab0bef19789abb"
+    },
+    {
+        "name": "Wrapped liquid staked Ether 2.0-Wrapped Ether",
+        "token_x": "0x5979d7b546e38e414f7e9822514be443a4800529",
+        "token_y": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "bin_step": 100,
+        "pair_address": "0x8ece668145f2ce58b0ed95999c74ea40dab8c8e1"
+    },
+    {
+        "name": "Hydranet-Tether USD",
+        "token_x": "0x3404149e9ee6f17fb41db1ce593ee48fbdcd9506",
+        "token_y": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "bin_step": 100,
+        "pair_address": "0x478f05d9edaffe250cab439e5bf720a28ad24b40"
+    }
+]
