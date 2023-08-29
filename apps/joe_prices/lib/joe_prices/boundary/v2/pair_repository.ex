@@ -115,8 +115,8 @@ defmodule JoePrices.Boundary.V2.PairRepository do
     
   end
 
-  defp has_stable_in_tokens(%PriceRequest{token_x: tx, token_y: ty}) do
-    Stable.is_token_stable(tx) or Stable.is_token_stable(ty)
+  defp has_stable_in_tokens(%PriceRequest{token_x: tx, token_y: ty, network: nw}) do
+    Stable.is_token_stable(tx, nw) or Stable.is_token_stable(ty, nw)
   end
 
   @spec init(any) :: {:ok, any}
