@@ -71,11 +71,12 @@ defmodule JoePrices.Boundary.V2.PairRepository do
       lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
     price = PriceComputator.compute_price(request, active_bin)
+    [token_x, token_y] = sorted_tokens(request.token_x, request.token_y)
 
     %Pair{
       name: "",
-      token_x: request.token_x,
-      token_y: request.token_y,
+      token_x: token_x,
+      token_y: token_y,
       bin_step: request.bin_step,
       active_bin: active_bin,
       price: price,
@@ -130,4 +131,12 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   @spec lb_factory_module(atom()) :: any()
   defp lb_pair_module(:v20), do: JoePrices.Contracts.V20.LbPair
   defp lb_pair_module(:v21), do: JoePrices.Contracts.V21.LbPair
+
+  @doc """
+  A pair token_x is always the token with the smaller address.
+
+  This is a helper method for sorting a pair of tokens.
+  """
+  defp sorted_tokens(token_x, token_y) when token_x < token_y, do: [token_x, token_y]
+  defp sorted_tokens(token_x, token_y), do: [token_y, token_x]
 end
