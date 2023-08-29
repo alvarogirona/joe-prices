@@ -80,7 +80,10 @@ defmodule JoePrices.Boundary.V2.PairRepository do
       token_y: request.token_y,
       bin_step: request.bin_step,
       active_bin: active_bin,
-      price: price
+      price: price,
+      address: addr,
+      network: request.network,
+      version: request.version
     }
   end
 
