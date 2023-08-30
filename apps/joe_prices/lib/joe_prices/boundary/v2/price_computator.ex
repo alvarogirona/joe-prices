@@ -13,14 +13,14 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
   alias JoePrices.Core.V21.Pair
   alias JoePrices.Boundary.Token.TokenInfoFetcher
 
-  @spec compute_price(PriceRequest.t(), non_neg_integer()) :: float()
-  def compute_price(request = %PriceRequest{}, active_bin) do
+  @spec compute_price(PriceRequest.t(), String.t(), non_neg_integer()) :: float()
+  def compute_price(request = %PriceRequest{}, pair_addr, active_bin) do
     cond do
       has_stable_in_tokens(request) ->
         compute_x_div_y_price(request, active_bin)
 
       has_primary_quote_asset(request) ->
-        compute_price_with_primary_quote_asset(request, active_bin)
+        compute_price_with_primary_quote_asset(request, pair_addr, active_bin)
 
       true ->
         -1
@@ -41,7 +41,7 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
     end
   end
 
-  defp compute_price_with_primary_quote_asset(request = %PriceRequest{}, active_bin) do
+  defp compute_price_with_primary_quote_asset(request = %PriceRequest{}, pair_addr, active_bin) do
     [token_x, token_y] = sorted_tokens(request.token_x, request.token_y)
 
     stable_pairs_token_x =
@@ -99,14 +99,19 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
           network: request.network
         }
 
-        %Pair{price: related_price} =
+        %Pair{price: price_x_in_dollars} =
           p_info = PairRepository.fetch_pair_info(stable_pair_x.pair_address, request_for_x)
 
         price = compute_x_div_y_price(request, active_bin)
-        # Uncomment to return price in dolars
-        price_in_dollars = related_price / price
+        price_y_in_dollars = price_x_in_dollars / price
 
-        price
+        has_enough_liquidity? = LbPair.pair_has_enough_reserves_around_active_bin?(token_x, token_y, pair_addr, active_bin, request.network, price_x_in_dollars, price_y_in_dollars)
+
+        if has_enough_liquidity? do
+          price
+        else
+          -1
+        end
     end
   end
 
