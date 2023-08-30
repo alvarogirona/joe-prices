@@ -79,6 +79,14 @@ If there is a related pair with an stable then the price in dollars is retrieved
 
 If there is a related pair with a `primary_quote_asset` that is not an stable (i.e: Avax in Avalanche, WETH in arbitrum), then it searches for stable pairs for that asset and makes the required conversions between pairs to get the price.
 
+### Info about created pairs
+
+`JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher` module serves as a cache for info about pairs (tokens, address, bin_step), which are used for finding the path to a stable coin and computing the price in $.
+
+This module loads all the pairs info from a json file (from `apps/joe_prices/priv/pairs`) to speed up app start.
+
+It also has methods for loading the price directly from the contracts `load_pairs_for_version(version, network)`. The json files come from the output of that method.
+
 ## Requirements
 
 Elixir and erlang have to be installed on your machine.
@@ -129,3 +137,11 @@ An specific release for you OS and architecture can be created by running:
 ```bash
 mix release #`MIX_ENV=prod mix release` for a production build
 ```
+
+## Stress testing
+
+Inside the `locust` directory there is a script to run a stress test agains the api.
+
+It requires Python.
+
+You can launch it by executing `locust` from that directory (a Python virtual environment for setting up the dependencies is recommended).
