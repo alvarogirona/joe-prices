@@ -115,11 +115,7 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
   defp pairs_json_file(:arbitrum_mainnet, :v21), do: Path.join([:code.priv_dir(:joe_prices), "pairs/arbitrum_v21_pairs.json"])
   defp pairs_json_file(:bsc_mainnet, :v21), do: Path.join([:code.priv_dir(:joe_prices), "pairs/bsc_v21_pairs.json"])
 
-  @doc """
-  Loads all pairs.
-
-  TODO: optimize fetch_token_name, could be cached.
-  """
+  # TODO: optimize fetch_token_name, could be cached.
   defp load_pairs_for_version(:v21, network) do
     network
     |> JoePrices.Contracts.V21.LbFactory.fetch_pairs()

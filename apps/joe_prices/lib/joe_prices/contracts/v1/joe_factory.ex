@@ -20,7 +20,7 @@ defmodule JoePrices.Contracts.V1.JoeFactory do
     """
     @spec fetch_pair(String.t(), String.t(), atom()) :: {:ok, binary()} | {:error, any()}
     def fetch_pair(token_x, token_y, network \\ :avalanche_mainnet) do
-      opts = Network.opts_for_call(network, "0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10")
+      opts = Network.opts_for_call(network, @contract_address)
 
       with {:ok, [pair]} <- __MODULE__.get_pair(token_x, token_y, opts) do
         {:ok, pair}

@@ -17,7 +17,7 @@ defmodule JoePrices.Boundary.V1.PairRepository do
     end
   end
 
-  def handle_call({:fetch_price, request}, from,  proc_id) do
+  def handle_call({:fetch_price, request}, _from,  proc_id) do
     pair_info = PriceCache.get_price(request)
     |> maybe_update_cache?(request)
 
@@ -28,7 +28,7 @@ defmodule JoePrices.Boundary.V1.PairRepository do
   defp maybe_update_cache?(cache_entry, _request), do: cache_entry
 
   @spec update_cache(JoePrices.Boundary.V1.PriceRequest.t()) :: JoePair.t()
-  def update_cache(%PriceRequest{base_asset: base_asset, quote_asset: quote_asset, network: network} = request) do
+  def update_cache(%PriceRequest{base_asset: base_asset, quote_asset: quote_asset, network: network}) do
     {:ok, pair} = JoePrices.Contracts.V1.JoeFactory.fetch_pair(quote_asset, base_asset, network)
     price_response = JoePair.fetch_price(base_asset, quote_asset, pair, network)
 

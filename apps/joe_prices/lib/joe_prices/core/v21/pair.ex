@@ -2,7 +2,6 @@ defmodule JoePrices.Core.V21.Pair do
   alias JoePrices.Core.Tokens.USDCe
   alias JoePrices.Core.Tokens.USDT
   alias JoePrices.Core.Tokens.USDC
-  alias JoePrices.Core.Tokens.Stable
 
   defstruct address: "",
             network: :avalanche_mainnet,
@@ -30,6 +29,7 @@ defmodule JoePrices.Core.V21.Pair do
   @arb_weth_address "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
   @bsc_wbnb_address "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
 
+  @spec primary_quote_assets(:arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet) :: list(String.t())
   def primary_quote_assets(:avalanche_mainnet = network) do
     [
       USDC.address_for_network(network),
@@ -54,6 +54,8 @@ defmodule JoePrices.Core.V21.Pair do
     ]
   end
 
+  @spec is_primary_quote_asset?(String.t(), :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet) ::
+          boolean
   def is_primary_quote_asset?(token_address, network) do
     downcased_token = String.downcase(token_address)
 

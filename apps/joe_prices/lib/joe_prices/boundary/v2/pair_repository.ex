@@ -132,11 +132,6 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   defp lb_pair_module(:v20), do: JoePrices.Contracts.V20.LbPair
   defp lb_pair_module(:v21), do: JoePrices.Contracts.V21.LbPair
 
-  @doc """
-  A pair token_x is always the token with the smaller address.
-
-  This is a helper method for sorting a pair of tokens.
-  """
   defp sorted_tokens(token_x, token_y) when token_x < token_y, do: [token_x, token_y]
   defp sorted_tokens(token_x, token_y), do: [token_y, token_x]
 end
