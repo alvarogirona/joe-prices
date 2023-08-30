@@ -4,6 +4,8 @@ defmodule JoePrices.Contracts.V20.LbPair do
 
   alias JoePrices.Core.Network
 
+  @type available_networks :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
+
   @doc """
   Fetches active bin for a given pair.
 
@@ -25,6 +27,17 @@ defmodule JoePrices.Contracts.V20.LbPair do
     case __MODULE__.get_reserves_and_id(opts) do
       {:ok, [_, _, active_bin_id]} -> {:ok, [active_bin_id]}
       _ -> {:error, :undefined_error}
+    end
+  end
+
+  @spec fetch_bin_step(available_networks(), String.t()) :: {:error, any} | {:ok, non_neg_integer}
+  def fetch_bin_step(network, contract_address) do
+    opts = Network.opts_for_call(network, contract_address)
+
+    case __MODULE__.fee_parameters(opts) do
+      {:ok, [bin_step | _]} -> {:ok, bin_step}
+      {:error, reason} -> {:error, reason}
+      _ -> {:error, :unknown}
     end
   end
 

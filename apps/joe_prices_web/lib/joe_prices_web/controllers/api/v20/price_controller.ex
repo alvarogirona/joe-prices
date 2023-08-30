@@ -1,7 +1,7 @@
 defmodule JoePricesWeb.Api.V20.PriceController do
   use JoePricesWeb, :controller
 
-  alias JoePrices.Core.V21.Pair
+  alias JoePrices.Core.V2.Pair
   alias JoePrices.Boundary.V2.PriceRequest
 
   def index(conn, opts) do

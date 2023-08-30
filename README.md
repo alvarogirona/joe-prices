@@ -40,6 +40,17 @@ end
 
 Having a process for each price serializes multiple requests to the same pair, so if many requests are made at the same time only the first one will call the RPC, while the rest will wait for the first request to finish and then will hit the cache.
 
+Pair processes are identified by the `PriceRequest` struct:
+```elixir
+  defstruct token_x: "",
+            token_y: "",
+            bin_step: 0,
+            network: :avalanche_mainnet,
+            version: :v21
+```
+
+The `PriceCache` modules handle interacting with the cache. Cachex is used as the underlying cache. At application start (`apps/joe_prices/lib/joe_prices/application.ex`) a cache process for each network and version is created.
+
 ## Parallelising batch requests
 
 Batch requests are parallelised by the `pmap` method located in the `JoePrices.Util.Parallel` module (`apps/joe_prices/lib/joe_prices/utils/parallel.ex`)
@@ -57,6 +68,16 @@ end
 The contract modules (`apps/joe_prices/lib/joe_prices/contracts`) for LbPair in `v2` and `v21` have a method for checking if a pair has enought liquidity named `pair_has_enough_reserves_around_active_bin?`.
 
 A pair has enough liquidity if in its +- bins around active bin there are more than 10$ of value. This value is defined by the value of `@minimum_liquidity_threshold` at the `LbPair` contract modules, which defaults to `10`.
+
+### Finding the value in $
+
+For pairs that do not have a stable coin in them, the `PriceComputator` module searches if there is any pair with one of the pair assets and a `primary_quote_asset`. 
+
+Primary quote assets are defined at `JoePrices.Core.V2.Token` (`apps/joe_prices/lib/joe_prices/core/v21/token.ex`).
+
+If there is a related pair with an stable then the price in dollars is retrieved from that pair.
+
+If there is a related pair with a `primary_quote_asset` that is not an stable (i.e: Avax in Avalanche, WETH in arbitrum), then it searches for stable pairs for that asset and makes the required conversions between pairs to get the price.
 
 ## Requirements
 

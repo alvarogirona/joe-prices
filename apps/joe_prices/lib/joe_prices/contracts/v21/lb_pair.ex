@@ -1,6 +1,6 @@
 defmodule JoePrices.Contracts.V21.LbPair do
-  alias JoePrices.Core.V21.Bin
-  alias JoePrices.Core.V21.Pair
+  alias JoePrices.Core.V2.Bin
+  alias JoePrices.Core.V2.Pair
   alias JoePrices.Boundary.Token.TokenInfoFetcher
   alias JoePrices.Core.Network
   alias JoePrices.Utils.Parallel

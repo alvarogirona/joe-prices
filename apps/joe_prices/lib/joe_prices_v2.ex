@@ -7,7 +7,7 @@ defmodule JoePricesV2 do
   The prices are fetched from the `JoePrices.Boundary.V2.PairRepository` which caches them.
   """
 
-  alias JoePrices.Core.V21.Pair
+  alias JoePrices.Core.V2.Pair
   alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Utils.Parallel
 

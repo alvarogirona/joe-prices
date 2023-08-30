@@ -5,7 +5,7 @@ defmodule JoePrices.Boundary.V2.PriceCache.PriceCache do
   Module for managin Cachex access for prices.
   """
   alias JoePrices.Boundary.V2.PriceRequest
-  alias JoePrices.Core.V21.Pair
+  alias JoePrices.Core.V2.Pair
 
   @spec get_price(network_name(), PriceRequest.t()) :: {:ok, term()} | {:ok, nil}
   def get_price(network, request = %PriceRequest{}) do

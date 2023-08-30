@@ -1,4 +1,4 @@
-defmodule JoePrices.Core.V21.Bin do
+defmodule JoePrices.Core.V2.Bin do
   @moduledoc """
   Module with method for v2.1 bin
   """

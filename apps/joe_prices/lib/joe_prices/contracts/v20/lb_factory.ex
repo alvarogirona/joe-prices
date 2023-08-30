@@ -4,6 +4,7 @@ defmodule JoePrices.Contracts.V20.LbFactory do
     default_address: "0x6E77932A92582f504FF6c4BdbCef7Da6c198aEEf"
 
   alias JoePrices.Core.Network
+  alias JoePrices.Utils.Parallel
 
   @type network :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
   @type pair_info :: {non_neg_integer, binary, boolean, boolean}
@@ -34,6 +35,22 @@ defmodule JoePrices.Contracts.V20.LbFactory do
       {:ok, pairs} -> {:ok, pairs}
       {:error, _} -> {:error, "Error getting pairs for tokens"}
     end
+  end
+
+  @spec fetch_pairs(network()) :: list
+  def fetch_pairs(network) do
+    opts = Network.opts_for_call(network, contract_for_network(network))
+
+    [pairs_count] = __MODULE__.get_number_of_lb_pairs!(opts)
+
+    responses =
+      0..(pairs_count - 1)
+      |> Enum.to_list()
+      |> Parallel.pmap(&__MODULE__.all_lb_pairs(&1, opts))
+
+    responses
+    |> Enum.filter(&match?({:ok, _}, &1))
+    |> Enum.map(fn {:ok, [result]} -> result end)
   end
 
   defp contract_for_network(:avalanche_mainnet), do: "0x6E77932A92582f504FF6c4BdbCef7Da6c198aEEf"

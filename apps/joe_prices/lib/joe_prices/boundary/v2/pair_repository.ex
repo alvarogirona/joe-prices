@@ -12,7 +12,7 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Boundary.V2.PriceComputator
   alias JoePrices.Boundary.V2.PriceCache.PriceCache
-  alias JoePrices.Core.V21.Pair
+  alias JoePrices.Core.V2.Pair
 
   @bad_resp_addr "0x0000000000000000000000000000000000000000"
 
@@ -64,13 +64,14 @@ defmodule JoePrices.Boundary.V2.PairRepository do
     end
   end
 
+  @spec fetch_pair_info(String.t(), PriceRequest.t()) :: nil | JoePrices.Core.V2.Pair.t()
   def fetch_pair_info(@bad_resp_addr, _request), do: nil
 
   def fetch_pair_info(addr, request = %PriceRequest{}) do
     {:ok, [active_bin]} =
       lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
-    price = PriceComputator.compute_price(request, active_bin)
+    price = PriceComputator.compute_price(request, addr, active_bin)
     [token_x, token_y] = sorted_tokens(request.token_x, request.token_y)
 
     %Pair{

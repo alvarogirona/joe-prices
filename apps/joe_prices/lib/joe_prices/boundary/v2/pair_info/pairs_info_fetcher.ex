@@ -14,7 +14,7 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
   pairs, so we can asume just 1 hop between pairs to get the USDC value.
   """
 
-  alias JoePrices.Core.V21.Pair
+  alias JoePrices.Core.V2.Pair
   alias JoePrices.Utils.Parallel
   alias JoePrices.Core.Network
   alias JoePrices.Boundary.V2.PairInfoCache.PairCacheEntry
@@ -78,8 +78,8 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
           {downcased_tx, downcased_ty} == {downcased_tx, downcased_t}
 
       pair_has_primary_quote =
-        Pair.is_primary_quote_asset?(downcased_tx, network) or
-          Pair.is_primary_quote_asset?(downcased_ty, network)
+        Token.is_primary_quote_asset?(downcased_tx, network) or
+          Token.is_primary_quote_asset?(downcased_ty, network)
 
       pair_contains_token && pair_has_primary_quote
     end)
@@ -126,6 +126,28 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
       token_y_name = fetch_token_name(network, token_y)
 
       {:ok, bin_step} = JoePrices.Contracts.V21.LbPair.fetch_bin_step(network, pair)
+
+      %PairCacheEntry{
+        token_x: token_x,
+        token_y: token_y,
+        name: "#{token_x_name}-#{token_y_name}",
+        pair_address: pair,
+        bin_step: bin_step
+      }
+    end)
+    |> save_to_cache(:v21, network)
+  end
+
+  defp load_pairs_for_version(:v20, network) do
+    network
+    |> JoePrices.Contracts.V20.LbFactory.fetch_pairs()
+    |> Parallel.pmap(fn pair ->
+      [token_x, token_y] = JoePrices.Contracts.V20.LbPair.fetch_tokens(network, pair)
+
+      token_x_name = fetch_token_name(network, token_x)
+      token_y_name = fetch_token_name(network, token_y)
+
+      {:ok, bin_step} = JoePrices.Contracts.V20.LbPair.fetch_bin_step(network, pair)
 
       %PairCacheEntry{
         token_x: token_x,
