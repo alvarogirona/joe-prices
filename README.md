@@ -85,7 +85,13 @@ If there is a related pair with a `primary_quote_asset` that is not an stable (i
 
 This module loads all the pairs info from a json file (from `apps/joe_prices/priv/pairs`) to speed up app start.
 
-It also has methods for loading the price directly from the contracts `load_pairs_for_version(version, network)`. The json files come from the output of that method.
+It also has methods for loading the price directly from the contracts. The json files come from the output of that method:
+```elixir
+@spec load_all_pairs(available_versions(), available_networks()) :: any()
+def load_all_pairs(version, network) do
+...
+end
+```
 
 ## Requirements
 
