@@ -113,6 +113,7 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
 
   defp pairs_json_file(:avalanche_mainnet, :v20), do: Path.join([:code.priv_dir(:joe_prices), "pairs/avalanche_v20_pairs.json"])
   defp pairs_json_file(:arbitrum_mainnet, :v20), do: Path.join([:code.priv_dir(:joe_prices), "pairs/arbitrum_v20_pairs.json"])
+  defp pairs_json_file(:bsc_mainnet, :v20), do: Path.join([:code.priv_dir(:joe_prices), "pairs/bsc_v20_pairs.json"])
 
   defp pairs_json_file(:avalanche_mainnet, :v21), do: Path.join([:code.priv_dir(:joe_prices), "pairs/avalanche_v21_pairs.json"])
   defp pairs_json_file(:arbitrum_mainnet, :v21), do: Path.join([:code.priv_dir(:joe_prices), "pairs/arbitrum_v21_pairs.json"])
@@ -178,7 +179,7 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
   end
 
   defp load_pairs_from_files() do
-    versions = [:v21]
+    versions = [:v21, :v20]
     networks = JoePrices.Core.Network.all_networks()
 
     for v <- versions, nw <- networks do

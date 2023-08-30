@@ -14,10 +14,6 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
   alias JoePrices.Core.V2.Pair
   alias JoePrices.Boundary.Token.TokenInfoFetcher
 
-  def compute_price(request = %PriceRequest{version: :v20}, pair_addr, active_bin) do
-    compute_x_div_y_price(request, active_bin)
-  end
-
   @spec compute_price(PriceRequest.t(), String.t(), non_neg_integer()) :: float()
   def compute_price(request = %PriceRequest{}, pair_addr, active_bin) do
     cond do
@@ -26,7 +22,7 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
       has_primary_quote_asset(request) -> # Example BTC.b/Avax
         compute_price_with_primary_quote_asset(request, pair_addr, active_bin)
       true -> # Does not have a primary quote asset. Example: WETH/BTC.b in Avalanche
-        -7
+        -7 # TODO
     end
   end
 
@@ -63,43 +59,49 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
 
     case {stable_pairs_token_x, stable_pairs_token_y} do
       {[], []} ->
-        throw("no pairs")
+        -1
 
       {[stable_related_pair | _token_x_pairs], []} ->
         request_for_x = %PriceRequest{
           token_x: stable_related_pair.token_x,
           token_y: stable_related_pair.token_y,
           bin_step: stable_related_pair.bin_step,
-          network: request.network
+          network: request.network,
+          version: request.version
         }
 
-        %Pair{price: related_price} =
+        %Pair{price: price_x_in_dollars} =
           p_info = PairRepository.fetch_pair_info(stable_related_pair.pair_address, request_for_x)
 
         price = compute_x_div_y_price(request, active_bin)
+        price_y_in_dollars = price_x_in_dollars / price
 
-        -2
+        has_enough_liquidity? = LbPair.pair_has_enough_reserves_around_active_bin?(token_x, token_y, pair_addr, active_bin, request.network, price_x_in_dollars, price_y_in_dollars)
 
+        if has_enough_liquidity? do
+          price
+        else
+          -1
+        end
       {[], [stable_related_pair | _token_y_pairs]} ->
         request_for_y = %PriceRequest{
           token_x: stable_related_pair.token_x,
           token_y: stable_related_pair.token_y,
           bin_step: stable_related_pair.bin_step,
-          network: request.network
+          network: request.network,
+          version: request.version
         }
 
         p_info = PairRepository.fetch_pair_info(stable_related_pair.pair_address, request_for_y)
 
         price = compute_x_div_y_price(request, active_bin)
-
-        -2
-
       {[stable_pair_x | _], [_stable_pair_y | _]} ->
         request_for_x = %PriceRequest{
           token_x: stable_pair_x.token_x,
           token_y: stable_pair_x.token_y,
           bin_step: stable_pair_x.bin_step,
-          network: request.network
+          network: request.network,
+          version: request.version
         }
 
         %Pair{price: price_x_in_dollars} =
