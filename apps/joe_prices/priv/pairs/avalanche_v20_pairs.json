@@ -1,0 +1,212 @@
+[
+    {
+        "name": "USD Coin-USD Coin",
+        "token_x": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 1,
+        "pair_address": "0x18332988456c4bd9aba6698ec748b331516f5a14"
+    },
+    {
+        "name": "TetherToken-USD Coin",
+        "token_x": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 1,
+        "pair_address": "0x1d7a1a79e2b4ef88d2323f3845246d24a3c20f1d"
+    },
+    {
+        "name": "Tether USD-USD Coin",
+        "token_x": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 1,
+        "pair_address": "0x12ef33ed026d6eeb6c1ea90e97401ddf3d45f569"
+    },
+    {
+        "name": "Dai Stablecoin-USD Coin",
+        "token_x": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 1,
+        "pair_address": "0x855ee438445075f25c18a125ba6607543052a194"
+    },
+    {
+        "name": "Wrapped BTC-Bitcoin",
+        "token_x": "0x50b7545627a5162f82a992c33b87adc75187b218",
+        "token_y": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+        "bin_step": 2,
+        "pair_address": "0xe4e7aaa5a1aab5b55ee44fab2d5dd6fcd80e4d42"
+    },
+    {
+        "name": "Staked AVAX-Wrapped AVAX",
+        "token_x": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 5,
+        "pair_address": "0xa7687be7174721178cfd7aa1ae590209649fc0b8"
+    },
+    {
+        "name": "Tether USD-TetherToken",
+        "token_x": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+        "token_y": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+        "bin_step": 1,
+        "pair_address": "0x761969787f55cc9f6ccae3a46ca9f0108b160934"
+    },
+    {
+        "name": "BUSD Token-USD Coin",
+        "token_x": "0x9c9e5fd8bbc25984b178fdce6117defa39d2db39",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 1,
+        "pair_address": "0xbc811ef83fb68c25eedf83767e24a2de0262aca6"
+    },
+    {
+        "name": "Bitcoin-USD Coin",
+        "token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 10,
+        "pair_address": "0x11c0f9134d7db45e3dab7a78ac3c957a92229e8c"
+    },
+    {
+        "name": "Wrapped Ether-USD Coin",
+        "token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 15,
+        "pair_address": "0x5851e2d6396bcc26fb9eee21effbf99e0d2b2148"
+    },
+    {
+        "name": "Wrapped AVAX-USD Coin",
+        "token_x": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 20,
+        "pair_address": "0xb5352a39c11a81fe6748993d586ec448a01f08b5"
+    },
+    {
+        "name": "JoeToken-USD Coin",
+        "token_x": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 25,
+        "pair_address": "0xf1f4ce5dd70d4384f9b764020f26e8cabee39070"
+    },
+    {
+        "name": "JoeToken-Wrapped AVAX",
+        "token_x": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 15,
+        "pair_address": "0xc01961ede437bf0cc41d064b1a3f6f0ea6aa2a40"
+    },
+    {
+        "name": "Wrapped Ether-Wrapped AVAX",
+        "token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 10,
+        "pair_address": "0x42be75636374dfa0e57eb96fa7f68fe7fcdad8a3"
+    },
+    {
+        "name": "Bitcoin-Wrapped AVAX",
+        "token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 10,
+        "pair_address": "0xcca0cffbf97fb10b08c1703f1dddcf7b48c69d69"
+    },
+    {
+        "name": "GMX-Wrapped AVAX",
+        "token_x": "0x62edc0692bd897d2295872a9ffcac5425011c661",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 20,
+        "pair_address": "0x294dc12a20e0018f77d8e043dad60af6777f716b"
+    },
+    {
+        "name": "Vector-Wrapped AVAX",
+        "token_x": "0x5817d4f0b62a59b17f75207da1848c2ce75e7af4",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 50,
+        "pair_address": "0xf251897d37576d68b38c8f54617bf433853b8630"
+    },
+    {
+        "name": "YieldYak gAVAX-Wrapped AVAX",
+        "token_x": "0xf7d9281e8e363584973f946201b82ba72c965d27",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 5,
+        "pair_address": "0xf25ecad00b5ce43ad24551835f3c57d4978d1fbb"
+    },
+    {
+        "name": "Wrapped AVAX-TetherToken",
+        "token_x": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "token_y": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+        "bin_step": 20,
+        "pair_address": "0xdf3e481a05f58c387af16867e9f5db7f931113c9"
+    },
+    {
+        "name": "zJoe-JoeToken",
+        "token_x": "0x769bfeb9faacd6eb2746979a8dd0b7e9920ac2a4",
+        "token_y": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+        "bin_step": 5,
+        "pair_address": "0xedde9c9f9960784870a84aaafcb77f965df012aa"
+    },
+    {
+        "name": "Chainlink Token-Wrapped AVAX",
+        "token_x": "0x5947bb275c521040051d82396192181b413227a3",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 10,
+        "pair_address": "0x7146b81986be17d5abcf199ebfa43c17f152ae89"
+    },
+    {
+        "name": "Wrapped Ether-Bitcoin",
+        "token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+        "token_y": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+        "bin_step": 10,
+        "pair_address": "0xf43f906250bea2d84aeaaf28bd7ac74d5c8dbfb6"
+    },
+    {
+        "name": "BENQI-Wrapped AVAX",
+        "token_x": "0x8729438eb15e2c8b576fcc6aecda6a148776c0f5",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 25,
+        "pair_address": "0xb577bc082c52d4d0207f5887a3c3a7b92e11a65a"
+    },
+    {
+        "name": "GMD-Wrapped AVAX",
+        "token_x": "0x1fe70939c2cec8f31e8f7729442658586b469972",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 50,
+        "pair_address": "0x02d406503986f03592e1aa15db9273fc015b7cb8"
+    },
+    {
+        "name": "YUSD Stablecoin-USD Coin",
+        "token_x": "0x111111111111ed1d73f860f57b2798b683f2d325",
+        "token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "bin_step": 5,
+        "pair_address": "0xb0c572beb35796f32e7c5bb6a212afb1da7a2081"
+    },
+    {
+        "name": "YUSD Stablecoin-TetherToken",
+        "token_x": "0x111111111111ed1d73f860f57b2798b683f2d325",
+        "token_y": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+        "bin_step": 5,
+        "pair_address": "0x00d17878f26f7c44f8c8dd8eb2c8aba0b0b1aa53"
+    },
+    {
+        "name": "BetSwirl Token-Wrapped AVAX",
+        "token_x": "0xc763f8570a48c4c00c80b76107cbe744dda67b79",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 100,
+        "pair_address": "0xd90ec2cbaa1a68d4743cb7178b1e035ae71dfd09"
+    },
+    {
+        "name": "Aave Token-Wrapped AVAX",
+        "token_x": "0x63a72806098bd3d9520cc43356dd78afe5d386d9",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 20,
+        "pair_address": "0x6377d41c6c287b305659b3cb0f46c490ee347037"
+    },
+    {
+        "name": "Platypus-Wrapped AVAX",
+        "token_x": "0x22d4002028f537599be9f666d1c4fa138522f9c8",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 50,
+        "pair_address": "0xa0fb6b422528744acf9b80f8b40b0a17ee0a4db4"
+    },
+    {
+        "name": "Colony Avalanche Index-Wrapped AVAX",
+        "token_x": "0x48f88a3fe843ccb0b5003e70b4192c1d7448bef0",
+        "token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+        "bin_step": 50,
+        "pair_address": "0xe1e7065235d59a71da419d5004015eb3a2b3d5b0"
+    }
+]

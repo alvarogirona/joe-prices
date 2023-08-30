@@ -111,6 +111,9 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
     |> save_to_cache(version, network)
   end
 
+  defp pairs_json_file(:avalanche_mainnet, :v20), do: Path.join([:code.priv_dir(:joe_prices), "pairs/avalanche_v20_pairs.json"])
+  defp pairs_json_file(:arbitrum_mainnet, :v20), do: Path.join([:code.priv_dir(:joe_prices), "pairs/arbitrum_v20_pairs.json"])
+
   defp pairs_json_file(:avalanche_mainnet, :v21), do: Path.join([:code.priv_dir(:joe_prices), "pairs/avalanche_v21_pairs.json"])
   defp pairs_json_file(:arbitrum_mainnet, :v21), do: Path.join([:code.priv_dir(:joe_prices), "pairs/arbitrum_v21_pairs.json"])
   defp pairs_json_file(:bsc_mainnet, :v21), do: Path.join([:code.priv_dir(:joe_prices), "pairs/bsc_v21_pairs.json"])
