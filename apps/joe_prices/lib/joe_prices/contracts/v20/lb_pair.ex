@@ -35,7 +35,7 @@ defmodule JoePrices.Contracts.V20.LbPair do
     opts = Network.opts_for_call(network, contract_address)
 
     case __MODULE__.fee_parameters(opts) do
-      {:ok, [bin_step | _]} -> {:ok, bin_step}
+      {:ok, [{bin_step, _, _, _, _, _, _, _, _, _, _, _} | _]} -> {:ok, bin_step}
       {:error, reason} -> {:error, reason}
       _ -> {:error, :unknown}
     end
