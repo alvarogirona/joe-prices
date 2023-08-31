@@ -69,12 +69,11 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   @spec fetch_pair_info(String.t(), PriceRequest.t()) :: nil | JoePrices.Core.V2.Pair.t()
   def fetch_pair_info(@bad_resp_addr, _request), do: nil
 
-  def fetch_pair_info(addr, request = %PriceRequest{}) do
+  def fetch_pair_info(addr, request = %PriceRequest{token_x: token_x, token_y: token_y}) do
     {:ok, [active_bin]} =
       lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
     price = PriceComputator.compute_price(request, addr, active_bin)
-    [token_x, token_y] = sorted_tokens(request.token_x, request.token_y)
 
     %Pair{
       name: "",
@@ -134,7 +133,4 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   @spec lb_factory_module(atom()) :: any()
   defp lb_pair_module(:v20), do: JoePrices.Contracts.V20.LbPair
   defp lb_pair_module(:v21), do: JoePrices.Contracts.V21.LbPair
-
-  defp sorted_tokens(token_x, token_y) when token_x < token_y, do: [token_x, token_y]
-  defp sorted_tokens(token_x, token_y), do: [token_y, token_x]
 end
