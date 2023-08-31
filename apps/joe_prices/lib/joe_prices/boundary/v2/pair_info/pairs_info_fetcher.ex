@@ -14,6 +14,7 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
   pairs, so we can asume just 1 hop between pairs to get the USDC value.
   """
 
+  alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Core.V2.Pair
   alias JoePrices.Utils.Parallel
   alias JoePrices.Core.Network
@@ -82,6 +83,16 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
           Token.is_primary_quote_asset?(downcased_ty, network)
 
       pair_contains_token && pair_has_primary_quote
+    end)
+    |> Enum.sort_by(fn pair -> pair.bin_step end)
+  end
+
+  @spec find_pair_from_price_request(PriceRequest.t()) :: PairCacheEntry.t() | nil
+  def find_pair_from_price_request(%PriceRequest{network: nw, token_x: tx, token_y: ty, version: v, bin_step: bs} = request) do
+    get_pairs(v, nw)
+
+    |> Enum.find(fn %PairCacheEntry{token_x: ptx, token_y: pty, bin_step: pbs} = pair ->
+      ((ptx == tx && pty == ty) or (ptx == ty && pty == tx)) and pbs == bs
     end)
   end
 
