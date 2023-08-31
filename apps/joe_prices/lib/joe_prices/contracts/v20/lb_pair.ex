@@ -3,6 +3,8 @@ defmodule JoePrices.Contracts.V20.LbPair do
     abi_file: "priv/abis/v20/LBPair.json"
 
   alias JoePrices.Core.Network
+  alias JoePrices.Boundary.Token.TokenInfoFetcher
+  alias JoePrices.Utils.Parallel
 
   @type available_networks :: :arbitrum_mainnet | :avalanche_mainnet | :bsc_mainnet
 
@@ -28,6 +30,52 @@ defmodule JoePrices.Contracts.V20.LbPair do
       {:ok, [_, _, active_bin_id]} -> {:ok, [active_bin_id]}
       _ -> {:error, :undefined_error}
     end
+  end
+
+  @spec fetch_bin_reserves(String.t(), non_neg_integer(), available_networks()) :: any()
+  def fetch_bin_reserves(pair_address, bin_id, network) do
+    opts = Network.opts_for_call(network, pair_address)
+
+    __MODULE__.get_bin(bin_id, opts)
+  end
+
+  def pair_has_enough_reserves_around_active_bin?(
+    token_x,
+    token_y,
+    address,
+    active_bin,
+    network,
+    price_x_in_dollars,
+    price_y_in_dollars
+  ) do
+    [reserves_below, reserves_above] = get_reserves_around_active_bin(token_x, token_y, address, active_bin, network)
+    |> Enum.map(&Enum.sum/1)
+
+    (reserves_below * price_x_in_dollars) + (reserves_above * price_y_in_dollars) > @minimum_liquidity_threshold
+  end
+
+  def get_reserves_around_active_bin(token_x, token_y, address, active_bin, network) do
+    opts = Network.opts_for_call(network, address)
+
+    token_x_decimals = TokenInfoFetcher.get_decimals_for_token(token_x)
+    token_y_decimals = TokenInfoFetcher.get_decimals_for_token(token_y)
+
+    reserves_above = Enum.to_list(active_bin + 1..active_bin + 5)
+      |> Parallel.pmap(fn bin_id ->
+        {:ok, [reserves, _]} = __MODULE__.fetch_bin_reserves(address, bin_id, network)
+
+        reserves
+      end)
+      |> Enum.map(fn res -> res * :math.pow(10, -token_x_decimals) end)
+
+    reserves_below = Enum.to_list(active_bin - 5..active_bin - 1)
+      |> Parallel.pmap(fn bin_id ->
+        {:ok, [_, reserves]} = __MODULE__.fetch_bin_reserves(address, bin_id, network)
+        reserves
+      end)
+      |> Enum.map(fn res -> res * :math.pow(10, -token_y_decimals) end)
+
+    [reserves_below, reserves_above]
   end
 
   @spec fetch_bin_step(available_networks(), String.t()) :: {:error, any} | {:ok, non_neg_integer}

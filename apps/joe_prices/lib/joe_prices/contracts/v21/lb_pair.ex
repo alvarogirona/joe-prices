@@ -145,7 +145,6 @@ defmodule JoePrices.Contracts.V21.LbPair do
       |> Enum.map(fn res -> res * :math.pow(10, -token_y_decimals) end)
 
     [reserves_below, reserves_above]
-    # Enum.to_list(active_bin - 5..active_bin)
   end
 end
 

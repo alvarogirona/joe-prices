@@ -5,6 +5,8 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
   It also checks that there is enough liquidity (>10$) arount =-5 bins of the active
   """
 
+  alias JoePrices.Contracts.V21
+  alias JoePrices.Contracts.V20
   alias JoePrices.Core.V2.Token
   alias JoePrices.Contracts.V21.LbPair
   alias JoePrices.Boundary.V2.PairRepository
@@ -73,23 +75,23 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
   end
 
   defp compute_price_with_related_stable(
-         %PriceRequest{token_x: token_x, token_y: token_y} = request,
+         %PriceRequest{token_x: token_x, token_y: token_y, version: version, network: network} = request,
          %PairCacheEntry{} = stable_related_pair,
          pair_addr,
          active_bin
        ) do
-    related_price_in_dollars = compute_price_in_dollars(stable_related_pair, request.network, request.version)
+    related_price_in_dollars = compute_price_in_dollars(stable_related_pair, network, version)
 
     price = compute_x_div_y_price(request, active_bin)
     price_y_in_dollars = related_price_in_dollars / price
 
     has_enough_liquidity? =
-      LbPair.pair_has_enough_reserves_around_active_bin?(
+      lb_pair_module(version).pair_has_enough_reserves_around_active_bin?(
         token_x,
         token_y,
         pair_addr,
         active_bin,
-        request.network,
+        network,
         related_price_in_dollars,
         price_y_in_dollars
       )
@@ -229,4 +231,7 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
   defp has_stable_in_tokens(%PriceRequest{token_x: tx, token_y: ty, network: nw}) do
     Stable.is_token_stable(tx, nw) or Stable.is_token_stable(ty, nw)
   end
+
+  defp lb_pair_module(:v20), do: V20.LbPair
+  defp lb_pair_module(:v21), do: V21.LbPair
 end
