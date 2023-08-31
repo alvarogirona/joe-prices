@@ -163,18 +163,56 @@ The expected format for batch requests body is:
 			"bin_step": 10
 		},
 		{
-			"token_x": "0x5947bb275c521040051d82396192181b413227a3",
+			"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
 			"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
 			"bin_step": 10
 		},
-		{
-			"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+        {
+			"token_x": "0x5947bb275c521040051d82396192181b413227a3",
 			"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
 			"bin_step": 10
 		}
 	]
 }
 ```
+
+Response is in the following format:
+```json
+[
+	{
+		"token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+		"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+		"price": 1659.3478769868748
+	},
+	{
+		"token_x": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+		"token_y": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+		"price": 0.999203001599911
+	},
+	{
+		"token_x": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+		"token_y": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+		"price": 0.9990005497800716
+	},
+	{
+		"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+		"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+		"price": 26354.21606386862
+	},
+	{
+		"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+		"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+		"price": 2619.407343338454
+	},
+    {
+		"token_x": "0x5947bb275c521040051d82396192181b413227a3",
+		"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+		"price": -1
+	}
+]
+```
+
+Here the last response corresponds to a `LINK.e/AVAX` pair (`0xc0dfc065894b20d79aade34a63b5651061b135cc`) which does not have enough liquidity, so `-1` is returned.
 
 ## Generating a release
 
