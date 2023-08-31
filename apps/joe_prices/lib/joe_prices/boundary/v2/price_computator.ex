@@ -38,11 +38,7 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
     raw_price = JoePrices.Core.V2.Bin.get_price_from_id(active_bin, request.bin_step)
     price_multiplier = :math.pow(10, token_x_decimals - token_y_decimals)
 
-    # if request.token_x < request.token_y do
     raw_price * price_multiplier
-    # else
-    #   (1 / raw_price) * price_multiplier
-    # end
   end
 
   defp compute_price_with_primary_quote_asset(request = %PriceRequest{}, pair_addr, active_bin) do
@@ -65,10 +61,13 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
     case {stable_pairs_token_x, stable_pairs_token_y} do
       {[], []} ->
         -1
+
       {[stable_related_pair | _token_x_pairs], []} ->
         compute_price_with_related_stable(request, stable_related_pair, pair_addr, active_bin)
+
       {[], [stable_related_pair | _token_y_pairs]} ->
         compute_price_with_related_stable(request, stable_related_pair, pair_addr, active_bin)
+
       {[stable_pair_x | _], [_stable_pair_y | _]} ->
         compute_price_with_related_stable(request, stable_pair_x, pair_addr, active_bin)
     end
@@ -88,12 +87,12 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
       version: request.version
     }
 
-    %Pair{price: price_related_in_dollars} =
-      p_info =
+    %Pair{price: related_price_in_dollars} =
+      related_pair_info =
       PairRepository.fetch_pair_info(stable_related_pair.pair_address, request_for_related)
 
     price = compute_x_div_y_price(request, active_bin)
-    price_y_in_dollars = price_related_in_dollars / price
+    price_y_in_dollars = related_price_in_dollars / price
 
     has_enough_liquidity? =
       LbPair.pair_has_enough_reserves_around_active_bin?(
@@ -102,7 +101,7 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
         pair_addr,
         active_bin,
         request.network,
-        price_related_in_dollars,
+        related_price_in_dollars,
         price_y_in_dollars
       )
 
@@ -113,7 +112,11 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
     end
   end
 
-  defp compute_price_without_primary_quote_asset(request = %PriceRequest{token_x: token_x, token_y: token_y}, pair_addr, active_bin) do
+  defp compute_price_without_primary_quote_asset(
+         request = %PriceRequest{token_x: token_x, token_y: token_y, version: version, network: network},
+         pair_addr,
+         active_bin
+       ) do
     stable_pairs_token_x =
       PairsInfoFetcher.find_stable_pairs_with_token(
         token_x,
@@ -129,11 +132,99 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
       )
 
     case {stable_pairs_token_x, stable_pairs_token_y} do
-      {[], []} -> -1
-      {[token_x_related | _], []} -> -2
-      {[], [token_y_related | _]} -> -3
-      {[token_x_related | _], [token_y_related | _]} -> -4
+      {[], []} ->
+        # First we need to find pairs with a primary quote asset which is not an stable (i.e.: AVAX)
+        # Then compute the price of AVAX in dollars
+        # Use that price to get the price of X or Y in dollars, and from it the
+        related_with_x =
+          PairsInfoFetcher.find_pairs_with_token_and_primary_quote_asset(token_x, version, network)
+
+        related_with_y =
+          PairsInfoFetcher.find_pairs_with_token_and_primary_quote_asset(token_y, version, network)
+
+        -1 # TODO
+      {[token_x_related | _], []} ->
+        x_price_in_dollars = compute_price_in_dollars(token_x_related, network, version)
+        price = compute_x_div_y_price(request, active_bin)
+        y_price_in_dollars = x_price_in_dollars / price
+
+        has_enough_liquidity? =
+          LbPair.pair_has_enough_reserves_around_active_bin?(
+            token_x,
+            token_y,
+            pair_addr,
+            active_bin,
+            request.network,
+            x_price_in_dollars,
+            y_price_in_dollars
+          )
+
+        if has_enough_liquidity? do
+          price
+        else
+          -1
+        end
+
+      {[], [token_y_related | _]} ->
+        y_price_in_dollars = compute_price_in_dollars(token_y_related, network, version)
+        price = compute_x_div_y_price(request, active_bin)
+        x_price_in_dollars = y_price_in_dollars / price
+
+        has_enough_liquidity? =
+          LbPair.pair_has_enough_reserves_around_active_bin?(
+            token_x,
+            token_y,
+            pair_addr,
+            active_bin,
+            request.network,
+            x_price_in_dollars,
+            y_price_in_dollars
+          )
+
+        if has_enough_liquidity? do
+          price
+        else
+          -1
+        end
+
+      {[token_x_related | _], [token_y_related | _]} ->
+        x_price_in_dollars = compute_price_in_dollars(token_x_related, network, version)
+        price = compute_x_div_y_price(request, active_bin)
+        y_price_in_dollars = x_price_in_dollars / price
+
+        has_enough_liquidity? =
+          LbPair.pair_has_enough_reserves_around_active_bin?(
+            token_x,
+            token_y,
+            pair_addr,
+            active_bin,
+            request.network,
+            x_price_in_dollars,
+            y_price_in_dollars
+          )
+
+        if has_enough_liquidity? do
+          price
+        else
+          -1
+        end
     end
+  end
+
+  defp compute_price_in_dollars(%PairCacheEntry{} = stable_related_pair, network, version) do
+    request_for_related = %PriceRequest{
+      token_x: stable_related_pair.token_x,
+      token_y: stable_related_pair.token_y,
+      bin_step: stable_related_pair.bin_step,
+      network: network,
+      version: version
+    }
+
+    %Pair{price: related_price_in_dollars} =
+      related_pair_info =
+      PairRepository.fetch_pair_info(stable_related_pair.pair_address, request_for_related)
+
+    related_price_in_dollars
   end
 
   defp has_primary_quote_asset(
