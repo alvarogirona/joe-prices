@@ -4,15 +4,21 @@ defmodule JoePricesWeb.Api.V1.PriceController do
   alias JoePrices.Contracts.V1.JoePair
   alias JoePrices.Boundary.V1.PriceRequest
 
-  def index(conn, params = %{"base_asset" => _, "quote_asset" => _}) do
+  def index(conn, params = %{"base_asset" => base_asset, "quote_asset" => quote_asset}) do
     price_request = parse_token_request(params)
 
     {:ok, joe_pair} = JoePricesV1.get_price(price_request)
 
+    price = if base_asset < quote_asset do
+      joe_pair.price
+    else
+      1 / joe_pair.price
+    end
+
     json(conn, %{
       base_asset: price_request.base_asset,
       quote_asset: price_request.quote_asset,
-      price: joe_pair.price
+      price: price
     })
   end
 
