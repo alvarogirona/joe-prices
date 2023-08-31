@@ -87,7 +87,6 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
   @spec find_pair_from_price_request(PriceRequest.t()) :: PairCacheEntry.t() | nil
   def find_pair_from_price_request(%PriceRequest{network: nw, token_x: tx, token_y: ty, version: v, bin_step: bs} = request) do
     get_pairs(v, nw)
-
     |> Enum.find(fn %PairCacheEntry{token_x: ptx, token_y: pty, bin_step: pbs} = pair ->
       ((ptx == tx && pty == ty) or (ptx == ty && pty == tx)) and pbs == bs
     end)

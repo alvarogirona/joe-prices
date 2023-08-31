@@ -104,10 +104,13 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   end
 
   defp via(request = %PriceRequest{}) do
+    [x, y] = sorted_tokens(request.token_x, request.token_y)
+    process_key = {x, y, request.version, request.network}
+
     {
       :via,
       Registry,
-      {JoePrices.Registry.V21.PairRepository, request}
+      {JoePrices.Registry.V21.PairRepository, process_key}
     }
   end
 
@@ -133,4 +136,7 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   @spec lb_factory_module(atom()) :: any()
   defp lb_pair_module(:v20), do: JoePrices.Contracts.V20.LbPair
   defp lb_pair_module(:v21), do: JoePrices.Contracts.V21.LbPair
+
+  defp sorted_tokens(token_x, token_y) when token_x < token_y, do: [token_x, token_y]
+  defp sorted_tokens(token_x, token_y), do: [token_y, token_x]
 end
