@@ -16,13 +16,15 @@ defmodule JoePrices.Boundary.V2.PairRepository do
 
   @bad_resp_addr "0x0000000000000000000000000000000000000000"
 
+  @timeout 20_000
+
   @doc """
   Returns the price for a given pair.
   """
   @spec get_price(PriceRequest.t()) :: Pair.t()
   def get_price(request = %PriceRequest{}) do
     with {:ok, pid} <- fetch_process(request) do
-      GenServer.call(pid, :fetch_price)
+      GenServer.call(pid, :fetch_price, @timeout)
     end
   end
 

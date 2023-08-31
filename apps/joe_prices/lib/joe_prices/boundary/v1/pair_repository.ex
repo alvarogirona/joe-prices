@@ -4,6 +4,8 @@ defmodule JoePrices.Boundary.V1.PairRepository do
   alias JoePrices.Boundary.V1.PriceRequest
   use GenServer
 
+  @timeout 20_000
+
   @doc """
 
   ## Example
@@ -13,7 +15,7 @@ defmodule JoePrices.Boundary.V1.PairRepository do
   @spec get_price(PriceRequest.t()) :: JoePair.t()
   def get_price(%PriceRequest{} = request) do
     with {:ok, pid} <- fetch_process(request) do
-      GenServer.call(pid, {:fetch_price, request})
+      GenServer.call(pid, {:fetch_price, request}, @timeout)
     end
   end
 
