@@ -136,6 +136,46 @@ iex> JoePrices.Contracts.V21.LbFactory.fetch_pairs(:arbitrum_mainnet)
   GET   /v2_1/prices/:token_x/:token_y/:bin_step  JoePricesWeb.Api.V21.PriceController :index
 ```
 
+### Batch requests
+
+The expected format for batch requests body is:
+```json
+{
+	"tokens": [
+		{
+			"token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+			"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+			"bin_step": 15
+		},
+		{
+			"token_x": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+			"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+			"bin_step": 1
+		},
+		{
+			"token_x": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+			"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+			"bin_step": 1
+		},
+		{
+			"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+			"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+			"bin_step": 10
+		},
+		{
+			"token_x": "0x5947bb275c521040051d82396192181b413227a3",
+			"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+			"bin_step": 10
+		},
+		{
+			"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+			"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+			"bin_step": 10
+		}
+	]
+}
+```
+
 ## Generating a release
 
 An specific release for you OS and architecture can be created by running:
