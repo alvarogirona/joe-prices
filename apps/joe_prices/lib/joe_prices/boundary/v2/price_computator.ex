@@ -41,8 +41,7 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
     raw_price * price_multiplier
   end
 
-  defp compute_price_with_primary_quote_asset(request = %PriceRequest{}, pair_addr, active_bin) do
-    [token_x, token_y] = sorted_tokens(request.token_x, request.token_y)
+  defp compute_price_with_primary_quote_asset(request = %PriceRequest{token_x: token_x, token_y: token_y}, pair_addr, active_bin) do
 
     stable_pairs_token_x =
       PairsInfoFetcher.find_stable_pairs_with_token(
@@ -79,17 +78,7 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
          pair_addr,
          active_bin
        ) do
-    request_for_related = %PriceRequest{
-      token_x: stable_related_pair.token_x,
-      token_y: stable_related_pair.token_y,
-      bin_step: stable_related_pair.bin_step,
-      network: request.network,
-      version: request.version
-    }
-
-    %Pair{price: related_price_in_dollars} =
-      related_pair_info =
-      PairRepository.fetch_pair_info(stable_related_pair.pair_address, request_for_related)
+    related_price_in_dollars = compute_price_in_dollars(stable_related_pair, request.network, request.version)
 
     price = compute_x_div_y_price(request, active_bin)
     price_y_in_dollars = related_price_in_dollars / price
@@ -240,7 +229,4 @@ defmodule JoePrices.Boundary.V2.PriceComputator do
   defp has_stable_in_tokens(%PriceRequest{token_x: tx, token_y: ty, network: nw}) do
     Stable.is_token_stable(tx, nw) or Stable.is_token_stable(ty, nw)
   end
-
-  defp sorted_tokens(token_x, token_y) when token_x < token_y, do: [token_x, token_y]
-  defp sorted_tokens(token_x, token_y), do: [token_y, token_x]
 end
