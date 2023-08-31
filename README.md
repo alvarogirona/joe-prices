@@ -240,4 +240,11 @@ You can launch it by executing `locust` from that directory (a Python virtual en
 
 `JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher` stores a cache of available pairs in a list. A "dictionary" (map) structure would improve the access and search for pairs, but its not a huge trade-off since the amount of pairs is "limited".
 
-Also, `PairsInfoFetcher` has methods for loading all pairs directly from the contract, but uses a json dump of that method to load all tokens in app start and doesn't look for new pairs. An scheduled task could be checking for the number of available pairs at a given interval (`LbFactory.get_number_of_lb_pairs`) and load newly avaible pairs if they appear. I think this is a small limitation and focused on other parts, but it is not 100% correct how it is currently done, since a new pair could be created and it wouldn't be taken into account when checking the liquidity constraints (`PairsInfoFetcher` is mainly used for searching for paths from TOKEN_X/TOKEN_Y to a stable pair which allows to determine if there are >10$ in the bins around the active bin).
+### PairsInfoFetcher pairs
+
+`PairsInfoFetcher` has methods for loading all pairs directly from the contract, but uses a json dump of that method to load all tokens in app start and doesn't look for new pairs. 
+
+An scheduled task could be checking for the number of available pairs at a given interval (`LbFactory.get_number_of_lb_pairs`) and load newly avaible pairs if they appear. 
+
+I think this is a small limitation and focused on other parts, but it is not 100% correct how it is currently done, since a new pair could be created and it wouldn't be taken into account when checking the liquidity constraints (`PairsInfoFetcher` is mainly used for searching for paths from TOKEN_X/TOKEN_Y to a stable pair which allows to determine if there are >10$ in the bins around the active bin).
+
