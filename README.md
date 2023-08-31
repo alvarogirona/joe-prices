@@ -1,9 +1,5 @@
 # JoePrices
 
-## Notes
-
-I initially asumed that v2 and v2.1 pairs `token_x` and `token_y` would be ordered by token address, as in univ2/joev1, but found out that they aren't on the last day of the challenge. I'm making changes to the code on the last day (I hope I won't break anything else) but maybe there are some cases where I'm returning the inverse of the price (1/price) for some pairs.
-
 ## Configuring RPCs
 
 A sample `.env.sample` file is included with the project. To configure different RPC endpoints the environment variables defined on that file can be changed.
@@ -147,8 +143,8 @@ The expected format for batch requests body is:
 {
 	"tokens": [
 		{
-			"token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
-			"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+			"token_y": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+			"token_x": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
 			"bin_step": 15
 		},
 		{
@@ -167,13 +163,13 @@ The expected format for batch requests body is:
 			"bin_step": 10
 		},
 		{
-			"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+			"token_x": "0x5947bb275c521040051d82396192181b413227a3",
 			"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
 			"bin_step": 10
 		},
-        {
-			"token_x": "0x5947bb275c521040051d82396192181b413227a3",
-			"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+		{
+			"token_y": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+			"token_x": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
 			"bin_step": 10
 		}
 	]
@@ -184,39 +180,53 @@ Response is in the following format:
 ```json
 [
 	{
+		"price": 6.071798130750191e-4,
 		"token_x": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
 		"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
-		"price": 1659.3478769868748
+		"base_asset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+		"quote_asset": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab"
 	},
 	{
-		"token_x": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
-		"token_y": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
-		"price": 0.999203001599911
+		"price": 0.999203001599911,
+		"token_x": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+		"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+		"base_asset": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+		"quote_asset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
 	},
 	{
-		"token_x": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
-		"token_y": "0xc7198437980c041c805a1edcba50c1ce5db95118",
-		"price": 0.9990005497800716
+		"price": 0.9989006597141001,
+		"token_x": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+		"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+		"base_asset": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+		"quote_asset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
 	},
 	{
+		"price": 26013.997545333943,
 		"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
 		"token_y": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
-		"price": 26354.21606386862
+		"base_asset": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+		"quote_asset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
 	},
 	{
-		"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
-		"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
-		"price": 2619.407343338454
-	},
-    {
+		"price": -1,
 		"token_x": "0x5947bb275c521040051d82396192181b413227a3",
 		"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
-		"price": -1
+		"base_asset": "0x5947bb275c521040051d82396192181b413227a3",
+		"quote_asset": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+	},
+	{
+		"price": 3.8444613725162905e-4,
+		"token_x": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+		"token_y": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+		"base_asset": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+		"quote_asset": "0x152b9d0fdc40c096757f570a51e494bd4b943e50"
 	}
 ]
 ```
 
-Here the last response corresponds to a `LINK.e/AVAX` pair (`0xc0dfc065894b20d79aade34a63b5651061b135cc`) which does not have enough liquidity, so `-1` is returned.
+Here the response with price `-1` corresponds to a `LINK.e/AVAX` pair (`0xc0dfc065894b20d79aade34a63b5651061b135cc`) which does not have enough liquidity, so `-1` is returned.
+
+The first and last requests have `token_x` and `token_y` inverted from the pair tokens, so the "inverse" price (1/price) is returned. `quote_asset` and `base_asset` come from the pair, while `token_x` and `token_y` values from the response are the ones from the request.
 
 ## Generating a release
 
