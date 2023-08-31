@@ -7,14 +7,16 @@ defmodule JoePricesWeb.Api.V20.PriceController do
   def index(conn, opts) do
     price_request = parse_token_request(opts)
     price = JoePricesV2.get_price(price_request)
-    json(conn, render_price(price))
+    json(conn, render_price(price, price_request))
   end
 
   def batch(conn, %{"tokens" => tokens_list} = _opts) do
-    prices = tokens_list
+    requests = tokens_list
     |> Enum.map(&parse_token_request/1)
+
+    prices = requests
     |> JoePricesV2.get_prices()
-    |> render_prices()
+    |> render_prices(requests)
 
     json(conn, prices)
   end
@@ -33,17 +35,26 @@ defmodule JoePricesWeb.Api.V20.PriceController do
   defp parse_bin_step(bs) when is_binary(bs), do: Integer.parse(bs) |> elem(0)
   defp parse_bin_step(bs) when is_integer(bs), do: bs
 
-  defp render_prices(prices) do
-    Enum.map(prices, &render_price/1)
+  defp render_prices(prices, requests) do
+    Enum.zip(prices, requests)
+    |> Enum.map(fn {price, request} -> render_price(price, request) end)
   end
 
-  defp render_price({:ok, price} = _ok), do: render_price(price)
-  defp render_price({:error, _}), do: %{error: "could not fetch price"}
-  defp render_price(%Pair{} = pair) do
+  defp render_price({:ok, price} = _ok, request = %PriceRequest{}), do: render_price(price, request)
+  defp render_price({:error, _}, request = %PriceRequest{}), do: %{error: "could not fetch price"}
+  defp render_price(%Pair{} = pair, request = %PriceRequest{}) do
+    price = if pair.token_x == request.token_x do
+      pair.price
+    else
+      1 / pair.price
+    end
+
     %{
+      base_asset: request.token_x,
+      quote_asset: request.token_y,
       token_x: pair.token_x,
       token_y: pair.token_y,
-      price: pair.price
+      price: price
     }
   end
 end

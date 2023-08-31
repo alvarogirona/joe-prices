@@ -9,6 +9,8 @@ defmodule JoePrices.Boundary.V2.PairRepository do
 
   use GenServer
 
+  alias JoePrices.Boundary.V2.PairInfoCache.PairCacheEntry
+  alias JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher
   alias JoePrices.Boundary.V2.PriceRequest
   alias JoePrices.Boundary.V2.PriceComputator
   alias JoePrices.Boundary.V2.PriceCache.PriceCache
@@ -69,10 +71,13 @@ defmodule JoePrices.Boundary.V2.PairRepository do
   @spec fetch_pair_info(String.t(), PriceRequest.t()) :: nil | JoePrices.Core.V2.Pair.t()
   def fetch_pair_info(@bad_resp_addr, _request), do: nil
 
-  def fetch_pair_info(addr, request = %PriceRequest{token_x: token_x, token_y: token_y}) do
+  def fetch_pair_info(addr, request = %PriceRequest{}) do
     {:ok, [active_bin]} =
       lb_pair_module(request.version).fetch_active_bin_id(request.network, addr)
 
+    %PairCacheEntry{token_x: token_x, token_y: token_y} = PairsInfoFetcher.find_pair_from_price_request(request)
+
+    request = %{request | token_x: token_x, token_y: token_y}
     price = PriceComputator.compute_price(request, addr, active_bin)
 
     %Pair{
