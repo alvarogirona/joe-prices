@@ -62,10 +62,6 @@ defmodule JoePrices.Contracts.V21.LbPair do
     end
   end
 
-  def has_enough_liquidity() do
-
-  end
-
   @doc"""
   ## Example
 
