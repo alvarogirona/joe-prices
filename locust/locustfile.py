@@ -21,6 +21,22 @@ class JoeLocustTester(HttpUser):
         data = json.load(f)
 
         return random.choice(data)
+    
+    @task
+    def v2_simple(self):
+        pair = self.random_v20_pair()
+        tx = pair['token_x']
+        ty = pair['token_y']
+        bs = pair['bin_step']
+        self.client.get(f"/v2/prices/{tx}/{ty}/{bs}")
+
+    def random_v20_pair(self):
+        # Opening JSON file
+        f = open('v20_pairs.json')
+
+        data = json.load(f)
+
+        return random.choice(data)
 
     def random_v21_batch(self):
         pass
