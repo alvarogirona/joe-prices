@@ -5,13 +5,10 @@ defmodule JoePrices.Boundary.V2.PairInfoCache.PairsInfoFetcher do
   Ideally, when resolving if a given pair (TOKEN_A/TOKEN_B) with no stable assets has available liquidity,
   a path from TOKEN_A and TOKEN_B to a stable coin has to be resolved.
 
-  This path can involve multiple jumps to different pairs (i.e: TOKEN_A/TOKEN_C -> TOKEN_C/USDC) in order
+  This path can involve multiple jumps to different pairs (i.e: TOKEN_A/TOKEN_B -> TOKEN_B/TOKEN_C -> TOKEN_C/USDC) in order
   to get the price of TOKEN_A quoted in USDC.
 
   Having a cache for all the available pairs of a version allows to quickly lookup for it.
-
-  TODO: Implement the path finding. *Currently Joe v2 limits the base assets that people can use to create
-  pairs, so we can asume just 1 hop between pairs to get the USDC value.
   """
 
   alias JoePrices.Boundary.V2.PriceRequest
