@@ -1,5 +1,9 @@
 # JoePrices
 
+## Notes
+
+I initially asumed that v2 and v2.1 pairs `token_x` and `token_y` would be ordered by token address, as in univ2/joev1, but found out that they aren't on the last day of the challenge. I'm making changes to the code on the last day (I hope I won't break anything else) but maybe there are some cases where I'm returning the inverse of the price (1/price) for some pairs.
+
 ## Configuring RPCs
 
 A sample `.env.sample` file is included with the project. To configure different RPC endpoints the environment variables defined on that file can be changed.
